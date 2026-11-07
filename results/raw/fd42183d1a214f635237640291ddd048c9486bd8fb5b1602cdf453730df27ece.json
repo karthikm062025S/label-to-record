@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893447510",
+ "split": "test",
+ "image_file": "data/images_small/3893447510.jpg",
+ "image_sha256": "db54c34f8f4fe73e06b498c189904eb409d339056befc3ba86312ee883bdab27",
+ "image_bytes": 923013,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 6.68,
+ "created": "2026-11-06T21:42:35",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Dicentra cucullaria (L.) Bernh.\", \"recordedBy\": \"LENA ARTZ\", \"recordNumber\": \"29\", \"eventDate\": \"1933-04-14\", \"country\": \"USA\", \"stateProvince\": \"Virginia\", \"county\": \"Shenandoah\", \"locality\": \"PLANTS OF MASSANUTTEN MOUNTAINS. Stonewall Bend, Woodstock, Va.\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 98,
+   "totalTokenCount": 3025,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 1324,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "E5Duar3nBIutuMYP5PuKwAw"
+ },
+ "parsed": {
+  "scientificName": "Dicentra cucullaria (L.) Bernh.",
+  "recordedBy": "LENA ARTZ",
+  "recordNumber": "29",
+  "eventDate": "1933-04-14",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Shenandoah",
+  "locality": "PLANTS OF MASSANUTTEN MOUNTAINS. Stonewall Bend, Woodstock, Va.",
+  "habitat": null
+ },
+ "error": null
+}

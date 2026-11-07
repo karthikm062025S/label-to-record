@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893467088",
+ "split": "dev",
+ "image_file": "data/images_small/3893467088.jpg",
+ "image_sha256": "2ab551693ccb35ba06bb3253b46404b02b26f7242505efd9aae12ec85c0beb60",
+ "image_bytes": 583596,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.58,
+ "created": "2026-11-06T21:23:09",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Corallorhiza odontorhiza (Willd.)\", \"recordedBy\": \"J. B. Lewis\", \"recordNumber\": null, \"eventDate\": \"Oct 4, 1930\", \"country\": null, \"stateProvince\": \"Virginia\", \"county\": \"Amelia\", \"locality\": null, \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 78,
+   "totalTokenCount": 2035,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 823,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "hYvuauHQMv3h0_gPwoO-mQQ"
+ },
+ "parsed": {
+  "scientificName": "Corallorhiza odontorhiza (Willd.)",
+  "recordedBy": "J. B. Lewis",
+  "recordNumber": null,
+  "eventDate": "Oct 4, 1930",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Amelia",
+  "locality": null,
+  "habitat": null
+ },
+ "error": null
+}

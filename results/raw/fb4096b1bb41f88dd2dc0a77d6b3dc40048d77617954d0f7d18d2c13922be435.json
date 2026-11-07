@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893493940",
+ "split": "test",
+ "image_file": "data/images_small/3893493940.jpg",
+ "image_sha256": "7254bb6ed9393c32c294651bc42a0dee7c7cf099f435b1a10645cdf9ca127185",
+ "image_bytes": 646763,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.04,
+ "created": "2026-11-06T21:51:25",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Lespedeza intermedia (Wats.) Britt.\",\n  \"recordedBy\": \"T.F. Wieboldt; C.E. Stevens; Chip Morgan\",\n  \"recordNumber\": \"11517\",\n  \"eventDate\": \"2004-09-21\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Russell\",\n  \"locality\": \"Very dry and rocky, southerly-facing limestone slope; mixed hardwood canopy. Just W above confluence of Big Cedar Creek with Clinch River. Ca 4.8 mi NE of Lebanon, Va.\",\n  \"habitat\": null\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 154,
+   "totalTokenCount": 2657,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 900,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "JpLuat6nCICpytMPwuK88Q0"
+ },
+ "parsed": {
+  "scientificName": "Lespedeza intermedia (Wats.) Britt.",
+  "recordedBy": "T.F. Wieboldt; C.E. Stevens; Chip Morgan",
+  "recordNumber": "11517",
+  "eventDate": "2004-09-21",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Russell",
+  "locality": "Very dry and rocky, southerly-facing limestone slope; mixed hardwood canopy. Just W above confluence of Big Cedar Creek with Clinch River. Ca 4.8 mi NE of Lebanon, Va.",
+  "habitat": null
+ },
+ "error": null
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893454749",
+ "split": "dev",
+ "image_file": "data/images/3893454749.jpg",
+ "image_sha256": "2d528772de2857575551efdd6e8c9379cd1320cb12fb8569616cd0553939a135",
+ "image_bytes": 5928393,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 7.39,
+ "created": "2026-11-06T21:25:33",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Platanthera ciliaris (L.) Lindley\",\n  \"recordedBy\": \"R. Kral\",\n  \"recordNumber\": \"13569\",\n  \"eventDate\": \"5 Aug 1961\",\n  \"country\": null,\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Roanoke\",\n  \"locality\": \"ca 1.5 mi. n.w. Salem; Ft. Lewis Mtn.\",\n  \"habitat\": \"moist sandy clay of banks of intermittent stream\"\n}",
+       "thoughtSignature": "EoMcCoAcAWkUfROkjFoElqGMDHBeO5oF/JK/kAWmkJKI4iIVxa07V5n3l6SeKYiMdw//cXcQZ/Es0Y2TrnqiyVLQNnbJtyzI6rnYrO6EZoC2UWbZRrewt47VAn0Oj4WokbSbRBrCqqCZKyhUPy702UxHQEw68wJ+uN7IZ10TBwy90bod8HESby0+nGWnhM/nw4vDrtYEMfJsgP9juYULKEyLWIrLTBLXuZOGwab2odhdd4DnShT8Lms/t8SgjswkNdY/xj47F7CqjtBYsu12hTm1ZDe53JMYamlnnreeHyVCQd62uMqUe1NuWl9AcmqD/VGfA/r6wbh/Qd9ahZt/UR988pu7pUoNGRmPGWJMN/gx9kQ64hWMDC2HTpc2ZyD4HEa6RJjtcITi8G6bNNCbOWv33Su3B2YdqQ6ik8nc8fikcHPRq02JfrAq0T1QpNx23MyviliM2y8yKv0E8HoBxwlR4w8N2kpesBl3IxEXuruXrujaNaIC/LMN9h+V/VQ6DYttKVYqCMVUspU1c2vExrXQ+1EeGfHzQElylL2P5owgwssEFOMuri2vYpmpxw36dk8m0oojfyNoIErMEq/oNAuGcIwqYXiAnwLaRN0W6ZwvcyyLscEcdk6VkzzEHqcBSpjCPx84pAr7tfhZ7dz28ocO5SypdIZ6CsTOGIZKXR7oLaPlNVM4mEET982MzivZ12kqrrfQYQyhfcHZMTY444QQoESHLXSMAEIDP/RAoRp7W0zYP17HZFLtotHvEVm7dUQz03PIQ8Iztw9dlgS8aFHVkJWSWTbc49Z/swHovfCB1WJtTobLomIBH6QN/aA0GYab2Lm3WQWkvhShbDohqmRgV+8xse1zYDrsHNiNfropOAGDLxBSsOAeNkFbiYuO1YMtDFaWr8QjFzr44EFP46cDp1/reNUwTqysvk0r1WqPIUJFwoHYtMXn0b8QbG5oMatHSBriwv207Oo6XNWCHwHwqfujGYTSlvVkJ0TQYZ51REvepmL23/7TT6hHNpsyNr+GqkGGjWwHd4uadRGwyJaHWWLmo+xNVcgzmMJikwcga1+RIEeqAEAsSF7dNo06iIjETLUOLi1gIxXHcR8v1r/gG8ih6R4PrxdXVuPhMaK8A5pdhVurwiHoaogcsjt7dDEZ287sVtqoE0Mv2AvN18ChFWNYCXKD2UVkQuKbFWgOiqZyNUaKAz+iguCqkztA+KlkqXfewlzBcgwO6nY9dJMWqWDlWcFnqRfLDpbQpj8kIe++oz56iRjYnPxoOl+n6AA26qXEWmIU11I5EPt63RRE69UJvW71DlVnxoSzbnJ7j2cYtyImGrdG1SsOhMIBUHQaGuCNnIXrGThmLxycT2KUT6Q8UrE6SXQAvMnCSLcoaN41YQGCz2JFsf0KyGjnxPk4UVBcDdQ/oKQ1GriG31Hin4dXgBusprDFgBrx8aCm1ih4jQrGWqSwXcETtiFqW3cRxZ4vKhSgnhmR1yHjsZvP5c+ZEtE4HlCyS0urVQWfvW4YAqBx13Jg13um8RbyH0G2wNWSsLZaSjbblcjWzykVrkabPfQ3TBl2XLWwXRhGTYulgsqdaEGruKr/7dIykXGkZCg9vHqGusjaFkpNqa4ThIb0riTBPtiZXNWjuS8MNIrhJpU0voszPXFr1yEsagr7munhTmhOcwVa/4pynfXFjlm8xZQa7cQK0VPYWnMRbghLfKSrDguMTr2a6pvW3apSw/+MyCyZsslXTrT7sU+mLKOaWQV395hMCa7qDv9e5BGKGsjwaLl3AqOnzCN9ZaS6hYNdRrBeSoFyCDxXuD5nY/9awUNSmHaz5/X6CLi0AHfBi/CVeLJMJPw0FzSCw0Yny9i1+8PWiEu+Yde4ZYzClb9LGsnPlcKZl4n1X75raZ0AcVaCmb4gu6Od2yhBDR9Xd4GVM9+oGMM9+VsOcJy74SR9fH78zhvmfy7PstXZ72na5Y4MYsftDS/YpqnWmnITu4te7VSQPTVHnUw/xgfWEmzxeqTMb5Klel/rTetQYTxBcwmDrqi5pOpzmo5DEOO43Od3KaIvppuPWU2clBHcGmKALIv19nT5FVt6w/SPr8l0JwLxUDtIJ+uHhJFOGrGGXDg9I1R3ZRtGmzKuGRW5nX+kZ432kNgLNrKgSCbRj8JAR8dd+gdDwRMPz5hyxTAhJYUtj3aCWuAMjF3PkUT1uGNjhHHjeH4MTAiBk4VhbS88tuGnMCH5G+GBHs2rDSew++9A9lv0dFmNxiE3nlUsXaw83OHK/F8NIVx9PFTPPKPkyaZ8OrkgORhBLZC4YZN968nLANVyK1QB9/WzHAVf2hbCbeLBmIzlBnInDcj0GkGIx5DUvSeq9V5+u/MGzZRab3j/CEsQQXvzvp9lB4G6IhwULHrpW5U5z9/5x5PO/dgqP8LS4ig6Wpv4EHzSQqMaQAy9KYxPkHhaT6hrZQvD0dLnBPXx3x9wcJDbTsS3yDx7Pv4Z6TBY74k2RuCQYgxvE7gANgyIAeQJMMvLAab6iwEVx9QT/Zv2pLg77vC6I8CApFm4e3NKnGxcn7vSQj/zVw/7TVoeYZtJgcALvVnYqFA9ITN200MocGQn0X88bWfgOSMniNHOJ/9KNeKJ2I5XqsaUrIN84w//s3E6IHYchC/7jEYmZYv1+mv6GvZYG8S76LufsYLX103Gs8xjEx8/haWg0PFVohoM4vsvhLP3V30fzaX/MWEduHWb7tfIusNDnatkr80hxMe93uBp03DwxHE5Ed5sjA2wmYXF0d+xEwcKrgIS2v3bapabZZKz3dnobtY9tOtqT1FGsYWq0hjitWFMT3FN5zFdlpF7Bpv10ziBIO7p5Dh4LMJDm68do/FXOZG4+NijILOhUDZopHp8fJq0UBDdVMuhM/lIWHVPn8MS9anvurM4Nm8zsBRYAojdyWqejaK+8GY++qkHLkp3p/1nptniVByhoNwz5siQ9VA651HQ4sjzFg8Zq8uNPF2dJDIRIp11NMCY27XHB+dtpZrDElbJb5S7cmxPKRMyZEh00VLFYBh79HfhZcrnTn7uVcYMRKBdN/dyvgG0uw/Zu42h/STqB6Ucv96aS9cBuBqldDFQgKTMycXDqlW3jE6RGj9wVcsUXzoxy3QlkpaVZNQKyYz3t99tXbDxLud3ROff8ugMShWi9LqxGFJoLwd9uVikwf74bs9bjEnApN6vQGTErwRKHSYrnBWRWxET/9vc0tCQl/uEfpXwoM78+bBS7YZJA5DWXEZe6GuursQKiMssrp40zLC5v6tsNkZW2PcR+V3TsqltVDL6JOGp1VdlGcrW1DgmCePCeBhY2qc9KskAdneFBsj+75bLXMKtEaEvwGKNKWJdRg5ujMc0sktS5wrGx8G7sxyMBx04RcQSfCcSHtcn5OMLAWa8dBHh+P6dMoiIMRSHyfQXpoaXuiF1sp3XeXAud99BztCtUJdO55jARrojL9wfB6IY6wif/X1vebVKy4xRJpA/zgFMWrlJE4qtAUVJXWqxsInttzsSGk/Acoj79AlTo8x4mQXtQSKe/h1kNMYI9zd67szFF45QlnwtpbcWQeZRm4TYTQSY4CWXtZW16QpI8APgwjOwkKGZoWGtFs8E7GGZ60ez87zPBqW7osf/LJ2ssE6dDhMmlRsJiGR5NSv6c3mncXHvHMkgW/aeH1sFCa2K2d57WLVrQHsDm5DyxKRnYwXoOgLWxoeAilmF4vgFwlU75YlH/kQN7B9aEWwV8zU5qt62Js/jwuj4equb3Dls8JbuoPnifd3itrFMayy+0TVHEeUqzYLoA1PCwoEcNfBMELna1cjnLekGVTEgqAA4hm5J/PzStDV7BTecS1TjOMrnZ5iXHawqxhvrtVvEVpfOAVSIsX2o8Qx7p56z6EyZ/t1HJpkzoy6smAkiEDSZCmvyVGronDT6LUyiMawgKLeslr5tbI4slQKizsxgqxbxzupz1qds+X+5S+XBosVafdkpRThL9xd8Chtu84q63O/1bcGWtb50VWEZ6S2oqd/RYSaZ1uPq5KaxRW0WhttzNUBGfBdp9ziWRLllOKjQ1w7EUf+so7RmAUZCP2EUnRlyf9Uy9vQHwP88t2niPQIw2nH0k84GEh6/YFsYymL2L6nLs5wviBRIu9HLLrc1x9qjxNEktqMgApRFAZXwkgoEqgCUwDXfmX7F3FA3ESeHjtZ3xKUz2+w78rjqmof3nwToNRA9Q+HIaYzIAm0/e0dmGY+b+/Y/UrYXagF+YwBohIzGFCpWg2jk2C+jJjHXFEdWlxHvj/PPFG/Q/262aA+iLhWwP6GgmyH3MwBwI9djcb7jBJsi4S9quqrsfSN70et99j3iI1IS8mKbdLcaI/rZuPIW7P8uICHNWd+53neq1Cwa46fyiAtlmRY+X7oXeIoTBYfUPiMfA1DnFxAwIJ8r1eNEW0yj3pOYFUsKlBCDT7KEiv1VQfaLqiteBPdpOREezf8fpc0xVfp089vjVhTVOD2HK/wcc0A5dqb1qZbuEdulTB59wehGdri+y5w9RA8p+8BXO1TVM9+JHaqk8vg4QxFpR3h0nMhmMHZgPmwRdMIOfLdYCZU/Wn/5RlehUlBjL4yEtOAwFIw69nx2M6WfFy9eweqB7XVhdOcRnOOgPnaS0+QrlTcMhqHH3lPk+A+oYfDfCWdYcWAK/qFpZCynQSWZHq8eVFB7Q13ekR7Nh+n3TZk3Sb9I7O9ILSwmhFraPJn7nLd9Bs8sqK/16eduDfJACl/i5tryHaYAw2Y3+uzxQfAP386k3xQ="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 129,
+   "totalTokenCount": 2448,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 1185,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "FIzuasDyM4HCytMPmM7u-As"
+ },
+ "parsed": {
+  "scientificName": "Platanthera ciliaris (L.) Lindley",
+  "recordedBy": "R. Kral",
+  "recordNumber": "13569",
+  "eventDate": "5 Aug 1961",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Roanoke",
+  "locality": "ca 1.5 mi. n.w. Salem; Ft. Lewis Mtn.",
+  "habitat": "moist sandy clay of banks of intermittent stream"
+ },
+ "error": null
+}

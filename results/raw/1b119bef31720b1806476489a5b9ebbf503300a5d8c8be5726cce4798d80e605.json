@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893440243",
+ "split": "dev",
+ "image_file": "data/images/3893440243.jpg",
+ "image_sha256": "25a0b719ac6ed6856b38c0482aff690f08d280d07a4eb60e351734aa727d740c",
+ "image_bytes": 4581010,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.65,
+ "created": "2026-11-06T21:25:57",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Amianthium muscaetoxicum Gray\", \"recordedBy\": \"Stan Bentley\", \"recordNumber\": null, \"eventDate\": \"8-23-81\", \"country\": null, \"stateProvince\": \"Virginia\", \"county\": \"Grayson Co.\", \"locality\": \"Big Spring Bog off Rt. 613\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 83,
+   "totalTokenCount": 2035,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 818,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "LYzuapqGNdHFxdIPhPGQkQ8"
+ },
+ "parsed": {
+  "scientificName": "Amianthium muscaetoxicum Gray",
+  "recordedBy": "Stan Bentley",
+  "recordNumber": null,
+  "eventDate": "8-23-81",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Grayson Co.",
+  "locality": "Big Spring Bog off Rt. 613",
+  "habitat": null
+ },
+ "error": null
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893466144",
+ "split": "dev",
+ "image_file": "data/images_small/3893466144.jpg",
+ "image_sha256": "8497dac3ddb0285abaef2123d404b309acf49b127d97c03896f02fc1aab9a482",
+ "image_bytes": 1249156,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.82,
+ "created": "2026-11-06T21:37:39",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Castanea mollissima Blume.\",\n  \"recordedBy\": \"A. B. Massey\",\n  \"recordNumber\": null,\n  \"eventDate\": \"195\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"VIRGINIA\",\n  \"county\": \"Montgomery\",\n  \"locality\": \"V.P.I. farm, planted, Exotic\",\n  \"habitat\": null\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 98,
+   "totalTokenCount": 2700,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 999,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "647uateHNoqDytMPq-So2QE"
+ },
+ "parsed": {
+  "scientificName": "Castanea mollissima Blume.",
+  "recordedBy": "A. B. Massey",
+  "recordNumber": null,
+  "eventDate": "195",
+  "country": "USA",
+  "stateProvince": "VIRGINIA",
+  "county": "Montgomery",
+  "locality": "V.P.I. farm, planted, Exotic",
+  "habitat": null
+ },
+ "error": null
+}

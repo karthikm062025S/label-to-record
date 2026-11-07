@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893486607",
+ "split": "dev",
+ "image_file": "data/images_small/3893486607.jpg",
+ "image_sha256": "aa1c65fc86093e99165544d1ab2b29e12d281923bed79ed339e53f22c09bdae4",
+ "image_bytes": 825055,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.56,
+ "created": "2026-11-06T21:25:20",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Veratrum viride Ait.\",\n  \"recordedBy\": \"C.A. Bushland\",\n  \"recordNumber\": null,\n  \"eventDate\": \"7/20/32\",\n  \"country\": null,\n  \"stateProvince\": \"Virginia\",\n  \"county\": null,\n  \"locality\": \"Mt. Lake, Va.\",\n  \"habitat\": \"Broad-leaf woodland\"\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 100,
+   "totalTokenCount": 2061,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    }
+   ],
+   "thoughtsTokenCount": 827,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "CIzuaqTYPIKEytMP8_byiAw"
+ },
+ "parsed": {
+  "scientificName": "Veratrum viride Ait.",
+  "recordedBy": "C.A. Bushland",
+  "recordNumber": null,
+  "eventDate": "7/20/32",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": null,
+  "locality": "Mt. Lake, Va.",
+  "habitat": "Broad-leaf woodland"
+ },
+ "error": null
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893493571",
+ "split": "dev",
+ "image_file": "data/images/3893493571.jpg",
+ "image_sha256": "be8dc3bab9bbf6e7a6bfb3b949b75c6a80882ea37f8a8d4e6ee757d5d20f0ec3",
+ "image_bytes": 6303506,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 9.26,
+ "created": "2026-11-06T21:23:18",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Arisaema triphyllum (L.) Schott\",\n  \"recordedBy\": \"Ellison A. Smyth, Jr.\",\n  \"recordNumber\": \"17121\",\n  \"eventDate\": \"1893-05-12\",\n  \"country\": null,\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Montgomery\",\n  \"locality\": null,\n  \"habitat\": \"Shady damp places.\"\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 109,
+   "totalTokenCount": 2949,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 1706,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "i4vuav-9Kc2P5NoPmMPckQQ"
+ },
+ "parsed": {
+  "scientificName": "Arisaema triphyllum (L.) Schott",
+  "recordedBy": "Ellison A. Smyth, Jr.",
+  "recordNumber": "17121",
+  "eventDate": "1893-05-12",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Montgomery",
+  "locality": null,
+  "habitat": "Shady damp places."
+ },
+ "error": null
+}

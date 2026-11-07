@@ -1,0 +1,42 @@
+name,value,numerator,denominator,source,kind
+gemini-3-flash-preview total wrong (all fields),24,,,results/test_gemini-3-flash-preview_scores.csv,preregistered
+gemini-3-flash-preview total unsupported (all fields),9,,,results/test_gemini-3-flash-preview_scores.csv,preregistered
+gemini-3-flash-preview total omitted (all fields),49,,,results/test_gemini-3-flash-preview_scores.csv,preregistered
+gemini-3-flash-preview total partial (all fields),65,,,results/test_gemini-3-flash-preview_scores.csv,preregistered
+"gemini-3-flash-preview pooled unsupported rate (AI filled / curated empty, all fields; unaudited upper bound)",0.1525,9,59,results/test_gemini-3-flash-preview_scores.csv,post_hoc
+"gemini-3-flash-preview wrong + unsupported share of AI-filled values (AI-filled = ai_value non-empty, incl. 's.n.')",0.0624,33,529,results/test_gemini-3-flash-preview_scores.csv,post_hoc
+gemini-3-flash-preview records with every field null,1,,,results/test_gemini-3-flash-preview_scores.csv,preregistered
+gemini-3-flash-preview test calls (attempts),70,,,"results/raw/*.json (test, prompts/v2.txt)",preregistered
+gemini-3-flash-preview median latency s,6.265,,,"results/raw/*.json (test, prompts/v2.txt)",preregistered
+gemini-3-flash-preview mean prompt tokens,1603.0,112210,70,"results/raw/*.json (test, prompts/v2.txt)",preregistered
+gemini-3-flash-preview mean output tokens,109.8571,7690,70,"results/raw/*.json (test, prompts/v2.txt)",preregistered
+gemini-3-flash-preview mean thinking tokens,3945.6857,276198,70,"results/raw/*.json (test, prompts/v2.txt)",preregistered
+"gemini-3-flash-preview recordedBy partial rows that match after reordering 'Surname, Given'",0.5,7,14,results/test_gemini-3-flash-preview_scores.csv,post_hoc
+gemini-3-flash-preview habitat omitted rows whose curated habitat is inside the AI locality,0.7353,25,34,results/test_gemini-3-flash-preview_scores.csv,post_hoc
+gemini-3.1-pro-preview total wrong (all fields),21,,,results/test_gemini-3.1-pro-preview_scores.csv,preregistered
+gemini-3.1-pro-preview total unsupported (all fields),8,,,results/test_gemini-3.1-pro-preview_scores.csv,preregistered
+gemini-3.1-pro-preview total omitted (all fields),53,,,results/test_gemini-3.1-pro-preview_scores.csv,preregistered
+gemini-3.1-pro-preview total partial (all fields),61,,,results/test_gemini-3.1-pro-preview_scores.csv,preregistered
+"gemini-3.1-pro-preview pooled unsupported rate (AI filled / curated empty, all fields; unaudited upper bound)",0.1356,8,59,results/test_gemini-3.1-pro-preview_scores.csv,post_hoc
+"gemini-3.1-pro-preview wrong + unsupported share of AI-filled values (AI-filled = ai_value non-empty, incl. 's.n.')",0.0553,29,524,results/test_gemini-3.1-pro-preview_scores.csv,post_hoc
+gemini-3.1-pro-preview records with every field null,1,,,results/test_gemini-3.1-pro-preview_scores.csv,preregistered
+gemini-3.1-pro-preview test calls (attempts),70,,,"results/raw/*.json (test, prompts/v2.txt)",preregistered
+gemini-3.1-pro-preview median latency s,4.175,,,"results/raw/*.json (test, prompts/v2.txt)",preregistered
+gemini-3.1-pro-preview mean prompt tokens,1603.0,112210,70,"results/raw/*.json (test, prompts/v2.txt)",preregistered
+gemini-3.1-pro-preview mean output tokens,119.2286,8346,70,"results/raw/*.json (test, prompts/v2.txt)",preregistered
+gemini-3.1-pro-preview mean thinking tokens,32.4714,2273,70,"results/raw/*.json (test, prompts/v2.txt)",preregistered
+"gemini-3.1-pro-preview recordedBy partial rows that match after reordering 'Surname, Given'",0.4286,6,14,results/test_gemini-3.1-pro-preview_scores.csv,post_hoc
+gemini-3.1-pro-preview habitat omitted rows whose curated habitat is inside the AI locality,0.7273,24,33,results/test_gemini-3.1-pro-preview_scores.csv,post_hoc
+"gate4 GBIF: AI accepted key equals curated, where AI name not omitted",0.913,63,69,results/reconcile_gbif_test_gemini-3.1-pro-preview.csv,preregistered
+gate4 GBIF control: curated name reconciles to its own accepted key,1.0,70,70,results/reconcile_gbif_test_gemini-3.1-pro-preview.csv,preregistered
+H4: strong wrong scientificName that reconcile to the curated accepted key,0.875,7,8,results/reconcile_gbif_test_gemini-3.1-pro-preview.csv,preregistered
+H4: strong partial scientificName that reconcile to the curated accepted key,0.6,6,10,results/reconcile_gbif_test_gemini-3.1-pro-preview.csv,post_hoc
+strong string-match scientificName that also reconcile,0.9804,50,51,results/reconcile_gbif_test_gemini-3.1-pro-preview.csv,post_hoc
+gate4 TGN: distinct curated county strings resolving to one Virginia county,0.8611,31,36,results/reconcile_tgn_test_gemini-3.1-pro-preview.csv,preregistered
+gate4 LC NAF: distinct curated collector strings with a plausible hit (any one person in the string),0.4583,22,48,results/reconcile_lcnaf_test_gemini-3.1-pro-preview.csv,preregistered
+LC NAF: distinct curated collector strings where every person has a plausible hit,0.3333,16,48,results/reconcile_lcnaf_test_gemini-3.1-pro-preview.csv,post_hoc
+LC NAF: distinct curated normalized persons with a plausible hit,0.3065,19,62,results/reconcile_lcnaf_test_gemini-3.1-pro-preview.csv,post_hoc
+gate4 TGN: distinct ai county strings resolving to one Virginia county,0.8649,32,37,results/reconcile_tgn_test_gemini-3.1-pro-preview.csv,preregistered
+gate4 LC NAF: distinct ai collector strings with a plausible hit (any one person in the string),0.5227,23,44,results/reconcile_lcnaf_test_gemini-3.1-pro-preview.csv,preregistered
+LC NAF: distinct ai collector strings where every person has a plausible hit,0.3636,16,44,results/reconcile_lcnaf_test_gemini-3.1-pro-preview.csv,post_hoc
+LC NAF: distinct ai normalized persons with a plausible hit,0.3725,19,51,results/reconcile_lcnaf_test_gemini-3.1-pro-preview.csv,post_hoc

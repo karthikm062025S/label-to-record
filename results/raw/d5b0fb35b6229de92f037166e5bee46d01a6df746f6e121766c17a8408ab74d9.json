@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893454283",
+ "split": "test",
+ "image_file": "data/images/3893454283.jpg",
+ "image_sha256": "325a20418b4e0389b46dcc4f725d63914a5ee6efb4bdd14b90ee3975d77b682f",
+ "image_bytes": 7161500,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 7.26,
+ "created": "2026-11-06T21:51:05",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Quercus laurifolia Michx.\", \"recordedBy\": \"R. Kral\", \"recordNumber\": \"12324\", \"eventDate\": \"1961-05-09\", \"country\": \"USA\", \"stateProvince\": \"VIRGINIA\", \"county\": \"Sussex\", \"locality\": \"Waverly; small, tight-barked tree of pond margin.\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 94,
+   "totalTokenCount": 2902,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 1205,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "EJLuatT6GMCo5NoP47vN4A8"
+ },
+ "parsed": {
+  "scientificName": "Quercus laurifolia Michx.",
+  "recordedBy": "R. Kral",
+  "recordNumber": "12324",
+  "eventDate": "1961-05-09",
+  "country": "USA",
+  "stateProvince": "VIRGINIA",
+  "county": "Sussex",
+  "locality": "Waverly; small, tight-barked tree of pond margin.",
+  "habitat": null
+ },
+ "error": null
+}

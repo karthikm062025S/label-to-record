@@ -1,0 +1,62 @@
+{
+ "model": "gemini-3.1-pro-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893483883",
+ "split": "dev",
+ "image_file": "data/images_small/3893483883.jpg",
+ "image_sha256": "8f6ab4bc2445e509daba579b5c07611f145bb958556d8573473b174366f6950c",
+ "image_bytes": 609037,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 2.6,
+ "created": "2026-11-06T21:19:47",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Lycopodium flabelliforme (Fern.) Blanch.\",\n  \"recordedBy\": \"Stan Lusby\",\n  \"recordNumber\": \"12748\",\n  \"eventDate\": \"4/8/43\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Henrico\",\n  \"locality\": \"Patterson Ave. extended. Richmond\",\n  \"habitat\": \"Swamp near\"\n}",
+       "thoughtSignature": "EnIKcAFpFH0TZQPES9u1jWQW1emAnImjYNmKv4JnylC/UuTlhvgcGeXMa/fMcuNxj7DKRfIuROgNFZRTLS/wwBPaNvdohcCJCW2jyOK59mgyuXwSlazKgXrQTwuMjaXoKB3OM87J8FyQIYqFy0yLbb5rXyY="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 109,
+   "totalTokenCount": 1243,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-pro-preview",
+  "responseId": "v4ruatvIFbvcytMPkfzqqAE"
+ },
+ "parsed": {
+  "scientificName": "Lycopodium flabelliforme (Fern.) Blanch.",
+  "recordedBy": "Stan Lusby",
+  "recordNumber": "12748",
+  "eventDate": "4/8/43",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Henrico",
+  "locality": "Patterson Ave. extended. Richmond",
+  "habitat": "Swamp near"
+ },
+ "error": null
+}

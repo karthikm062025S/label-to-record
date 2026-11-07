@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893439452",
+ "split": "dev",
+ "image_file": "data/images_small/3893439452.jpg",
+ "image_sha256": "afd43bfd1ba56cdb403af9846ab04a41bacb80202c949a560f13aa15167038fa",
+ "image_bytes": 732464,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 4.91,
+ "created": "2026-11-06T21:22:50",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Streptopus roseus Michx.\", \"recordedBy\": \"A. B. Massey\", \"recordNumber\": null, \"eventDate\": \"5/17/41\", \"country\": null, \"stateProvince\": \"Virginia\", \"county\": \"Grayson\", \"locality\": null, \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 72,
+   "totalTokenCount": 1892,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    }
+   ],
+   "thoughtsTokenCount": 686,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "c4vuap2AJu_ZytMP-MTbuAE"
+ },
+ "parsed": {
+  "scientificName": "Streptopus roseus Michx.",
+  "recordedBy": "A. B. Massey",
+  "recordNumber": null,
+  "eventDate": "5/17/41",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Grayson",
+  "locality": null,
+  "habitat": null
+ },
+ "error": null
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893434200",
+ "split": "dev",
+ "image_file": "data/images/3893434200.jpg",
+ "image_sha256": "b04e9b99356d64f411d5b14871b73ebd276c811c1d0b4d51b99d8c072152d997",
+ "image_bytes": 6074546,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 8.18,
+ "created": "2026-11-06T21:26:44",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Smilacina racemosa\", \"recordedBy\": \"Karen Surber\", \"recordNumber\": \"2056\", \"eventDate\": \"1973-05-02\", \"country\": null, \"stateProvince\": \"Virginia\", \"county\": \"Smyth\", \"locality\": \"Archery range in Allison Gap\", \"habitat\": \"rich woods\"}",
+       "thoughtSignature": "Eu0eCuoeAWkUfRPL0VzSLqCObCM9q4P3Yt4ZVsK0D6/XCX8IowJ0xGgO0oK4JPwQcabcXlhk4tS9gFEN+RQ+e5SlO9nJtKAR8J6+ar1pRRxzwa+vISRpPf29dcUv0cGNtD5W9sLC7AaF3EcgQ8gQ5t3Zq2ctgp4ZLQN6apXUXltjxa+9G8Bp4iPKDi4Q9azt5cgZSLJA6ZWuimqMiT/LA9YUGv8iI6f9Yppw/PZHG9vZaYMaWR2QaY2WDAOmdseWKPkO47ogFotQ+WyWTmKpBjF85ARoSLd2+IUKc+2e9SEjFldYaC/PbgpAhz3qHCKCJ3s3ipby9MXD1TMt/sE/8KwJXo/iHzRVbYezzXTD0jIRfqdZbG7ahOX3E2oZKyqpY14xjvftGldgCJ6Pew0P8PAo3yDpmXZ3k8rkj+JGDjvKXDp7RtP9VNLOFbWQPHzR6MoNqmFHHfqATIE6MycAGviV2D+C+UpSQ4rg3J7dgsEfu3FNY6vT+XXOIJPILjzHQicRqmBBUBHuCIXPtIFFWnVSSNwEvt/hSxp/NSiWkV/BpThMRgFhL0d8ZoMpijYPi6viXX9Mmt02A0Azmf58/M59MshuZej7yIiI4l4F3mh+K7LkyaQZXYMVlTDp+5pfKo9PCWavHdGTrSNC7QgsbkmmtJQlzCjlMginZcdawYW4jkXtewT+CBllMiuP4Lp2yKB2O5NvY2PYJHdFOlKY2pr08bm6+BmUnGYGL6IbMfpBdb7gXhmUZnqB0CLnq/qejs/XBKn7S6Xpn7oVcFp/eXiohpiu9T2fYj0BnJ0STWFuRqeRoW9lglQsUwm6rCLuH1mnhYsMl3vnMJdzZxS+cqfEhdVo81xHqHrNkvGhqnjk2vKWKJyA9GqvNEZh0m2D8F70YZzxpxZAenlzbfaa3QoBCA17/dfVdeJUqqpa2ZoRr/xvYlwYOY3Y5TZD4/g7Qr78isPDmL7Yc2VOFFHBi5Exn+vDNW/EeQFeZH0Rtq0e2Zqw+u0JEJ1H+6zrkUSykbmRGqN1TEW7crDNAgRPWwC08n588eeGhN0Gqaw930MgPi4LArFzuAadEXm7qNZ6mXSGdWFo1//W2H8dIAqwwrUwcdzGTeLPzuN8W/u/nzOhJYbtqqEpRNokyUOuw8TXMPbJ3n8H2ILNv1m/vGiZz0McLuguYwEm3xBCZczi4gM20RdnAQoXy/BJNONDtRqF5uFrJzS3oOSJ/dbpI3nlHz6UemPtW2BKfq7JEFNfwKNsIpzOq59tPMJ8cicd5zAqnrmbFUj4JgLP6i6PdGxjorhT0gSgW7PY7gNbPnHkipfzI8dN1YSPV99HnbsrybP0DeDtbDUr256YL4kSCCACJ5y6AQ8Zstz2PEpxrIGNxO7DSml0s0y2bE9/3O/NU6ZFcFKSWWY90PMkbr30cNKEqFvnEyGmtAjub/cjUOSzWZML1PuztxwhO78kcVxZ3OXbZoJnztYM+d7GSF4d+WUGGBUwYpYnZI9vnWxgD7dPM794WQFMjaME1bqYsBNwgJQoBfHGjKh55SB5cBMWO5F4m9FcPEaYzVXzvkJoShvfhPckr2sNRVt+SzhXKLbYZFBTBRiea7swrx1YPq5u8zH1uesuhlTA7a7aqSGcboroyTwQl1+zzuKqzGO468fhiacLtKQb9ZDRhTxTmDIHcjvJZrE2a7a/5VPIYFv6l56RkbycUV+FE8zS8iy6YnmF8jq+BichqdEZI2XtNwa7WqhRPtY2O4emE8nYONU4D3q/mgHrgH2gZ9AFU6d1xO/s+c2Oeutc7PX/U6rOFDnfbkmB5USIt/BfjOvVN5US9kt5gArumJgiEPECg0QXcdoxkNfR3ysGe9gccNyFYci/yrMeDJnkYExHW94ievPntRMfQiHhVTnn2MipbUt1Qf8WQqy9IOpa6p1D7cl4pXr89Cag7BjEr+Ru62GqzCAMeRm4L+agdnJYNIlJrcn+/2ZgOCSlJgF/EQ9DEeARs3vbTK2uOVOlLfFm89vQ4DSzvxi0bDgsCosqbVgm79W3hjbW/cq4MrBxyacFLTuOfMHukydoGcZO1T1dM0BkomT12mgAkEd9FKR3ZeurGLbzdXIFt2sAexOCpR7adtf8qWFj0TMgwcR9nWBTATaDddQrGHZcx5Wx8dvkvvbyfVG+HB14xK51StRf2wHmPg8WKX6beSSnLB8w05qwxMJ7e5DJBG+g1Ni8Ubo9IQllcirYWzZFrQg0WcdUTZTvIFDAb1oFRYw+r4pPe46Xrc7F8QnE8NccsNdoRxTi14ZonEYYoMfqwbAeD4jaS4EgdzLd0IhOJAfmyQvOD+ILqpupcEgNi2XKTNQSkKONCWG1H5brxR3cmH0d+sOt5l3YJ9x/ndJhb/xi8PAuPLRcjO/zG7WuYORL5owVHB66Qn7iYOUplrhpjq2NnHFQrunpBvc5zokbMWJe9n4PTYXnxUH1FbVbfKSjJgzmwl2VqhlpcnAsSwMQDnC4SMZp0W5MXOq4BWt7GML4V+fnNMGs8zOL7T452BTdf3h1JGi7P1tvMFcrLb/9LAESVsDqcGR9YCpHwj5BzO57RqxQYylyaNNPLHS301WmaxWTmy9uOHL7AfR1OehKdyzXm5r1rJ0/qxSWF3pucMx6doNAek46wTonhyn+kKyqAbAtZtvdgTwMVSk9Azxe1zld7M0hPMjHtdEdMvj8I1gR4S9QD2+tIcG571vK21H3o7a/TqhhWJ4xHqqQcpb/DjlvS1DjQtR3zWOQEJ//4Ucb67aFb+8HNtCtkC1i7DtW0DIbkGft2fY1KzXTJyK9O74clYfRMwC1lAVMHHDsMgaKGKOpCuMLwjnTfxhqdGOjEDJ+XvKOEipCsNBHyWXI5ftUVnJk9ewy1BF6B6MmliHyEQJDZEMvxlVKQ6jPh/5Wn8Q3Snu3OuGYFQuXp/jZ4CmUkee4avI9/DUHxQmjHIlq0IQ35mlXd+GbEWDq/9RhwjNIxoDNsKOOBskOIKzV8a+N52/h8ix4aJ+zAHtWrZmuWDvlGSrJsPXFEsEJ5rj1j9Z/5qfILUpNJ5rGFZyOMi/F1viDp61pGBgjIHJgPL2ZT2qfrAcEBEnWpUuWH6GWpFJ6CQaRmTmHvkDq5b4pCMA0fneBfjTBijfkDLTSRDgN6EwQYo9MnjjFgIPeL5Q7zgXuHZnImL546ju6DdSsxR+/EnXuceoUmg85BilhpfQhdurltTtJI8Q/aJeDsMR9mBuJxsxNtLdlf06cnzGdrUkXxfWNWfm49s9U14mem3U+thyjAob2WkRLVK2JeBLcI5JXwDrHnE8buzACwxe/DC4ZrzdeFSoQ3kY6hQSHdZw/Qet4TaXSqfQR6couEvMRYa5lCZRvnR4hLN0MW+Bsj9Lnqn/UF/J6G5QBxEgEoZGqJMSMvR5RNaQCYOUUERdIB5Wp95IjeGFhcXNaWQXCLl39imfi5nUlwQ0Q14YXjPu5m7OgzDmtsxvIsSoRz42LEccbyw8IGR4yRQtmlEUDYH/N2r2wKKaBPGhBsih7tmDbj/BuCAJRLnPSb4UNf+63t/VxJrL5u0WvQpK0fVEH1UCGWloX8afjc6kV8fF96PmgTd32Xlll37dCh/zUmnUOdHQT4T3h7rI4JBUk4dBHGOwJahUSY88FWig4Fgnyzhbzua97JhanqcfJNx+G3h0LXUxAxvnhGmroylnVzbxu6oX2iGPSDasarHXNP3cDpRA04HlQqx6hs88tlMP/MdkJpZdnYPAOcAgIk3PdFtX7opFAxyi/fIgUA5Cxc36hBtz9l1wQiNTwwqJjkFiu37eT0wwH3u+JXfxjZIE/L75+4kJtC7p2nplAQLneAks00fYZ46RrwKrvTfO5zoIOGT8N9kR93HMxFRsCiunFl8ubv1f0M8brNrxPFRLbugJUhbywKJfqFz6AGekPyGqe2KZuttFVwTCTqesRD4YMkRzjKqQL2o80qDKq05fsu8Db9n4YCvPriRTCPBmmE2qibm7hTOzciqH9NfKaah90vfT3esD99gQzRwZPnMQBrxgPWsdWiZhBZ8igzkRx3y5L8T7y9LiGaUt1aHu9zxQa2CuomkFWv5odyfYfxDDz3T8ZzZEqB+L+MIXE1FUlqdJcs+vy3vLGIHYpfbUsv49OCXS380sK2EYFX92Ga8/BYKgto3AyUCiJPOl/S6Z7IEtv+D3ZdG4kI9zWMLrUSBKDjzi5UHhUgY/4xXWP0/kI62aHuoRzBCd4GBQbCzSxLsVkYuHx/VZzphqFSG9iKK+at/MZp/ZPnGFB5KEFqpBx39J+2NAJrEV1SOmPqlEIYtsRp9DaQmmkmW1tt0FzRuVd7j94S9C2aJyL2eT+n4TnTuZj1Tg1fZX+IUt8AF45fsYmvL4VsGeNrvoNLMtz1vmr5eJm8af61x+bRp0VDB9V0iZtvcW4YE4PKXdU6d8nnrOxHVa9Fs2fbtrLs0sOxT/n09cFP182GErDByrSeKIIVTknSBsuoGzsNqRhJvokRqrQdEwvo5pS9e37y7NrEbJYYfqFM/3B1Pt716eipy7FoRlwVyaDffk23tVmi390YBuzLVnFq+2i3cuegACo4Tephzr8W3i9mj0m+JMYO8uRHcx/43GRXWm10Bu/mx0rsotwGljmMdvnDEA5f6o+YLjx38xkn4a7sxeCfsobB0NSUDIkv65SPvVEwWi7eNbhGQNQzQLoPZwFgw/R2nG7aJFTsiT+LiGygK97mTRKgbifBG+VBy7dx8FZ7oN7nZ2Kb6mdnAT/KUZVmbmS5rx36p5Z9vQWWMTx14YLI48/XfsWNzOBspGutORt2UAfZ6JVMWxX37gtiZZynbD1ko9jcgaDlNKercatfcJHT1yiBjnnzz052zuFCW99tTg3iFL+Xbu9S8y/rlr+CLiDFfLrVn44aL46zmFb4kte0Iz0lqimMgeqXLEUareIcFEVHrVS5hETaOyS6Yx2SUVMmV6xc0D3IGNYySsTj9XU0/YEgIJNsvi2O6QSYsGI5XzDeoi2lvFW6d15ATwPgGHkvb++sQoqLQWO9sjIeAiVe57mqHLWSXr6zlSTigouzEeqeRbhTfWeDghyYUaMyppWDcuvnROfUSpMtMyOawE41mZDa/tIQMsALNJJVGYLDm9NCcOHGDLzsNcH5zf1H2epA6/CI2QcuqbdqJpRn+HG7PeDR0AcX7PfNXZUBajo1NDU32Nz2FM3QljWbvvegtVcR9b4hE9Hvsgy7MsOqAGgmsIeW1Y/4R0yQTYrGA=="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 85,
+   "totalTokenCount": 2453,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    }
+   ],
+   "thoughtsTokenCount": 1234,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "W4zuaoSFA-2KytMPjOPOiQ0"
+ },
+ "parsed": {
+  "scientificName": "Smilacina racemosa",
+  "recordedBy": "Karen Surber",
+  "recordNumber": "2056",
+  "eventDate": "1973-05-02",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Smyth",
+  "locality": "Archery range in Allison Gap",
+  "habitat": "rich woods"
+ },
+ "error": null
+}

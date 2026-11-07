@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893493557",
+ "split": "dev",
+ "image_file": "data/images/3893493557.jpg",
+ "image_sha256": "e5dc8e2a2d5f67c0828834e6d5fca6bbf3c66db227704841457c5d8a99f3f024",
+ "image_bytes": 5846549,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 12.23,
+ "created": "2026-11-06T21:24:28",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Arisaema triphyllum (L.) Schott\",\n  \"recordedBy\": \"F. W. Hunnewell\",\n  \"recordNumber\": \"17,404\",\n  \"eventDate\": \"May 13. 1941\",\n  \"country\": null,\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Frederick\",\n  \"locality\": \"low woods near Whitehall\",\n  \"habitat\": \"low woods\"\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 112,
+   "totalTokenCount": 3452,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    }
+   ],
+   "thoughtsTokenCount": 2206,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "zovuavntHtGEytMPm96kqAE"
+ },
+ "parsed": {
+  "scientificName": "Arisaema triphyllum (L.) Schott",
+  "recordedBy": "F. W. Hunnewell",
+  "recordNumber": "17,404",
+  "eventDate": "May 13. 1941",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Frederick",
+  "locality": "low woods near Whitehall",
+  "habitat": "low woods"
+ },
+ "error": null
+}

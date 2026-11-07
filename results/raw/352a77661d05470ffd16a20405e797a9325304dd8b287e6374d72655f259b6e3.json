@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893483883",
+ "split": "dev",
+ "image_file": "data/images_small/3893483883.jpg",
+ "image_sha256": "8f6ab4bc2445e509daba579b5c07611f145bb958556d8573473b174366f6950c",
+ "image_bytes": 609037,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 4.25,
+ "created": "2026-11-06T21:32:40",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Lycopodium flabelliforme (Fern.) Blanch.\",\n  \"recordedBy\": \"Stan. Lusby\",\n  \"recordNumber\": \"12748\",\n  \"eventDate\": \"1943-04-08\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Henrico\",\n  \"locality\": \"Swamp near Patterson Ave. extended. Richmond\",\n  \"habitat\": null\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 112,
+   "totalTokenCount": 2398,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 683,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "wo3uatvJGsyrytMPqr-QkQw"
+ },
+ "parsed": {
+  "scientificName": "Lycopodium flabelliforme (Fern.) Blanch.",
+  "recordedBy": "Stan. Lusby",
+  "recordNumber": "12748",
+  "eventDate": "1943-04-08",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Henrico",
+  "locality": "Swamp near Patterson Ave. extended. Richmond",
+  "habitat": null
+ },
+ "error": null
+}

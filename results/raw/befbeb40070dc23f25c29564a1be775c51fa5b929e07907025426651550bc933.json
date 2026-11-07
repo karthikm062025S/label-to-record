@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893450557",
+ "split": "dev",
+ "image_file": "data/images_small/3893450557.jpg",
+ "image_sha256": "d892dda7b61635a67d5efd311737a85c161c8fc6a345a0a55af1ffc4c130c24c",
+ "image_bytes": 818332,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 8.05,
+ "created": "2026-11-06T21:32:52",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Eriogonum Alleni S. Wats.\",\n  \"recordedBy\": \"LENA ARTZ\",\n  \"recordNumber\": \"201\",\n  \"eventDate\": \"1932-07-31\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Shenandoah\",\n  \"locality\": \"PLANTS OF MASSANUTTEN MOUNTAINS Woodstock Shales\",\n  \"habitat\": null\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 114,
+   "totalTokenCount": 3238,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 1521,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "yo3uat7wN43mwbUPgeaFqAM"
+ },
+ "parsed": {
+  "scientificName": "Eriogonum Alleni S. Wats.",
+  "recordedBy": "LENA ARTZ",
+  "recordNumber": "201",
+  "eventDate": "1932-07-31",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Shenandoah",
+  "locality": "PLANTS OF MASSANUTTEN MOUNTAINS Woodstock Shales",
+  "habitat": null
+ },
+ "error": null
+}

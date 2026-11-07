@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893468713",
+ "split": "test",
+ "image_file": "data/images/3893468713.jpg",
+ "image_sha256": "2faf273f04841977d3a87f926f73c30dfd8a486a7829f2c52459e06399dc75ef",
+ "image_bytes": 5329341,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 7.45,
+ "created": "2026-11-06T21:50:42",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Asplenium montanum\",\n  \"recordedBy\": \"DW Ogle\",\n  \"recordNumber\": \"6708\",\n  \"eventDate\": \"1987-09-03\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"VIRGINIA\",\n  \"county\": \"Wise\",\n  \"locality\": \"Flag Rock recreation area above Norton\",\n  \"habitat\": null\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 102,
+   "totalTokenCount": 2944,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 1239,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "-JHuasiDOdmco_UPr-iIsAI"
+ },
+ "parsed": {
+  "scientificName": "Asplenium montanum",
+  "recordedBy": "DW Ogle",
+  "recordNumber": "6708",
+  "eventDate": "1987-09-03",
+  "country": "USA",
+  "stateProvince": "VIRGINIA",
+  "county": "Wise",
+  "locality": "Flag Rock recreation area above Norton",
+  "habitat": null
+ },
+ "error": null
+}

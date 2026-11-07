@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893441883",
+ "split": "test",
+ "image_file": "data/images_small/3893441883.jpg",
+ "image_sha256": "5a91006aad033cf46b843a01b87bcf6fa9be2363c9c04fb23baa7986bb283ae2",
+ "image_bytes": 904955,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 7.13,
+ "created": "2026-11-06T21:41:24",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Antennaria Parlinii Fern. subsp. Parlinii\",\n  \"recordedBy\": \"J. B. Lewis\",\n  \"recordNumber\": \"152\",\n  \"eventDate\": \"1936-04-11\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Amelia\",\n  \"locality\": null,\n  \"habitat\": null\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 103,
+   "totalTokenCount": 2886,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 1180,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "y4_uauz1AtGEytMPm96kqAE"
+ },
+ "parsed": {
+  "scientificName": "Antennaria Parlinii Fern. subsp. Parlinii",
+  "recordedBy": "J. B. Lewis",
+  "recordNumber": "152",
+  "eventDate": "1936-04-11",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Amelia",
+  "locality": null,
+  "habitat": null
+ },
+ "error": null
+}

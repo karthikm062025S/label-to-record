@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893457219",
+ "split": "dev",
+ "image_file": "data/images/3893457219.jpg",
+ "image_sha256": "acea395be0f230a2ea6159fddb71d818bf7da4ba33518b12830b1b5210494dad",
+ "image_bytes": 5713151,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 7.89,
+ "created": "2026-11-06T21:24:36",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Vicia caroliniana Walt.\", \"recordedBy\": \"L. J. Uttal\", \"recordNumber\": \"11816\", \"eventDate\": \"21 April 1976\", \"country\": null, \"stateProvince\": \"Virginia\", \"county\": \"Floyd County\", \"locality\": \"rt. 668, 1 mile S. of 802.\", \"habitat\": \"Thin woods\"}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 98,
+   "totalTokenCount": 2557,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 1325,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "2ovuaqPhMKSnxdIPtMiP0Ak"
+ },
+ "parsed": {
+  "scientificName": "Vicia caroliniana Walt.",
+  "recordedBy": "L. J. Uttal",
+  "recordNumber": "11816",
+  "eventDate": "21 April 1976",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Floyd County",
+  "locality": "rt. 668, 1 mile S. of 802.",
+  "habitat": "Thin woods"
+ },
+ "error": null
+}

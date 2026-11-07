@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893434172",
+ "split": "test",
+ "image_file": "data/images/3893434172.jpg",
+ "image_sha256": "41fc5206504cc9e60ae391d62f75dd0fb67e509668f618fc562fde3ed41e2e40",
+ "image_bytes": 5614828,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.28,
+ "created": "2026-11-06T21:47:02",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Smilacina racemosa (L.) Desf.\", \"recordedBy\": \"J. L. Pendleton\", \"recordNumber\": \"55\", \"eventDate\": \"1937\", \"country\": \"USA\", \"stateProvince\": \"Virginia\", \"county\": \"Augusta\", \"locality\": \"Ramsey's Gap CCC Camp\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 84,
+   "totalTokenCount": 2416,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 729,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "H5Huao-kCq_UiLMPgP3bkA8"
+ },
+ "parsed": {
+  "scientificName": "Smilacina racemosa (L.) Desf.",
+  "recordedBy": "J. L. Pendleton",
+  "recordNumber": "55",
+  "eventDate": "1937",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Augusta",
+  "locality": "Ramsey's Gap CCC Camp",
+  "habitat": null
+ },
+ "error": null
+}

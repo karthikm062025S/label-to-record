@@ -1,0 +1,71 @@
+gbifID,model,curated_acceptedTaxonKey,curated_scientificName,ai_scientificName,string_category,ai_acceptedUsageKey,ai_matchType,ai_reconciled,curated_acceptedUsageKey,curated_matchType,curated_reconciled
+3893443281,gemini-3.1-pro-preview,5390070,Arnoglossum atriplicifolium (L.) H.Rob.,Cacalia atriplicifolia L.,wrong,5390070,EXACT,1,5390070,EXACT,1
+3893444907,gemini-3.1-pro-preview,3114064,Packera obovata (Muhl. ex Willd.) W.A.Weber & Á.Löve,Packera obovata (Muhl. ex Willd.) Weber & Löve,normalized,3114064,EXACT,1,3114064,EXACT,1
+3893438484,gemini-3.1-pro-preview,2928303,Ellisia nyctelea (L.) L.,Ellisia nyctelea L.,normalized,2928303,EXACT,1,2928303,EXACT,1
+3893441883,gemini-3.1-pro-preview,7222267,Antennaria parlinii subsp. parlinii,Antennaria Parlinii Fern. subsp. Parlinii,partial,8159339,EXACT,0,7222267,EXACT,1
+3893441330,gemini-3.1-pro-preview,3113928,Packera anonyma (Alph.Wood) W.A.Weber & Á.Löve,Packera anonyma (Alph. Wood) W.A. Weber & A. Löve,normalized,3113928,EXACT,1,3113928,EXACT,1
+3893441106,gemini-3.1-pro-preview,8054757,Euthamia caroliniana (L.) Greene ex Porter & Britton,Euthamia tenuifolia (Pursh) Nutt.,partial,8054757,EXACT,1,8054757,EXACT,1
+3893493321,gemini-3.1-pro-preview,5388438,Brickellia eupatorioides (L.) Shinners,Kuhnia eupatorioides L. var. eupatorioides,wrong,5388438,EXACT,1,5388438,EXACT,1
+3893438702,gemini-3.1-pro-preview,3151787,Symphyotrichum undulatum (L.) G.L.Nesom,"Aster undulatus, L",wrong,3151787,EXACT,1,3151787,EXACT,1
+3893491964,gemini-3.1-pro-preview,3127691,Cnicus benedictus L.,Cnicus benedictus L.,exact,3127691,EXACT,1,3127691,EXACT,1
+3893447776,gemini-3.1-pro-preview,2650714,"Asplenium platyneuron (L.) Britton, Sterns & Poggenb.",Asplenium platyneuron (L.) Oakes,normalized,2650714,EXACT,1,2650714,EXACT,1
+3893452002,gemini-3.1-pro-preview,2724040,Carex albursina E.Sheld.,Carex albursina Sheldon,normalized,2724040,EXACT,1,2724040,EXACT,1
+3893447816,gemini-3.1-pro-preview,2688302,Isoetes valida (Engelm.) Clute,Isoëtes valida (Engelm.) Clute,wrong,2688302,EXACT,1,2688302,EXACT,1
+3893434570,gemini-3.1-pro-preview,2769544,Maianthemum canadense Desf.,Maianthemum canadense Desf.,exact,2769544,EXACT,1,2769544,EXACT,1
+3893447510,gemini-3.1-pro-preview,2888548,Dicentra cucullaria (L.) Bernh.,Dicentra cucullaria (L.) Bernh.,exact,2888548,EXACT,1,2888548,EXACT,1
+3893439728,gemini-3.1-pro-preview,2850131,Galearis spectabilis (L.) Raf.,"Orchis spectabilis, L.",wrong,2850131,EXACT,1,2850131,EXACT,1
+3893471419,gemini-3.1-pro-preview,2867579,Lemna trisulca L.,Lemna trisulca L.,exact,2867579,EXACT,1,2867579,EXACT,1
+3893441632,gemini-3.1-pro-preview,5341242,Mertensia virginica (L.) Pers. ex Link,Mertensia virginica (L) D.C.,normalized,5341242,EXACT,1,5341242,EXACT,1
+3893442526,gemini-3.1-pro-preview,2879737,Quercus alba L.,Quercus alba,normalized,2879737,EXACT,1,2879737,EXACT,1
+3893438889,gemini-3.1-pro-preview,2726643,Carex annectens (E.P.Bicknell) E.P.Bicknell,Carex annectens (Bickn.) Bickn.,normalized,2726643,EXACT,1,2726643,EXACT,1
+3893446135,gemini-3.1-pro-preview,2927701,Phlox buckleyi Wherry,Phlox buckleyi Wherry,exact,2927701,EXACT,1,2927701,EXACT,1
+3893435617,gemini-3.1-pro-preview,5414933,Chelone cuthbertii Small,Chelone cuthbertii Small.,normalized,5414933,EXACT,1,5414933,EXACT,1
+3893458225,gemini-3.1-pro-preview,3026842,Spiraea latifolia (Aiton) Borkh.,Spiraea alba var. latifolia (Ait.) Ahles,partial,3026842,EXACT,1,3026842,EXACT,1
+3893483881,gemini-3.1-pro-preview,2688379,Diphasiastrum digitatum (Dill. ex A.Braun) Holub,L. flabelliforme (Fern.) Blanch.,wrong,,NONE,0,2688379,EXACT,1
+3893481729,gemini-3.1-pro-preview,2805477,Spiranthes tuberosa Raf.,Spiranthes tuberosa Raf.,exact,2805477,EXACT,1,2805477,EXACT,1
+3893491947,gemini-3.1-pro-preview,2753278,Lilium superbum L.,Lilium superbum L.,exact,2753278,EXACT,1,2753278,EXACT,1
+3893453442,gemini-3.1-pro-preview,2752903,Erythronium umbilicatum C.R.Parks & Hardin,Erythronium umbilicatum Parks & Hardin,normalized,2752903,EXACT,1,2752903,EXACT,1
+3893474734,gemini-3.1-pro-preview,5356511,Lathyrus venosus Muhl. ex Willd.,Lathyrus venosus Muhl. var. venosus,partial,7275101,EXACT,0,5356511,EXACT,1
+3893434172,gemini-3.1-pro-preview,2769457,Smilacina racemosa (L.) Desf.,Smilacina racemosa (L.) Desf.,exact,2769457,EXACT,1,2769457,EXACT,1
+3893463950,gemini-3.1-pro-preview,2650432,Lygodium palmatum (Bernh.) Sw.,Lygodium palmatum (Bernh.) Sw.,exact,2650432,EXACT,1,2650432,EXACT,1
+3893452387,gemini-3.1-pro-preview,5331105,Hexastylis virginica (L.) Small,Hexastylis virginica (L.) Small,exact,5331105,EXACT,1,5331105,EXACT,1
+3893448535,gemini-3.1-pro-preview,2879737,Quercus alba L.,Quercus alba L.,exact,2879737,EXACT,1,2879737,EXACT,1
+3893446433,gemini-3.1-pro-preview,3153837,Magnolia acuminata (L.) L.,Magnolia acuminata L.,normalized,3153837,EXACT,1,3153837,EXACT,1
+3893493816,gemini-3.1-pro-preview,5334521,Floerkea proserpinacoides Willd.,Floerkea proserpinacoides Willd.,exact,5334521,EXACT,1,5334521,EXACT,1
+3893473689,gemini-3.1-pro-preview,3153619,Magnolia fraseri Walter,Magnolia fraseri Walt.,normalized,3153619,EXACT,1,3153619,EXACT,1
+3893468713,gemini-3.1-pro-preview,2650651,Asplenium montanum Willd.,Asplenium montanum,normalized,2650651,EXACT,1,2650651,EXACT,1
+3893450366,gemini-3.1-pro-preview,2880539,Quercus rubra L.,Quercus rubra L.,exact,2880539,EXACT,1,2880539,EXACT,1
+3893447680,gemini-3.1-pro-preview,2650714,"Asplenium platyneuron (L.) Britton, Sterns & Poggenb.",Asplenium platyneuron (L) Oakes,normalized,2650714,EXACT,1,2650714,EXACT,1
+3893454283,gemini-3.1-pro-preview,2877708,Quercus laurifolia Michx.,Quercus laurifolia Michx.,exact,2877708,EXACT,1,2877708,EXACT,1
+3893452809,gemini-3.1-pro-preview,2878190,Quercus ilicifolia Wangenh.,Quercus ilicifolia Wang.,normalized,2878190,EXACT,1,2878190,EXACT,1
+3893455196,gemini-3.1-pro-preview,5341425,Synandra hispidula (Michx.) Baill.,Synandra hispidula (Michaux) Baillon,normalized,5341425,EXACT,1,5341425,EXACT,1
+3893493940,gemini-3.1-pro-preview,2955600,Lespedeza Michx.,Lespedeza intermedia (Wats.) Britt.,partial,2955613,EXACT,0,2955600,EXACT,1
+3893434361,gemini-3.1-pro-preview,2769457,Smilacina racemosa (L.) Desf.,Smilacina racemosa (L.) Desf,normalized,2769457,EXACT,1,2769457,EXACT,1
+3893451834,gemini-3.1-pro-preview,2955750,Lespedeza hirta (L.) Hornem.,Lespedeza hirta (L.) Hornem. var. hirta,partial,2955750,EXACT,1,2955750,EXACT,1
+3893454726,gemini-3.1-pro-preview,2798080,Platanthera ciliaris (L.) Lindl.,Platanthera ciliaris (L.) Lindl.,exact,2798080,EXACT,1,2798080,EXACT,1
+3893434954,gemini-3.1-pro-preview,2772020,Muscari neglectum Guss. ex Ten.,"Muscari racemosa, (L) Mill",partial,2772013,FUZZY,0,2772020,EXACT,1
+3893481310,gemini-3.1-pro-preview,2753428,Lilium michauxii Poir.,Lilium Michauxii Poir.,normalized,,NONE,0,2753428,EXACT,1
+3893461253,gemini-3.1-pro-preview,2688326,Isoetes engelmannii A.Braun,Isoëtes engelmannii A. Br.,wrong,2688326,EXACT,1,2688326,EXACT,1
+3893487798,gemini-3.1-pro-preview,9432066,Ammophila breviligulata Fernald,Ammophila breviligulata Fernald,exact,9432066,EXACT,1,9432066,EXACT,1
+3893485167,gemini-3.1-pro-preview,9063248,Galium verum L.,GALIUM VERUM L.,normalized,9063248,EXACT,1,9063248,EXACT,1
+3893481745,gemini-3.1-pro-preview,2805347,Spiranthes vernalis Engelm. & A.Gray,Spiranthes vernalis Engelm. & Gray,normalized,2805347,EXACT,1,2805347,EXACT,1
+5131791191,gemini-3.1-pro-preview,4277004,Frullania riparia Hampe ex Lehm.,,omitted,,,0,4277004,EXACT,1
+3893448074,gemini-3.1-pro-preview,2688302,Isoetes valida (Engelm.) Clute,Isoetes valida Clute,normalized,2688302,EXACT,1,2688302,EXACT,1
+3893443214,gemini-3.1-pro-preview,2955681,Lespedeza procumbens Michx.,Lespedeza procumbens Michx.,exact,2955681,EXACT,1,2955681,EXACT,1
+3893438084,gemini-3.1-pro-preview,2717130,Eleocharis wolfii (A.Gray) A.Gray ex Britton,Eleocharis wolfii (Gray) Gray ex Britt.,normalized,2717130,EXACT,1,2717130,EXACT,1
+3893434226,gemini-3.1-pro-preview,2769457,Smilacina racemosa (L.) Desf.,Smilacina racemosa,normalized,2769457,EXACT,1,2769457,EXACT,1
+3893491799,gemini-3.1-pro-preview,7325335,Leersia virginica Willd.,Leersia virginica var. ovata (Poir.) Fern.,partial,7325335,EXACT,1,7325335,EXACT,1
+3893452254,gemini-3.1-pro-preview,5331105,Hexastylis virginica (L.) Small,Hexastylis virginica (L.) Small,exact,5331105,EXACT,1,5331105,EXACT,1
+3893469912,gemini-3.1-pro-preview,3170660,Castilleja coccinea (L.) Spreng.,Castilleja coccinea (L.) Spreng.,exact,3170660,EXACT,1,3170660,EXACT,1
+3893467632,gemini-3.1-pro-preview,3153639,Magnolia virginiana L.,Magnolia virginiana L.,exact,3153639,EXACT,1,3153639,EXACT,1
+3893438495,gemini-3.1-pro-preview,7065345,Kalopanax pictus var. maximowiczii (Van Houtte) H.Hara ex H.L.Li,Kalopanax pictus (Thunb.) Nakai var. maximowicz (van Houtte) Hara,partial,7065345,FUZZY,1,7065345,EXACT,1
+3893470145,gemini-3.1-pro-preview,2725238,Carex appalachica J.M.Webber & P.W.Ball,Carex appalachia J.M. Webber and P.W. Ball,partial,2725238,FUZZY,1,2725238,EXACT,1
+3893446358,gemini-3.1-pro-preview,2873947,Asarum canadense L.,Asarum canadense L.,exact,2873947,EXACT,1,2873947,EXACT,1
+3893452227,gemini-3.1-pro-preview,5331105,Hexastylis virginica (L.) Small,Hexastylis virginica (L.) Small,exact,5331105,EXACT,1,5331105,EXACT,1
+3893439440,gemini-3.1-pro-preview,2768885,Asparagus officinalis L.,Asparagus officinalis L.,exact,2768885,EXACT,1,2768885,EXACT,1
+3893448397,gemini-3.1-pro-preview,2650621,Asplenium pinnatifidum Nutt.,Asplenium pinnatifidum,normalized,2650621,EXACT,1,2650621,EXACT,1
+3893483692,gemini-3.1-pro-preview,2688379,Diphasiastrum digitatum (Dill. ex A.Braun) Holub,Lycopodium digitatum A. Braun,wrong,2688379,EXACT,1,2688379,EXACT,1
+3893467594,gemini-3.1-pro-preview,3153639,Magnolia virginiana L.,Magnolia virginiana L.,exact,3153639,EXACT,1,3153639,EXACT,1
+3893447105,gemini-3.1-pro-preview,2770039,Polygonatum biflorum (Walter) Elliott,Polygonatum biflorum,normalized,2770039,EXACT,1,2770039,EXACT,1
+3893471455,gemini-3.1-pro-preview,2867589,Lemna minor L.,Lemna minor L.,exact,2867589,EXACT,1,2867589,EXACT,1
+3893444632,gemini-3.1-pro-preview,5334490,Polygonella articulata (L.) Meisn.,Polygonella articulata (L.) Meisser,normalized,5334490,EXACT,1,5334490,EXACT,1

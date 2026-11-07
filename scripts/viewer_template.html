@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Label to record viewer</title>
+<style>
+/*EMBEDDED_FONTS*/
+:root {
+  color-scheme: light;
+  --bg: #f7f7f5; --raised: #ffffff; --text: #222f30; --text-dim: #62706f;
+  --hairline: rgb(34 47 48 / 0.12); --sage: #2d5a43; --danger: #a8391f; --accent: #e69a6f; --focus: #2d5a43;
+  --t-match: rgb(45 90 67 / 0.12); --t-partial: rgb(230 154 111 / 0.24); --t-wrong: rgb(168 57 31 / 0.13);
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'Satoshi', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-label: 'Departure Mono', ui-monospace, monospace;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
+  --gutter: 24px; --radius-card: 16px; --radius-pill: 999px;
+}
+@media (min-width: 640px) { :root { --gutter: 48px; } }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #1a2325; --raised: #232e30; --text: #e8e4df; --text-dim: rgb(232 228 223 / 0.66);
+    --hairline: rgb(232 228 223 / 0.12); --sage: #8fbaa5; --danger: #e89a82; --focus: #e69a6f;
+    --t-match: rgb(143 186 165 / 0.16); --t-partial: rgb(230 154 111 / 0.18); --t-wrong: rgb(232 154 130 / 0.16);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1a2325; --raised: #232e30; --text: #e8e4df; --text-dim: rgb(232 228 223 / 0.66);
+  --hairline: rgb(232 228 223 / 0.12); --sage: #8fbaa5; --danger: #e89a82; --focus: #e69a6f;
+  --t-match: rgb(143 186 165 / 0.16); --t-partial: rgb(230 154 111 / 0.18); --t-wrong: rgb(232 154 130 / 0.16);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 15px/1.5 var(--font-sans); }
+a { color: var(--sage); text-underline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 var(--gutter); }
+header.top { padding-top: 48px; padding-bottom: 24px; display: grid; gap: 12px; }
+.label { font-family: var(--font-label); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dim); }
+h1 { font: 400 clamp(40px, 34.06px + 1.52vw, 56px)/1.05 var(--font-display); letter-spacing: -0.02em; margin: 0; }
+h2 { font: 400 22px/1.15 var(--font-display); margin: 0; }
+.lead { font-size: 16px; max-width: 70ch; margin: 0; color: var(--text-dim); }
+.toprow { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+button, select { font: inherit; color: var(--text); }
+.btn { min-height: 44px; padding: 0 16px; border-radius: var(--radius-pill); border: 1px solid var(--hairline);
+  background: var(--raised); cursor: pointer; white-space: nowrap; font-family: var(--font-label); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+.btn:hover { border-color: var(--text-dim); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.stats { display: flex; flex-wrap: wrap; gap: 24px; padding: 12px 0 0; }
+.stat .num { font: 500 22px/1 var(--font-sans); font-variant-numeric: tabular-nums; display: block; margin-bottom: 4px; }
+.controls { position: static; background: var(--bg); border-bottom: 1px solid var(--hairline); padding: 12px 0; }
+.controls .wrap { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+.ctl { display: grid; gap: 4px; }
+.ctl select { min-height: 44px; min-width: 150px; padding: 0 12px; border-radius: 12px; border: 1px solid var(--hairline); background: var(--raised); }
+.counts { display: flex; flex-wrap: wrap; gap: 8px 16px; width: 100%; font-variant-numeric: tabular-nums; font-size: 14px; }
+.counts span b { font-weight: 500; }
+.swatch { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: 0; border: 1px solid var(--hairline); }
+main { padding: 24px 0 72px; display: grid; gap: 24px; }
+.card { background: var(--raised); border: 1px solid var(--hairline); border-radius: var(--radius-card); padding: 16px;
+  display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 1024px) { .card { grid-template-columns: 260px 1fr; } .controls { position: sticky; top: 0; z-index: 2; } }
+.shot { display: block; position: relative; width: 100%; max-width: 260px; margin: 0 auto; border-radius: 12px; overflow: hidden;
+  background: var(--hairline); }
+.shot img { display: block; width: 100%; height: auto; opacity: 0; transition: opacity 200ms cubic-bezier(0.23, 1, 0.32, 1); }
+.shot.is-loaded img { opacity: 1; }
+.shot .state { position: absolute; inset: 0; display: grid; place-items: center; padding: 12px; text-align: center; }
+.shot.is-loaded .state { display: none; }
+.shot.is-error { aspect-ratio: auto !important; }
+.shot.is-error .state { position: static; }
+.meta { display: grid; gap: 4px; margin-top: 12px; font-size: 14px; color: var(--text-dim); text-align: center; }
+.mono { font-family: var(--font-mono); font-size: 13px; overflow-wrap: anywhere; }
+table { width: 100%; border-collapse: separate; border-spacing: 0 4px; table-layout: fixed; }
+th { text-align: left; font-weight: 400; padding: 4px 12px; }
+td { padding: 8px 12px; vertical-align: top; overflow-wrap: anywhere; border-radius: 8px; }
+td.fname { font-family: var(--font-mono); font-size: 13px; color: var(--text-dim); width: 150px; overflow-wrap: normal; }
+.v { display: block; }
+.tag { display: block; margin-top: 2px; font-family: var(--font-label); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+.c-exact, .c-normalized { background: var(--t-match); }
+.c-partial { background: var(--t-partial); }
+.c-wrong { background: var(--t-wrong); }
+.c-unsupported { box-shadow: inset 0 0 0 1.5px var(--danger); }
+.c-omitted { box-shadow: inset 0 0 0 1px var(--text-dim); }
+.null { font-style: italic; }
+.empty, .error { background: var(--raised); border: 1px solid var(--hairline); border-radius: var(--radius-card); padding: 24px; display: grid; gap: 12px; justify-items: start; }
+.error { border-color: var(--danger); }
+.legend { font-size: 14px; color: var(--text-dim); max-width: 80ch; margin: 0; }
+@media (max-width: 639px) {
+  table, tbody, tr, td { display: block; width: 100%; }
+  thead { display: none; }
+  tr { padding: 8px 0; border-top: 1px solid var(--hairline); }
+  td.fname { width: auto; padding: 4px 0; }
+  td[data-col]::before { content: attr(data-col); display: block; font-family: var(--font-label); font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dim); }
+  td[data-col] { margin-top: 4px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<header class="wrap top">
+  <div class="toprow">
+    <span class="label">Label to record · Massey Herbarium (VPI) · test split</span>
+    <button class="btn" id="theme" type="button" aria-pressed="false">Dark mode</button>
+  </div>
+  <h1>What the model wrote against what the catalog says</h1>
+  <p class="lead">70 test specimen sheets. Each model saw only the image and the frozen v2 prompt. Each AI value is compared with the curated GBIF record and scored with the pre-registered rules. A disagreement is not always an AI error: the record can carry information that is not on the label.</p>
+  <div class="stats" id="stats" aria-label="Overall match on test"></div>
+</header>
+<div class="controls" role="region" aria-label="Filters">
+  <div class="wrap">
+    <label class="ctl"><span class="label">Model</span><select id="f-model"></select></label>
+    <label class="ctl"><span class="label">Field</span><select id="f-field"></select></label>
+    <label class="ctl"><span class="label">Category</span><select id="f-cat"></select></label>
+    <button class="btn" id="clear" type="button">Clear filters</button>
+    <div class="counts" id="counts" aria-live="polite"></div>
+  </div>
+</div>
+<main class="wrap" id="list" aria-label="Specimens">
+  <p class="legend">Match covers exact and normalized. Unsupported means the AI filled a field the record leaves empty: an upper bound on hallucination until the image audit. Omitted means the AI returned null where the record has a value. Images load from the SERNEC portal (CC BY 4.0 or CC BY-NC 4.0; the licence is shown on each card) and may take a moment.</p>
+  <noscript><div class="error"><h2>This page needs JavaScript</h2><p>The data is embedded in the page, but the table is drawn by a script. The same data is in results/test_*_scores.csv.</p></div></noscript>
+</main>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function () {
+  var list = document.getElementById('list');
+  var D;
+  try { D = JSON.parse(document.getElementById('data').textContent); }
+  catch (e) {
+    list.insertAdjacentHTML('beforeend', '<div class="error" role="alert"><h2>The embedded data could not be read</h2><p>Rebuild the page with python scripts/build_viewer.py.</p></div>');
+    return;
+  }
+  var CATS = [['match', 'Match', ['exact', 'normalized']], ['partial', 'Partial', ['partial']], ['wrong', 'Wrong', ['wrong']],
+              ['unsupported', 'Unsupported', ['unsupported']], ['omitted', 'Omitted', ['omitted']], ['both_empty', 'Both empty', ['both_empty']]];
+  var SW = { match: 'var(--t-match)', partial: 'var(--t-partial)', wrong: 'var(--t-wrong)', unsupported: 'transparent', omitted: 'transparent', both_empty: 'transparent' };
+  var group = function (c) { for (var i = 0; i < CATS.length; i++) if (CATS[i][2].indexOf(c) >= 0) return CATS[i][0]; return c; };
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (ch) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]; }); };
+  var $ = function (id) { return document.getElementById(id); };
+
+  // Theme: light by default, dark from the OS or the toggle; remembered per browser if storage is allowed.
+  var root = document.documentElement, tbtn = $('theme');
+  var isDark = function () { return root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches; };
+  var syncTheme = function () { var d = isDark(); tbtn.textContent = d ? 'Light mode' : 'Dark mode'; tbtn.setAttribute('aria-pressed', String(d)); };
+  try { var saved = localStorage.getItem('theme'); if (saved) root.dataset.theme = saved; } catch (e) {}
+  tbtn.addEventListener('click', function () { root.dataset.theme = isDark() ? 'light' : 'dark'; try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {} syncTheme(); });
+  syncTheme();
+
+  // Headline stats from results/test_summary.csv (overall row per model).
+  $('stats').innerHTML = D.models.map(function (m) {
+    var r = D.summary.filter(function (s) { return s.model === m.id && s.field === 'overall'; })[0];
+    if (!r) return '';
+    var pct = function (v) { return Math.round(parseFloat(v) * 1000) / 10; };
+    return '<div class="stat"><span class="num">' + pct(r.match) + '%</span><span class="label">' + esc(m.label) + ' overall match, CI ' +
+      pct(r.match_ci_low) + ' to ' + pct(r.match_ci_high) + '</span></div>';
+  }).join('');
+
+  var opt = function (v, t) { return '<option value="' + esc(v) + '">' + esc(t) + '</option>'; };
+  $('f-model').innerHTML = opt('all', 'Both models') + D.models.map(function (m) { return opt(m.id, m.label + ' (' + m.id + ')'); }).join('');
+  $('f-field').innerHTML = opt('all', 'All fields') + D.fields.map(function (f) { return opt(f, f); }).join('');
+  $('f-cat').innerHTML = opt('all', 'All categories') + CATS.map(function (c) { return opt(c[0], c[1]); }).join('');
+
+  function cell(pair, label) {
+    var v = pair[0], c = pair[1];
+    return '<td class="c-' + c + '" data-col="' + esc(label) + '"><span class="v' + (v ? '' : ' null') + '">' + (v ? esc(v) : 'null') +
+      '</span><span class="tag">' + esc(c.replace('_', ' ')) + '</span></td>';
+  }
+
+  function render() {
+    var fm = $('f-model').value, ff = $('f-field').value, fc = $('f-cat').value;
+    var models = D.models.filter(function (m) { return fm === 'all' || m.id === fm; });
+    var counts = {}; CATS.forEach(function (c) { counts[c[0]] = 0; });
+    var shown = 0, html = '';
+    D.records.forEach(function (r) {
+      var rows = r.fields.filter(function (x) { return ff === 'all' || x.f === ff; });
+      rows.forEach(function (x) { models.forEach(function (m) { counts[group(x[m.id][1])]++; }); });
+      var hit = function (x) { return fc === 'all' || models.some(function (m) { return group(x[m.id][1]) === fc; }); };
+      if (!rows.some(hit)) return;
+      shown++;
+      var body = rows.filter(hit).map(function (x) {
+        return '<tr><td class="fname">' + esc(x.f) + '</td>' +
+          '<td data-col="Curated record"><span class="v' + (x.cur ? '' : ' null') + '">' + (x.cur ? esc(x.cur) : 'empty') + '</span></td>' +
+          models.map(function (m) { return cell(x[m.id], m.label + ' model'); }).join('') + '</tr>';
+      }).join('');
+      html += '<article class="card" aria-labelledby="h-' + r.id + '"><div>' +
+        '<a class="shot" href="' + esc(r.url) + '" target="_blank" rel="noopener" style="aspect-ratio:' + r.w + '/' + r.h + '">' +
+        '<img src="' + esc(r.url) + '" loading="lazy" decoding="async" width="' + r.w + '" height="' + r.h + '" alt="Specimen sheet ' + esc(r.cat) + '">' +
+        '<span class="state label" aria-hidden="true">Loading image</span></a>' +
+        '<div class="meta"><h2 id="h-' + r.id + '">' + esc(r.cat) + '</h2><span>' + esc(r.family) + ', ' + esc(r.year) + ', ' + esc(r.license) + '</span>' +
+        '<a class="mono" href="https://www.gbif.org/occurrence/' + r.id + '" target="_blank" rel="noopener">gbifID ' + r.id + '</a></div></div>' +
+        '<table><thead><tr><th class="label" style="width:150px">Field</th><th class="label">Curated record</th>' +
+        models.map(function (m) { return '<th class="label">' + esc(m.label) + ' model</th>'; }).join('') + '</tr></thead><tbody>' + body + '</tbody></table></article>';
+    });
+    var legend = list.querySelector('.legend').outerHTML;
+    list.innerHTML = legend + (shown ? html : '<div class="empty"><h2>No specimen matches these filters</h2><p>Try another category or field, or clear the filters.</p><button class="btn" type="button" data-clear>Clear filters</button></div>');
+    list.querySelectorAll('.shot img').forEach(function (img) {
+      var a = img.parentNode;
+      var ok = function () { a.classList.add('is-loaded'); };
+      if (img.complete && img.naturalWidth) ok();
+      img.addEventListener('load', ok);
+      img.addEventListener('error', function () {
+        a.classList.add('is-error');
+        a.querySelector('.state').outerHTML = '<span class="state">Image did not load. Open the source: <span class="mono">' + esc(img.src) + '</span></span>';
+        img.remove();
+      });
+    });
+    var cellsTotal = 0; CATS.forEach(function (c) { cellsTotal += counts[c[0]]; });
+    $('counts').innerHTML = '<span><b>' + shown + '</b> of ' + D.records.length + ' specimens shown</span>' + CATS.map(function (c) {
+      return '<span><i class="swatch" style="background:' + SW[c[0]] + (c[0] === 'unsupported' ? ';border-color:var(--danger)' : '') + '"></i>' + c[1] + ' <b>' + counts[c[0]] + '</b></span>';
+    }).join('') + '<span>of ' + cellsTotal + ' AI values</span>';
+    $('clear').disabled = fm === 'all' && ff === 'all' && fc === 'all';
+  }
+  ['f-model', 'f-field', 'f-cat'].forEach(function (id) { $(id).addEventListener('change', render); });
+  var clear = function () { $('f-model').value = 'all'; $('f-field').value = 'all'; $('f-cat').value = 'all'; render(); };
+  $('clear').addEventListener('click', clear);
+  list.addEventListener('click', function (e) { if (e.target.closest('[data-clear]')) clear(); });
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893454146",
+ "split": "dev",
+ "image_file": "data/images_small/3893454146.jpg",
+ "image_sha256": "04a76f7274b4337c3041d8d5559b989f04b4a88f9c73a138f84e859434044067",
+ "image_bytes": 845434,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 4.61,
+ "created": "2026-11-06T21:37:18",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Quercus incana Bartr.\", \"recordedBy\": \"R. Kral\", \"recordNumber\": \"11093\", \"eventDate\": \"1960-08-07\", \"country\": \"USA\", \"stateProvince\": \"VIRGINIA\", \"county\": \"Nansemond\", \"locality\": \"12 mi. s.s.e. Franklin; component of longleaf pine-scrub oak sand ridge.\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 103,
+   "totalTokenCount": 2544,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 838,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "2I7uap-9G7uEytMP9ILj2QE"
+ },
+ "parsed": {
+  "scientificName": "Quercus incana Bartr.",
+  "recordedBy": "R. Kral",
+  "recordNumber": "11093",
+  "eventDate": "1960-08-07",
+  "country": "USA",
+  "stateProvince": "VIRGINIA",
+  "county": "Nansemond",
+  "locality": "12 mi. s.s.e. Franklin; component of longleaf pine-scrub oak sand ridge.",
+  "habitat": null
+ },
+ "error": null
+}

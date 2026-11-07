@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893447776",
+ "split": "test",
+ "image_file": "data/images_small/3893447776.jpg",
+ "image_sha256": "812e43bdc9187d3c6ab9ae1df4dfc1f2c5fcc11d005939cad9fb6087aa0d8435",
+ "image_bytes": 680476,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 4.88,
+ "created": "2026-11-06T21:42:10",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Asplenium platyneuron (L.) Oakes\",\n  \"recordedBy\": \"J. B. Lewis\",\n  \"recordNumber\": null,\n  \"eventDate\": \"1936-08-28\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Amelia\",\n  \"locality\": \"Amelia County\",\n  \"habitat\": null\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 103,
+   "totalTokenCount": 2478,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 772,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "_I_uauSJBsnl5NoPqq_IkQ8"
+ },
+ "parsed": {
+  "scientificName": "Asplenium platyneuron (L.) Oakes",
+  "recordedBy": "J. B. Lewis",
+  "recordNumber": null,
+  "eventDate": "1936-08-28",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Amelia",
+  "locality": "Amelia County",
+  "habitat": null
+ },
+ "error": null
+}

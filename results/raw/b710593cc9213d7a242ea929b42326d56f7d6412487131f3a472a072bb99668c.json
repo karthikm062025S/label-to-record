@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893450366",
+ "split": "test",
+ "image_file": "data/images_small/3893450366.jpg",
+ "image_sha256": "cc4472a3885ca04f0af79c28415f8d05a3f17aff937e2511e482e8e61a3af375",
+ "image_bytes": 920750,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 8.05,
+ "created": "2026-11-06T21:50:50",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Quercus rubra L.\",\n  \"recordedBy\": \"G. C. Mason.\",\n  \"recordNumber\": \"137\",\n  \"eventDate\": \"1935-07-01\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Warwick\",\n  \"locality\": \"Mariner's Museum - open woods\",\n  \"habitat\": null\n}",
+       "thoughtSignature": "EpkkCpYkAWkUfROh3J3J5z9NkOk/oFcvvwc7MVZJV7dAnm6tsGxOfylCM18aXZ9C28TI9CurXzjwqsUZyDwEeFKTcvh3vDMBqfGj9H8AP1118qy2NViTgni8NoEAkd0sAZ4CgKFXPVtRJvOavK04K2GKGc32WS2rrCU0LQ++QzqJCGmSGObf6Y510uNGBPMMbKa31UiNe0vdEd7ORTeCVkJtWUSUPxpqN1pzcR4DZW8eK34e9qrMVrrk13dDvoVqLdtGRQsUC/n92Vhraj5+kqP+BsZwzqhmOlg06/LggHZU3fYt/fPI+OhLOMSvJEM24SJji2udVgvj8Rh/fCv9+cmzgFH82Ok7CAgbUvxSigNpjPSWnMqvqClFQ4hSQDbHq0pZo2PC88rfngkOLPxcMEN0OX2XYEonLeTD5NwGivHerKv66SSc/9p1v903yv/Kw0gN9iMBc2sENqyrUz5yHscaqs0S9UtAVPzxMi4MNP84oIcmaDexVxiTIdgaIl+iNLN7nck5QavognnVUuLCsUX9JkImDMh6fwway813k0DRfb42R7UTqZ9mMBoLnDCvkZ2nuuONcc5e1yST5uCG5H1UuAwUrUHaRDAmISkoQC/MOPhxWOTnChKOhOR/BPYsKlDLjHZZwn1+0jk8fCUjfZa2nzgBBydl4BwQUH7s8rlgdTxjMxQSDU9ygB6iOhG+XSlSRBXpyMS4Loa1SFoKRyeqMILAq5WByCWP3qD23kZY66OUawabHuvQoM8sxL52PhoJ2oyy2mm3IEJoQVSv8uxX6TY2miMBzMjfdUIC+r30DAWacHMxOG6zxaowPOpd6mYUyomctpLbBQjbdGpTbP6SW6HueqyXNvYvt4zCWrx5+eYNOcgjVicfYs8xgSLhcpUboWLNNmKRnU174R8jc/676b6XgzoIN8RJ4S1hlxB3TGnidv7RE3yqKoAOt3+fesrCvpucWaK+8jqOwaPE3NScSgej7dOpZkXfW1N1WhcZxFMiaQ0n2zpxKaxAcDsFx6C6A6mnzaOzMX/c7EmKtzl1O2bzpRgj555UHm5EITup1fmnasCGAjEPvCkbQBfxINhpS4E8GIjQvpEpUHpicL2F+DBqV6SlKgfPr1YKCTqbTYV1I8ynE/rzA3oRJOXGAGtg9+fpllx2LpwtP6jvAP3M4pTPmmQYXyvCezRxDUxejm+96LRmlGG/iJxVMqWgUKUWutuJtnQAJooiZ7zc0zgopkh66DWwf+nMQc7ojyeez/wAEnuZSVIhNp78n/+uWsXPakvIn9S2oxIQXY7ToPBDg2pFlULJW0Y4fWwGEzMv3Eli2GGtQ+rHr9hZMh1yrHELmnjFX1wCi9pzqTtwIXUFr5TUlwqMK4ST6h38Kd0dj138eM4gnjdpxQdPdqcgo9a0XsixXdNPTKptW8pO2ykIQGSV5F7+D/ljXDO8X5Q7TSPJ59tJ6lcelhWf09Q/5DJPS+aAZJwoEzXG6uumvk+mksCgiXMrK8uFkAia0tbEtuPxGpFG4uElsqhzhq/LhrOTVlRMkFCv0ndTNZH90zXj6Gdo5NogqqwuLORtUz0C578uSX1FtkQd7G2CVCoaFYi5YjtC1KLK16FNvqgPqa4+OXriu7y2omW2/ScZCU5jO6Z2hobzz34L5DKpLFWkimWdR+xiu2Of6OgDRQk4v0gr5Bv1iJLNk/IxD4fUO3c7P28aBCszxaNHmWiGYPlIDNRH+V+WIwsnzewedd5pWdbWg4VZjxOJ4dh4Rya2mBgwHThmyhzOAXUhESra5CrIupKCjOXDZyJD27DDS7+KDpkBMdUH9vv68RKHZjWwSmE1bCLYafkDDMG0HYymMGRX6JIN5nIIGu4deED4G7g8Tg+nd+ogGE74AJBDWVR6JAToPErTmyqxNunZsJNVXhpbxU7d07aWl9ADl1P+jTw+MREYlMVwyNRvNLnMcNIfnhS3HrYXLvNa+duyhxtgCY2YEu0Y+sPb8Kjl8pRGKeaETr+/828M5Wtwg12pvw+oEQqJ89mQT8iva0gxREfNSV9MkMismq15CpQT7cmcbgic6+qsFMeqEEudHlXBeoen2stxmcxOTBZpWD4CrU9pnr3g1aMVNVrQDR8b6rjdJIPaSG0/kSJKZvx+9j5H04GFply0gf7SAVcUrD6Pe5CO62R28TeZNO+0Y0vV0cNdjsSx5ZDFhexUz4oAlDNOGRcjMo9HaFKwSn9klMaaqWthitiN+Ya9AbfTZYUS3E/id6zO524EmElITz6qruVGCK9MHUdyxoNgoZH1mVh6nHwwFaxw73WuhAnooTH3BAoJTYMmCR+PPt9ZnZGbzQrhHhSpWevkIUL7Y/DkO3ktYPJH2Bz2g5+WUu+J7UrRVCmBWzonWcB361GTHIAcaqDZDTu39qJbBUiNqtWcKgJfyKr/aT1Odzc6js7guGprE6U8Ws1D2mHCvHPwwOLH4UKzTl9YBTB1ctqQ8AuSI0w6dqVss6ksHFpmvSajWMh06ufQLXHlMXDWU9XcEvxqhPYmAeMJtGCUHxJN9vhxkZCNZMJIozY24UBlaIJS7v7xrk1RqOjorveRDsqKlkx7MTOvHdw3OnAJV42Sfp0AzY3Y1DhUbIOWfP1vQHaEHGXd8Ii2rDyvM1K/OPAn/XLHTQ/TLouh9yH02BoO561IJ9FuR0uhqnlvOzfpBEa3G+c4gaCtjK0pe2bfMu9aPMaVJYS1+cEW/n2TUs/4PAmgdNFNjSMv+0ESkK5YKwi4Dkwq+zYzhDyIPmd6fjPl5fxkEmHJ1VCwkjRfpIA7LTTueHeLxCCgptX+/VtkVJiDzVtv/LCG5qGRTo1DP7Td7EmyECm9iKKD+m1RRKKjt5nUniqfUMao8Smi7gFhVlbOytucKQimAAcnPZzXHJUadFUdF3bcLQ+N4aebgaShZQ7wnIvs8xYEQFMH3NaxUrRp0lVwcPdMkxaQsb0D9Tm6cFfARIpaS/LRivmH7tLFifzPR/idoC/r6YuC5e5DSS2Z7NgwDP+c2v11PnoTClujg/R7RwNS9prq9Lqof9/pFJYVSz/hIsGsgN1o8+tAqJLPnUyY99Gs4Apcl9PvFzWbCY2/FLj9OkGqk2DaeGUicxapTzAtSVEHtLd1Sc4BbIAIa2XYe5EmTP9rU1aaQRZnV0Q0A305pjl8M33Y/1F/JtWrLDyc3U/sQypTnConn7myIAlYMhF9eWfcfq6S6QEqKMn/BLU8nA0mFIkEDYVw7lCqmlCVypdcQbURz62DKonVjtODnoNqDsYNz4kvqSZg15PT/5s1HrlvhXFo0Su/3lQZ752mkbtKIRZE3rlK6lQ0molmXf+2I33FLiBbhn+BgPjJJyc/kKuG647SmJZsI93e+Z/SeCX3+l3+vWPVvkl5E2ja5jzhXy3Aj8/ldKY4rRaKEIf7xntERQPC3RhpmVvEMevRjYEUqMQK53/TcJ9glXTFXGL7wNYBqnKXkRQKKwrUCDzbjvxok333qEd9a+flQXaMRQAItWWd+KnV64UGNphegcAADLFibyo2pWJsKNdKFvjWYwsTxGmUmCpkx9f4cqoRiAgJiIAUI3X2woJWds5owjPgqVRGFych1mfBokvKK1xfaSIeQQWsYauMrzSfxP9Wmx07PrtIzxP+oJVnuzzilX8R90Wp/8PeD9vndQtDHN9mpcytNoxi4LD4jLSWVHJ3nFn6TFSLy67e5va+YZm92ILtv0DGE7cUc+isxYkEHgWL+6FFAR6BlQhQnjNDJargjCVx9uIwtp/+bJGRhpv6iS63lHCyaAiKHVD0xv6+l5O9JfjtYnDn3wDDcierZgq8NwzRnxWLJA0Zy1bJ3x0PC1MgwQII80Tyxxlvd6WTOumtumDQUixutIlvgtY+3NuHcAazphtt6H/rkwMjfLv2Ijd05gtH7I/yQj4G2Ed/Hxzb3nfLlPo2/+l/szHRtrwcaXcKyX6c7ZTas1p4VjpdlTf72rzWNk6OrqosU1ZLMf8LwJgfLyIL6YcHEKo/Iu9FXWgKJclz18N2zlzUVGvEdeFZiLdNyeGh5HDQDywQjoJCwcb1WXKHxKT15fLirQqCKliFyeqvvMJmqx2FBADmW7gkInSU+qaCdaIWnh/r7WqfZe19Ocel13i0Y0bToxlaMBGOixvE+7vmrElIlh9iBcLsm1b2JnXPxrt38fL1Qpwin/zhMAir2HWatGabPVxNYq9j98/qcqnr94q4/2bDq8Z86PLNL+C9qGIZWU3nsRxUnAArK1YmoHZQWh+xLY82zsUfU7sMmuX+vk0qB5JHRf5fyNriiN3NzS6o92EP5uRRFkL+2wxFrC3UmEenaxM8/PsljhU49U01HzoX32742DuncoimRkWoUwm3uHpP9uchnvTgePnGIfVMoDap2TWr91z5/ZDEvrNEqh0YzzHuNHJNfLdgPLypqIPdStPab6tKb4qu6KAEhaabMWnGU1Gz/0dR5RsHN57iWy323ozeag2flUVUtSxMf36XDh1vrqiiaG3enkGsh2D71Wk6+dk1+8+kMtihE4q42uT0cDI+Gwi5gOYOEVCTLTnYylS4ij0R3VDcRyxyiUFuw5rZ8W8lbQ3LPLk+C+JscE5TfEtA4pm7TAg77eCtzwq9ZsDGx71IUaXfp0Dy6f3RJnOwJgn4h8bovU4x/ZDLrjdSa3nQONtDjTzR8zf/GSIrmuwMzqW0ShfNiG36Y33em6p807iubWZFukj7zcEWlU/HHDZY/5fL3xaop/efPqnnxOIQYUfhoxk3bBbEIeOFQiIGXb7wyT+PDmmFwLHof06XNVfNd8KqdKhzBknv/1Y+IflPmh9+dByy0KtOzrYMRBFiATcPgR7mtGVNti0AKO1GLDTQYKE8Jh3kY8bJKTEH9aRUPe6oH14ybbPWcj+49grDLh2h4Ya84uAshpVnaw//ezuVG14cRHBgshfezx+HPD+4ne+JCceexlp5xfYKEH2lQT69VrDDQxsGgmgSrR4tQ2c6KepoeL0iX3XpIuD2X6fdeS6BynzyQdIW4YOE5sXKbYypZSozLfAo/EKDHe8icgPm504Qcc5sBSzYsL3M7gRny+VRVDNnCsfkdnU+ASpIgwWY5/Qn1X/87jRTIuqmkkpT8Ba0Q2QrKLlWYkEiWRsiuo8AvjCYxP2apaQJ5V8Y0+VTNiBFbpoEPyvm/Q/DfNU+IXQRSadnBD4DsGt5oundp+uOUkD4bpMJYsaKAWtwM19vtvalftcRP7EEJxB84qEH/JawPEWjLNyZ2jb1eUyQhO6KnvFfNS8od8KcdyETn42Dowj1x/0+aubcI6pK4/AX0FGIG8sk57k4WXOPz6VFxT5WzJeI4ZI/rDWno0eFBUNIRRUV0Br8Z5qTWnVsQPqIyapZKkTln3aZGGrQGl6IcqUX08torF9Kmvgq6TgZL79cCiV4yK6OlZSk5mTPSzFWT+FkeROZ+c6q4Vi+MTSlgtiN1Id3c2GJ+Le1/4CF/t9cJtApwHn9Nbd2dGDPZkGijM5h7kGDe2fMMiXUUr9fWlQaksrddlG0XMd06OQrrjfoNZ1mTNbe/lOaJvEy2e6vLK8981UShXcNMtsEbSF4E1Mkn2GTET3MefdLm86M+SYL/baSENSoTza1rW357YpsKaE1HWwLRgVBGbeFyM4zjVjn8sHWfBoJYA+BlQvp5e2F+IgvmfKJA18rf8RgO7hJgoQaYb+GVmp5fyaTl+YURroe0Bwwmuoxey+/0qeyLAhB56rOWwxna92Zdn3o9ULQ3YlEjfUdbYEaOM9cnbn6+5+7wjbiOXYZggnTcH7n/em8sR1qZEuW0Az9SL4Aw0KY1bsFJ+DIhZIaH93lglrSXCn7pxvBCcAmxl0sWqo8jtF1NLz21SYzihC+PT4cxLR+NH6dRGOQyetnMT9qhzC2J7yOXf85E9QJAPIJPfFsXpDohkl8/7AlkP/EyvpJY2deuAEVOLXB20LVpCn8MuxneBOWtLdDUm9gSp4lx8LOM4Ue/uvS8BSBSkOJNzszGlyKg8GbQCr4UUIyPaklYoZaRx0PlD7PtSFRzj8SVts/mG2UkEwXkZK5OAfPxn/UoN1ybesSjMV0+YbKT7rrqzTqG409s4097oa1v6cFSCBpTkUUcqHtsMEA0kz614jOGhfkAVDFlfWAMGHvdJx4dERz7jNBCQ=="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 106,
+   "totalTokenCount": 3221,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 1512,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "AJLuapmEE9GOytMP-rSR2QE"
+ },
+ "parsed": {
+  "scientificName": "Quercus rubra L.",
+  "recordedBy": "G. C. Mason.",
+  "recordNumber": "137",
+  "eventDate": "1935-07-01",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Warwick",
+  "locality": "Mariner's Museum - open woods",
+  "habitat": null
+ },
+ "error": null
+}

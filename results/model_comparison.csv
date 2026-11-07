@@ -1,0 +1,2 @@
+strong,fast,gap,clustered,ci_low,ci_high,n_boot,p_two_sided,p_is_floor,p_floor_value,excludes_zero
+gemini-3.1-pro-preview,gemini-3-flash-preview,0.005666237741709601,True,-0.009251254041415557,0.02071300261063065,10000,0.45255474452554745,False,0.00019998000199980003,False

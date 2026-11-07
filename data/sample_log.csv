@@ -1,0 +1,275 @@
+draw,offset,gbifID,decision,reason,collector,family,decade
+0,1951,3893443281,accept,,k t markley,Asteraceae,1980s
+1,5234,3893444907,accept,,l j uttal,Asteraceae,1960s
+2,8233,3893483883,accept,,s lusby,Lycopodiaceae,1940s
+3,8385,3893439452,accept,,a b massey,Liliaceae,1940s
+4,10603,3893450557,accept,,l artz,Polygonaceae,1930s
+5,1681,3893438484,accept,,t f; wieboldt,Hydrophyllaceae,1990s
+6,3658,3893486827,accept,,w h duis,Melanthiaceae,1970s
+7,9847,3893441883,accept,,j b lewis,Asteraceae,1930s
+8,10182,3893467088,accept,,j b lewis,Orchidaceae,1930s
+9,9118,3893441330,accept,,h a allard,Asteraceae,1930s
+10,6891,3893441106,accept,,r kral,Asteraceae,1960s
+11,9380,3893493321,accept,,f w hunnewell,Asteraceae,1930s
+12,8975,3893438702,accept,,f w hunnewell,Asteraceae,1930s
+13,8042,3893491964,accept,,a b massey,Asteraceae,1940s
+14,9609,3893436223,reject,cap: family=Asteraceae,j b lewis,Asteraceae,1930s
+15,7226,3893465942,reject,cap: family=Asteraceae,r kral,Asteraceae,1950s
+16,3931,3893453439,reject,cap: family=Asteraceae,t l sharik,Asteraceae,1970s
+17,41,3893464005,reject,cap: family=Asteraceae,g p fleming,Asteraceae,2010s
+18,10063,3893447776,accept,,j b lewis,Aspleniaceae,1930s
+19,1322,3893452002,accept,,c e stevens,Cyperaceae,1990s
+20,1814,3893440311,reject,cap: family=Asteraceae,t j rawinski,Asteraceae,1980s
+21,4706,3893447816,accept,,b gregg; j wilson,Isoetaceae,1970s
+22,1606,3893443452,reject,cap: family=Asteraceae,c e stevens; g p fleming,Asteraceae,1990s
+23,7367,3893434530,reject,cap: family=Asteraceae,o h weiss,Asteraceae,1950s
+24,188,3893444610,reject,cap: family=Asteraceae,g p fleming,Asteraceae,2010s
+25,8032,3893467809,reject,cap: family=Asteraceae,w w hopkins,Asteraceae,1940s
+26,11131,3893493571,accept,,e a smyth; jr,Araceae,1890s
+27,5148,3893439329,reject,cap: family=Asteraceae,l j uttal,Asteraceae,1970s
+28,3444,3893485455,reject,cap: family=Asteraceae,g w hall; s l v oettingen,Asteraceae,1970s
+29,6508,3893477563,reject,cap: family=Asteraceae,o h weiss,Asteraceae,1960s
+30,4120,3893453392,reject,cap: family=Asteraceae,l j uttal,Asteraceae,1970s
+31,5696,3893466369,reject,cap: family=Asteraceae,l j uttal,Asteraceae,1960s
+32,5843,3893462623,reject,cap: family=Asteraceae,o w gupton,Asteraceae,1960s
+33,6166,3893434570,accept,,a m hawell,Asparagaceae,1960s
+34,8414,3893467446,reject,cap: family=Asteraceae,h a allard,Asteraceae,1940s
+35,10448,3893447510,accept,,l artz,Papaveraceae,1930s
+36,1250,3893475615,accept,,g p fleming,Cyperaceae,1990s
+37,5577,3893448459,accept,,f c james,Fagaceae,1960s
+38,1469,3893472718,reject,cap: family=Asteraceae,g p fleming,Asteraceae,1990s
+39,9133,3893468327,accept,,a b massey,Liliaceae,1930s
+40,8815,3893439728,accept,,a b massey,Orchidaceae,1930s
+41,4786,3893475209,accept,,l j uttal,Cyperaceae,1970s
+42,4712,3893471419,accept,,e farr,Araceae,1970s
+43,7494,3893490165,reject,cap: family=Asteraceae,a b massey,Asteraceae,1950s
+44,2308,3893443048,reject,cap: family=Asteraceae,t f wieboldt,Asteraceae,1980s
+45,10564,3893441632,accept,,l artz,Boraginaceae,1930s
+46,9460,3893442526,accept,,j b lewis,Fagaceae,1930s
+47,5062,3893472189,reject,cap: family=Asteraceae,c e stevens,Asteraceae,1970s
+48,405,3893438889,accept,,t f wieboldt,Cyperaceae,2000s
+49,6043,3893446135,accept,,l artz,Polemoniaceae,1960s
+50,5956,3893435617,accept,,a m; harvill; jr,Plantaginaceae,1960s
+51,7554,3893458225,accept,,l artz,Rosaceae,1950s
+52,6917,3893483881,accept,,r kral,Lycopodiaceae,1960s
+53,1485,3893443352,reject,cap: family=Asteraceae,t f wieboldt,Asteraceae,1990s
+54,6533,3893481729,accept,,a b davenport,Orchidaceae,1960s
+55,9596,3893491947,accept,,a b massey,Liliaceae,1930s
+56,9084,3893453442,accept,,w r degarmo,Liliaceae,1930s
+57,8166,3893473305,reject,cap: family=Asteraceae,j t b jr,Asteraceae,1940s
+58,1907,3893493244,reject,cap: family=Asteraceae,a b davenport; a wieboldt; f levy; t f wieboldt,Asteraceae,1980s
+59,6970,3893450143,reject,cap: family=Asteraceae,r kral,Asteraceae,1960s
+60,8296,3893474734,accept,,f w hunnewell,Fabaceae,1940s
+61,9833,3893434172,accept,,j l pendleton,Asparagaceae,1930s
+62,8045,3893447212,reject,cap: family=Asteraceae,h a allard,Asteraceae,1940s
+63,6523,3893460736,accept,,a b massey; h class; w wegman,Equisetaceae,1960s
+64,8595,3893441323,reject,cap: family=Asteraceae,h a allard,Asteraceae,1940s
+65,4237,3893476789,reject,cap: family=Asteraceae,l j uttal,Asteraceae,1970s
+66,6880,3893490176,reject,cap: family=Asteraceae,l j uttal,Asteraceae,1960s
+67,9240,3893446985,reject,cap: family=Asteraceae,j b lewis,Asteraceae,1930s
+68,7851,3893461414,reject,cap: family=Asteraceae,w b mcintosh,Asteraceae,1940s
+69,8404,3893493557,accept,,f w hunnewell,Araceae,1940s
+70,8486,3893468136,reject,cap: family=Asteraceae,a b massey,Asteraceae,1940s
+71,415,3893463950,accept,,r h lutts,Lygodiaceae,2000s
+72,9429,3893452387,accept,,a b massey,Aristolochiaceae,1930s
+73,3678,3893457219,accept,,l j uttal,Fabaceae,1970s
+74,2113,3893448535,accept,,k markley,Fagaceae,1980s
+75,800,3893457201,reject,cap: family=Asteraceae,j dodge,Asteraceae,1990s
+76,8572,3893446433,accept,,a b massey,Magnoliaceae,1940s
+77,10985,3893450523,reject,cap: family=Asteraceae,m f johnson,Asteraceae,1910s
+78,1680,3893493816,accept,,j c ludwig; rwainski; t j,Limnanthaceae,1990s
+79,10195,3893491538,reject,cap: family=Asteraceae,j b lewis,Asteraceae,1930s
+80,7035,3893454146,accept,,r kral,Fagaceae,1960s
+81,7701,3893440560,accept,,l artz,Orobanchaceae,1940s
+82,2333,3893443502,reject,cap: family=Asteraceae,r bray,Asteraceae,1980s
+83,7898,3893461963,reject,cap: family=Asteraceae,w w hopkins,Asteraceae,1940s
+84,3750,3893473689,accept,,c burrell; j harrison; l mattingly,Magnoliaceae,1970s
+85,1999,3893468713,accept,,d w ogle,Aspleniaceae,1980s
+86,10267,3893450366,accept,,g c mason,Fagaceae,1930s
+87,7484,3893464967,reject,cap: family=Asteraceae,g lord,Asteraceae,1950s
+88,11047,3893454764,accept,,e steele,Orchidaceae,1900s
+89,7690,3893466144,accept,,a b massey,Fagaceae,1950s
+90,8939,3893436534,reject,cap: family=Asteraceae,d garmo,Asteraceae,1930s
+91,4112,3893447680,accept,,d w ogle,Aspleniaceae,1970s
+92,9171,3893477378,reject,cap: family=Asteraceae,h a allard,Asteraceae,1930s
+93,6587,3893454283,accept,,r kral,Fagaceae,1960s
+94,10973,3893443252,reject,missing recordedBy or eventDate,(none),Fabaceae,1910s
+95,5040,3893493543,accept,,l j uttal,Araceae,1970s
+96,8980,3893443838,reject,cap: family=Asteraceae,f r fosberg,Asteraceae,1930s
+97,10598,3893441613,reject,cap: family=Asteraceae,s f blake,Asteraceae,1930s
+98,8223,3893464501,reject,"cap: collector=a b massey,family=Asteraceae",a b massey,Asteraceae,1940s
+99,7846,3893446957,reject,cap: family=Asteraceae,f w h,Asteraceae,1940s
+100,6585,3893452809,accept,,r kral,Fagaceae,1960s
+101,7095,3893492405,reject,cap: family=Asteraceae,r kral,Asteraceae,1960s
+102,3318,3893455196,accept,,a m; b j; harvill; harville; jr,Lamiaceae,1970s
+103,4823,3893435045,reject,cap: family=Fagaceae,b f kiltz,Fagaceae,1970s
+104,4407,3893452172,reject,cap: family=Fagaceae,c e stevens; p howard,Fagaceae,1970s
+105,151,3893460524,reject,cap: family=Asteraceae,j f townsend,Asteraceae,2010s
+106,542,3893493940,accept,,t f wieboldt,Fabaceae,2000s
+107,2455,3893442942,reject,cap: family=Asteraceae,l pounds; m e medley; t s patrick,Asteraceae,1980s
+108,10742,3893486607,accept,,c b buckland,Melanthiaceae,1930s
+109,9785,3893490772,reject,"cap: collector=a b massey,family=Asteraceae",a b massey,Asteraceae,1930s
+110,7507,3893469821,reject,missing recordedBy or eventDate,(none),Lycopodiaceae,1950s
+111,8567,3893434361,accept,,s a terry,Asparagaceae,1940s
+112,8020,3893440626,reject,"cap: collector=a b massey,family=Asteraceae",a b massey,Asteraceae,1940s
+113,5897,3893451834,accept,,g w ramsey; r s freer; w m ruska,Fabaceae,1960s
+114,3274,3893440908,reject,cap: family=Asteraceae,d w ogle,Asteraceae,1970s
+115,4261,3893472596,reject,cap: family=Asteraceae,j a smith,Asteraceae,1970s
+116,7955,3893454726,accept,,a b culbertson,Orchidaceae,1940s
+117,7645,3893492853,reject,"cap: collector=a b massey,family=Asteraceae",a b massey,Asteraceae,1950s
+118,8376,3893492189,reject,cap: collector=a b massey,a b massey,Araceae,1940s
+119,8145,3893464506,reject,cap: family=Asteraceae,j t b jr,Asteraceae,1940s
+120,7114,3893442841,reject,cap: family=Fagaceae,r kral,Fagaceae,1960s
+121,9139,3893474222,accept,,w r degarmo,Orchidaceae,1930s
+122,10877,3893434954,accept,,f w hunnewell,Asparagaceae,1910s
+123,550,3893485953,reject,cap: family=Fagaceae,j f townsend,Fagaceae,2000s
+124,4752,3893472790,reject,cap: family=Fagaceae,m koszeerab,Fagaceae,1970s
+125,5188,3893439959,reject,cap: family=Asteraceae,t bradley,Asteraceae,1970s
+126,7498,3893434878,reject,cap: collector=a b massey,a b massey,Asparagaceae,1950s
+127,1611,3893460575,reject,cap: family=Asteraceae,t f wieboldt; t j rawinski,Asteraceae,1990s
+128,7183,3893482087,reject,cap: family=Asteraceae,r kral,Asteraceae,1960s
+129,8440,3893482210,reject,cap: family=Asteraceae,h a allard,Asteraceae,1940s
+130,4240,3893481310,accept,,d w ogle,Liliaceae,1970s
+131,7420,3893481914,reject,cap: collector=a b massey,a b massey,Liliaceae,1950s
+132,2999,3893456975,reject,cap: family=Asteraceae,a b davenport; t f wieboldt,Asteraceae,1980s
+133,6975,3893461253,accept,,e j s jr,Isoetaceae,1960s
+134,7850,3893454731,reject,cap: collector=a b massey,a b massey,Orchidaceae,1940s
+135,1053,3893487798,accept,,baldwin; patrick,Poaceae,1990s
+136,10625,3893485167,accept,,l artz,Rubiaceae,1930s
+137,4365,3893459763,reject,cap: family=Asteraceae,l j uttal,Asteraceae,1970s
+138,6064,3893483488,reject,cap: family=Asteraceae,g w ramsey; w ruska; w thacker,Asteraceae,1960s
+139,1583,3893463061,reject,cap: family=Asteraceae,g p fleming,Asteraceae,1990s
+140,3188,3893477840,reject,cap: family=Asteraceae,d w ogle,Asteraceae,1970s
+141,6738,3893454749,accept,,r kral,Orchidaceae,1960s
+142,2397,3893440195,reject,cap: family=Asteraceae,d w ogle,Asteraceae,1980s
+143,7362,3893442772,reject,cap: family=Fagaceae,a g smith,Fagaceae,1950s
+144,229,3893481745,accept,,g p fleming,Orchidaceae,2010s
+145,1510,3893473459,reject,cap: family=Asteraceae,t f wieboldt,Asteraceae,1990s
+146,3,5131791191,accept,,t f wieboldt,Frullaniaceae,2020s
+147,7392,3893443152,reject,"cap: collector=a b massey,family=Asteraceae",a b massey,Asteraceae,1950s
+148,9513,3893444656,reject,"cap: collector=a b massey,family=Asteraceae,decade=1930s",a b massey,Asteraceae,1930s
+149,8955,3893466837,reject,"cap: family=Fagaceae,decade=1930s",h a allard,Fagaceae,1930s
+150,1360,3893448074,accept,,c e stevens,Isoetaceae,1990s
+151,9996,3893449449,reject,"cap: family=Asteraceae,decade=1930s",j b lewis,Asteraceae,1930s
+152,3257,3893449346,reject,cap: family=Asteraceae,d w ogle,Asteraceae,1970s
+153,4060,3893446111,reject,cap: family=Asteraceae,j duncan,Asteraceae,1970s
+154,1979,3893443214,accept,,k markley,Fabaceae,1980s
+155,10175,3893447810,reject,cap: decade=1930s,w p baldwin,Aspleniaceae,1930s
+156,731,3893461914,reject,cap: family=Asteraceae,j dodge,Asteraceae,1990s
+157,8953,3893466421,reject,"cap: family=Asteraceae,decade=1930s",w r degarmo,Asteraceae,1930s
+158,4399,3893440973,reject,cap: family=Asteraceae,l j uttal,Asteraceae,1970s
+159,10952,3893473781,reject,cap: family=Asteraceae,e s steele,Asteraceae,1910s
+160,10410,3893447939,reject,"cap: family=Fagaceae,decade=1930s",h a allard,Fagaceae,1930s
+161,5853,3893472890,reject,cap: family=Asteraceae,o w gupton,Asteraceae,1960s
+162,2535,3893458106,reject,cap: family=Asteraceae,d w ogle,Asteraceae,1980s
+163,84,3893438084,accept,,j f townsend; t f; wieboldt,Cyperaceae,2010s
+164,5135,3893477213,reject,cap: family=Asteraceae,o w gupton,Asteraceae,1970s
+165,10888,3893455428,reject,missing recordedBy or eventDate,(none),Lycopodiaceae,1910s
+166,9552,3893442531,reject,"cap: family=Fagaceae,decade=1930s",j b lewis,Fagaceae,1930s
+167,9409,3893478636,reject,"cap: collector=a b massey,decade=1930s",a b massey,Lycopodiaceae,1930s
+168,8060,3893454788,reject,cap: family=Orchidaceae,j w murray,Orchidaceae,1940s
+169,2209,3893434226,accept,,c owens,Asparagaceae,1980s
+170,8942,3893444001,reject,"cap: collector=a b massey,family=Asteraceae,decade=1930s",a b massey,Asteraceae,1930s
+171,3652,3893494036,reject,cap: family=Asteraceae,m l smyth,Asteraceae,1970s
+172,7749,3893491799,accept,,l artz,Poaceae,1940s
+173,9632,3893446506,reject,"cap: family=Asteraceae,decade=1930s",j b lewis,Asteraceae,1930s
+174,2149,3893447909,reject,cap: family=Asteraceae,d r jr,Asteraceae,1980s
+175,9799,3893443835,reject,"cap: family=Asteraceae,decade=1930s",j b lewis,Asteraceae,1930s
+176,8269,3893453197,reject,cap: collector=a b massey,a b massey,Lycopodiaceae,1940s
+177,4762,3893493822,accept,,b miller,Limnanthaceae,1970s
+178,1383,3893446255,reject,cap: family=Asteraceae,j c ludwig; t f wieboldt,Asteraceae,1990s
+179,6844,3893466202,reject,cap: family=Asteraceae,r kral,Asteraceae,1960s
+180,10953,3893479788,reject,cap: family=Asteraceae,e s steele,Asteraceae,1910s
+181,2623,3893455592,reject,cap: family=Asteraceae,r atkins,Asteraceae,1980s
+182,2217,3893452254,accept,,t f; wieboldt,Aristolochiaceae,1980s
+183,9601,3893492435,reject,"cap: collector=a b massey,family=Asteraceae,decade=1930s",a b massey,Asteraceae,1930s
+184,5013,3893469912,accept,,l j; uttal,Orobanchaceae,1970s
+185,8318,3893459995,reject,cap: family=Asteraceae,f w hunnewell,Asteraceae,1940s
+186,6750,3893459968,reject,cap: family=Asteraceae,r kral,Asteraceae,1960s
+187,6396,3893439335,reject,cap: family=Asteraceae,r s freer,Asteraceae,1960s
+188,2433,3893485268,accept,,d w ogle,Lycopodiaceae,1980s
+189,8520,3893452724,reject,cap: family=Fagaceae,h a allard,Fagaceae,1940s
+190,3222,3893448964,reject,cap: family=Asteraceae,l m hill,Asteraceae,1970s
+191,6160,3893445109,reject,cap: family=Asteraceae,k a nicely,Asteraceae,1960s
+192,231,3893482373,reject,cap: family=Asteraceae,t f wieboldt,Asteraceae,2010s
+193,1738,3893443992,reject,cap: family=Asteraceae,d w ogle,Asteraceae,1990s
+194,6379,3893467632,accept,,f c james,Magnoliaceae,1960s
+195,1203,3893472587,reject,cap: family=Asteraceae,t f wieboldt,Asteraceae,1990s
+196,841,3893480820,reject,cap: family=Asteraceae,t f wieboldt,Asteraceae,1990s
+197,5685,3893459816,reject,cap: family=Asteraceae,r s freer,Asteraceae,1960s
+198,10588,3893471981,reject,"cap: collector=l artz,decade=1930s",l artz,Onagraceae,1930s
+199,5790,3893469412,reject,cap: family=Asteraceae,g s waggoner; g w ramsey; l j uttal; w f ruska,Asteraceae,1960s
+200,422,3893438495,accept,,t f; wieboldt,Araliaceae,2000s
+201,419,3893470145,accept,,c t bryson; n b bryson,Cyperaceae,2000s
+202,8362,3893442530,reject,cap: family=Fagaceae,a b massey; j b lewis,Fagaceae,1940s
+203,7799,3893454855,reject,"cap: collector=a b massey,family=Asteraceae",a b massey,Asteraceae,1940s
+204,5370,3893492974,reject,cap: family=Asteraceae,l j uttal,Asteraceae,1960s
+205,11186,3893487428,reject,"cap: collector=a b massey,family=Asteraceae",a b massey,Asteraceae,1880s
+206,4975,3893446358,accept,,l j uttal,Aristolochiaceae,1970s
+207,7375,3893444711,reject,cap: family=Asteraceae,r s freer,Asteraceae,1950s
+208,5341,3893460130,reject,cap: family=Asteraceae,g w ramsey; kevin; r s freer; w s hooks,Asteraceae,1960s
+209,1988,3893459758,reject,cap: family=Asteraceae,d w ogle,Asteraceae,1980s
+210,8152,3893466349,reject,cap: family=Asteraceae,j t b jr,Asteraceae,1940s
+211,7644,3893457226,reject,cap: collector=a b massey,a b massey,Fabaceae,1950s
+212,9365,3893476773,reject,"cap: family=Asteraceae,decade=1930s",j b lewis,Asteraceae,1930s
+213,10135,3893459948,reject,"cap: family=Asteraceae,decade=1930s",j b lewis,Asteraceae,1930s
+214,2797,3893452227,accept,,bentley; croy; frank; greg; s q; stan,Aristolochiaceae,1980s
+215,2521,3893439440,accept,,a vascott; d m e ware,Asparagaceae,1980s
+216,9687,3893487439,reject,"cap: family=Asteraceae,decade=1930s",h a allard,Asteraceae,1930s
+217,8513,3893442521,reject,cap: family=Fagaceae,h a allard,Fagaceae,1940s
+218,3391,3893448397,accept,,d w ogle,Aspleniaceae,1970s
+219,7104,3893439347,reject,cap: family=Asteraceae,r kral,Asteraceae,1960s
+220,10212,3893462561,reject,"cap: family=Asteraceae,decade=1930s",h s mosby,Asteraceae,1930s
+221,5511,3893446457,reject,cap: family=Asteraceae,g b straley,Asteraceae,1960s
+222,7517,3893474286,reject,"cap: collector=l artz,family=Orchidaceae",l artz,Orchidaceae,1950s
+223,9801,3893445301,reject,"cap: family=Asteraceae,decade=1930s",j b lewis,Asteraceae,1930s
+224,3822,3893475952,reject,cap: family=Asteraceae,f watson,Asteraceae,1970s
+225,11116,3893464847,reject,cap: family=Asteraceae,w palmer,Asteraceae,1900s
+226,1138,3893483692,accept,,b a stamp,Lycopodiaceae,1990s
+227,8967,3893476736,reject,"cap: family=Asteraceae,decade=1930s",r w menzel,Asteraceae,1930s
+228,6539,3893467594,accept,,r s freer,Magnoliaceae,1960s
+229,559,3893493472,reject,cap: family=Asteraceae,j f townsend,Asteraceae,2000s
+230,3202,3893480347,reject,cap: family=Asteraceae,m l smyth,Asteraceae,1970s
+231,10604,3893452110,reject,"cap: collector=l artz,decade=1930s",l artz,Caryophyllaceae,1930s
+232,2840,3893440243,accept,,s bentley,Melanthiaceae,1980s
+233,741,3893462598,reject,missing recordedBy or eventDate,(none),Asteraceae,1990s
+234,10620,3893478869,reject,"cap: collector=l artz,decade=1930s",l artz,Rosaceae,1930s
+235,8925,3893481940,reject,"cap: collector=a b massey,decade=1930s",a b massey,Liliaceae,1930s
+236,789,3893473225,reject,cap: family=Asteraceae,j dodge; m l dodge,Asteraceae,1990s
+237,7402,3893459619,reject,"cap: collector=a b massey,family=Asteraceae",a b massey,Asteraceae,1950s
+238,10499,3893486768,reject,"cap: collector=l artz,decade=1930s",l artz,Violaceae,1930s
+239,3088,3893464488,reject,cap: family=Asteraceae,a b davenport; t f wieboldt,Asteraceae,1980s
+240,7927,3893454724,reject,cap: family=Orchidaceae,a b massey; h swartzel,Orchidaceae,1940s
+241,11118,3893477950,reject,cap: family=Asteraceae,w palmer,Asteraceae,1900s
+242,335,3893492022,reject,cap: family=Asteraceae,a weakley; j c ludwig; j f townsend,Asteraceae,2000s
+243,2115,3893456044,reject,cap: family=Orchidaceae,d niemi,Orchidaceae,1980s
+244,10578,3893452211,reject,"cap: collector=l artz,decade=1930s",l artz,Campanulaceae,1930s
+245,8682,3893443019,reject,cap: family=Asteraceae,h a allard,Asteraceae,1940s
+246,3583,3893459182,accept,,c e stevens,Lycopodiaceae,1970s
+247,8468,3893447124,reject,cap: family=Asteraceae,h a allard,Asteraceae,1940s
+248,2256,3893477916,reject,cap: family=Asteraceae,a wieboldt; t f wieboldt,Asteraceae,1980s
+249,2627,3893486842,accept,,a b davenport; t wieboldt,Fabaceae,1980s
+250,10833,3893467620,reject,"cap: collector=a b massey,family=Orchidaceae",a b massey,Orchidaceae,1920s
+251,3047,3893454791,reject,cap: family=Orchidaceae,t f wieboldt,Orchidaceae,1980s
+252,6389,3893483991,accept,,r s freer,Lycopodiaceae,1960s
+253,4469,3893434200,accept,,k surber,Asparagaceae,1970s
+254,6969,3893450114,reject,cap: family=Asteraceae,r kral,Asteraceae,1960s
+255,8732,3893480756,reject,cap: family=Asteraceae,h a allard,Asteraceae,1940s
+256,6784,3893433633,reject,cap: family=Asteraceae,r kral,Asteraceae,1960s
+257,1288,3893459502,reject,cap: family=Asteraceae,belden; c fleming; g p fleming; ludwig; trew; v alstine,Asteraceae,1990s
+258,6278,3893448871,reject,cap: family=Asteraceae,r s freer,Asteraceae,1960s
+259,4995,3893439918,accept,,l j uttal,Cyperaceae,1970s
+260,3067,3893436963,reject,cap: family=Asteraceae,t f wieboldt,Asteraceae,1980s
+261,5637,3893444063,reject,cap: family=Asteraceae,g w ramsey; s baxter; w s hooks,Asteraceae,1960s
+262,2862,3893474301,reject,cap: family=Orchidaceae,d w ogle,Orchidaceae,1980s
+263,4316,3893447105,accept,,s foster,Asparagaceae,1970s
+264,7600,3893472792,reject,cap: family=Fagaceae,e l little; jr,Fagaceae,1950s
+265,6811,3893447722,reject,cap: family=Fagaceae,r kral,Fagaceae,1960s
+266,4713,3893471455,accept,,g a laursen,Araceae,1970s
+267,7662,3893474000,reject,cap: family=Asteraceae,r p winston,Asteraceae,1950s
+268,2899,3893444632,accept,,s q croy; t f; wieboldt,Polygonaceae,1980s
+269,5337,3893450381,reject,cap: family=Fagaceae,c e stevens,Fagaceae,1960s
+270,8508,3893491537,reject,"cap: collector=a b massey,family=Asteraceae",a b massey,Asteraceae,1940s
+271,7897,3893455560,reject,cap: family=Asteraceae,w w hopkins,Asteraceae,1940s
+272,7284,3893438678,reject,cap: family=Asteraceae,r kral,Asteraceae,1950s
+273,1967,3893469174,accept,,d w ogle,Melanthiaceae,1980s

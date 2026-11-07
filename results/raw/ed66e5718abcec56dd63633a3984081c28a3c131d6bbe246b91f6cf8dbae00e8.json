@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893475209",
+ "split": "dev",
+ "image_file": "data/images/3893475209.jpg",
+ "image_sha256": "4084d8a7524f3a4773fe75330ee7abe02696ff5b73161b9eaf2b1b0079ce568b",
+ "image_bytes": 5697707,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.82,
+ "created": "2026-11-06T21:36:55",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Carex alata Torr. & Gray\", \"recordedBy\": \"L. J. UTTAL\", \"recordNumber\": \"8134\", \"eventDate\": \"1971-06-22\", \"country\": \"USA\", \"stateProvince\": \"Virginia\", \"county\": \"Virginia Beach\", \"locality\": \"Bank of creek on Va. 603, ca. 1 mi. so. of Pungo. The plants scare, stems rather tall for Ovales. Pistillate bracts distinctly aristate, especially upwards on spike.\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 130,
+   "totalTokenCount": 2569,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 836,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "v47uauPvIqDnytMP6Lmu6Qw"
+ },
+ "parsed": {
+  "scientificName": "Carex alata Torr. & Gray",
+  "recordedBy": "L. J. UTTAL",
+  "recordNumber": "8134",
+  "eventDate": "1971-06-22",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Virginia Beach",
+  "locality": "Bank of creek on Va. 603, ca. 1 mi. so. of Pungo. The plants scare, stems rather tall for Ovales. Pistillate bracts distinctly aristate, especially upwards on spike.",
+  "habitat": null
+ },
+ "error": null
+}

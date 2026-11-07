@@ -1,0 +1,271 @@
+gbifID,split,model,prompt,field,ai_value,curated_value,category,api_error,cluster
+3893483883,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Lycopodium flabelliforme (Fern.) Blanch.,Diphasiastrum digitatum (Dill. ex A.Braun) Holub,wrong,0,s lusby
+3893483883,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,Stan Lusby,S. Lusby,normalized,0,s lusby
+3893483883,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,12748,12748,exact,0,s lusby
+3893483883,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,4/8/43,1943-04-08,wrong,0,s lusby
+3893483883,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,s lusby
+3893483883,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,s lusby
+3893483883,dev,gemini-3-flash-preview,prompts/v1.txt,county,Henrico,Henrico,exact,0,s lusby
+3893483883,dev,gemini-3-flash-preview,prompts/v1.txt,locality,near Patterson Ave. extended. Richmond,Patterson Ave extended to swamp,wrong,0,s lusby
+3893483883,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,Swamp,Swamp,exact,0,s lusby
+3893439452,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Streptopus roseus Michx.,Streptopus roseus Michx.,exact,0,a b massey
+3893439452,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,A. B. Massey,A. B. Massey,exact,0,a b massey
+3893439452,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,,,both_empty,0,a b massey
+3893439452,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,5/17/41,1941-05-17,wrong,0,a b massey
+3893439452,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,a b massey
+3893439452,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,a b massey
+3893439452,dev,gemini-3-flash-preview,prompts/v1.txt,county,Grayson,Grayson,exact,0,a b massey
+3893439452,dev,gemini-3-flash-preview,prompts/v1.txt,locality,,,both_empty,0,a b massey
+3893439452,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,,,both_empty,0,a b massey
+3893450557,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Eriogonum Alleni S. Wats.,Eriogonum allenii S.Watson,partial,0,l artz
+3893450557,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,LENA ARTZ,Lena Artz,normalized,0,l artz
+3893450557,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,201,201,exact,0,l artz
+3893450557,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,"July 31, 1932",1932-07-31,wrong,0,l artz
+3893450557,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,l artz
+3893450557,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,,Virginia,omitted,0,l artz
+3893450557,dev,gemini-3-flash-preview,prompts/v1.txt,county,Shenandoah Co.,Shenandoah,normalized,0,l artz
+3893450557,dev,gemini-3-flash-preview,prompts/v1.txt,locality,"Massanutten Mountains, Woodstock Shales","Massanutten Mountains, Woodstock Shales",exact,0,l artz
+3893450557,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,Woodstock Shales,Shales,partial,0,l artz
+3893486827,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Xerophyllum asphodeloides (L.) Nutt.,"Xerophyllum asphodeloides Spreng., 1825",normalized,0,w h duis
+3893486827,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,W. H. Duis,W. H. Duis,exact,0,w h duis
+3893486827,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,,,both_empty,0,w h duis
+3893486827,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,ca. 8 Feb. 1976,1976-02-08,wrong,0,w h duis
+3893486827,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,w h duis
+3893486827,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,VIRGINIA,Virginia,normalized,0,w h duis
+3893486827,dev,gemini-3-flash-preview,prompts/v1.txt,county,Bedford County,Bedford,normalized,0,w h duis
+3893486827,dev,gemini-3-flash-preview,prompts/v1.txt,locality,Goose Creek area,Goose Creek area,exact,0,w h duis
+3893486827,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,on a cliff with Kalmia.,on a cliff,partial,0,w h duis
+3893467088,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Corallorhiza odontorhiza (Willd.),Corallorhiza odontorhiza (Willdenow) Poiret,normalized,0,j b lewis
+3893467088,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,J. B. Lewis,J. B. Lewis,exact,0,j b lewis
+3893467088,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,,,both_empty,0,j b lewis
+3893467088,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,"Oct 4, 1930",1936-10-04,wrong,0,j b lewis
+3893467088,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,j b lewis
+3893467088,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,j b lewis
+3893467088,dev,gemini-3-flash-preview,prompts/v1.txt,county,Amelia,Amelia,exact,0,j b lewis
+3893467088,dev,gemini-3-flash-preview,prompts/v1.txt,locality,,,both_empty,0,j b lewis
+3893467088,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,,,both_empty,0,j b lewis
+3893493571,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Arisaema triphyllum (L.) Schott,Arisaema triphyllum (L.) Schott,exact,0,e a smyth; jr
+3893493571,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,"Ellison A. Smyth, Jr.","Ellison A. Smyth, Jr.",exact,0,e a smyth; jr
+3893493571,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,17121,,unsupported,0,e a smyth; jr
+3893493571,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,1893-05-12,1893-05-12,exact,0,e a smyth; jr
+3893493571,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,e a smyth; jr
+3893493571,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,e a smyth; jr
+3893493571,dev,gemini-3-flash-preview,prompts/v1.txt,county,Montgomery,Montgomery,exact,0,e a smyth; jr
+3893493571,dev,gemini-3-flash-preview,prompts/v1.txt,locality,,,both_empty,0,e a smyth; jr
+3893493571,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,Shady damp places.,Shady damp places,normalized,0,e a smyth; jr
+3893475615,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Carex aestivalis M.A. Curtis ex Gray,Carex aestivalis M.A.Curtis ex A.Gray,normalized,0,g p fleming
+3893475615,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,Gary P. Fleming,Gary P. Fleming,exact,0,g p fleming
+3893475615,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,9297,9297,exact,0,g p fleming
+3893475615,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,"June 23, 1994",1994-06-23,wrong,0,g p fleming
+3893475615,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,g p fleming
+3893475615,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,g p fleming
+3893475615,dev,gemini-3-flash-preview,prompts/v1.txt,county,Highland County,Highland,normalized,0,g p fleming
+3893475615,dev,gemini-3-flash-preview,prompts/v1.txt,locality,"Allegheny Mountain. above the head of Bearwallow Run, ca. 0.7 mi. NE of jct. Forest Roads 106 and 58, 7.4 miles NW of Blue Grass; elev. 3760 ft.","Allegheny Mountain. Open black cherry-red oak forest on spur ridge crest above the head of Bearwallow Run, ca. 0.7 mi. NE of jct. Forest Roads 106 and 58, 7.4 miles NW of Blue Grass.",partial,0,g p fleming
+3893475615,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,Open black cherry-red oak forest on spur ridge crest,,unsupported,0,g p fleming
+3893448459,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Quercus alba L.,Quercus alba L.,exact,0,f c james
+3893448459,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,Fred C. James,Fred C. James,exact,0,f c james
+3893448459,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,8938,8938,exact,0,f c james
+3893448459,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,"May 14, 1968",1968-05-14,wrong,0,f c james
+3893448459,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,f c james
+3893448459,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,VIRGINIA,Virginia,normalized,0,f c james
+3893448459,dev,gemini-3-flash-preview,prompts/v1.txt,county,Smyth Co.,Smyth,normalized,0,f c james
+3893448459,dev,gemini-3-flash-preview,prompts/v1.txt,locality,At Hungry Mother State Park on State 16,At Hungry Mother State Park on State 16 (Rich slope at Camp Area A),partial,0,f c james
+3893448459,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,Rich slope at Camp Area A,,unsupported,0,f c james
+3893468327,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Erythronium umbilicatum Parks & Hardin,Erythronium umbilicatum C.R.Parks & Hardin,normalized,0,a b massey
+3893468327,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,A. B. Massey,A. B. Massey,exact,0,a b massey
+3893468327,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,,,both_empty,0,a b massey
+3893468327,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,5-17-38,1938-05-17,wrong,0,a b massey
+3893468327,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,a b massey
+3893468327,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,a b massey
+3893468327,dev,gemini-3-flash-preview,prompts/v1.txt,county,Montgomery,Montgomery,exact,0,a b massey
+3893468327,dev,gemini-3-flash-preview,prompts/v1.txt,locality,East of Ironto,East of Trouts,partial,0,a b massey
+3893468327,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,,,both_empty,0,a b massey
+3893475209,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Carex alata Torr. & Gray,Carex alata Torr.,normalized,0,l j uttal
+3893475209,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,L. J. UTTAL,L. J. Uttal,normalized,0,l j uttal
+3893475209,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,8134,8134,exact,0,l j uttal
+3893475209,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,22 June 1971,1971-06-22,wrong,0,l j uttal
+3893475209,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,l j uttal
+3893475209,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,l j uttal
+3893475209,dev,gemini-3-flash-preview,prompts/v1.txt,county,Virginia Beach,Virginia Beach City,wrong,0,l j uttal
+3893475209,dev,gemini-3-flash-preview,prompts/v1.txt,locality,"Bank of creek on Va. 603, ca. 1 mi. so. of Pungo.","Bank of creek on Va. 603, ca. 1 mi. so. of Pungo. The plants scare, stems rather tall for Ovales. Pistillate bracts distinctly aristate, especially upwards on spike.",partial,0,l j uttal
+3893475209,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,Bank of creek,,unsupported,0,l j uttal
+3893460736,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,"Equisetum hiemale, L.",Equisetum hyemale L.,partial,0,a b massey; h class; w wegman
+3893460736,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,A. B. Massey with Warren Wagner,"A. B. Massey; Warren Wegman, and his class",wrong,0,a b massey; h class; w wegman
+3893460736,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,12703,,unsupported,0,a b massey; h class; w wegman
+3893460736,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,8-13-1962,1962-08-13,wrong,0,a b massey; h class; w wegman
+3893460736,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,a b massey; h class; w wegman
+3893460736,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,a b massey; h class; w wegman
+3893460736,dev,gemini-3-flash-preview,prompts/v1.txt,county,Montgomery,Montgomery,exact,0,a b massey; h class; w wegman
+3893460736,dev,gemini-3-flash-preview,prompts/v1.txt,locality,east of Ironto,In moist soil along railroad east of Ironto,partial,0,a b massey; h class; w wegman
+3893460736,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,In moist soil along railroad,,unsupported,0,a b massey; h class; w wegman
+3893493557,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Arisaema triphyllum (L.) Schott,Arisaema triphyllum (L.) Schott,exact,0,f w hunnewell
+3893493557,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,F. W. Hunnewell,F. W. Hunnewell,exact,0,f w hunnewell
+3893493557,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,"17,404",17404,wrong,0,f w hunnewell
+3893493557,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,May 13. 1941,1941-05-13,wrong,0,f w hunnewell
+3893493557,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,f w hunnewell
+3893493557,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,f w hunnewell
+3893493557,dev,gemini-3-flash-preview,prompts/v1.txt,county,Frederick,Frederick,exact,0,f w hunnewell
+3893493557,dev,gemini-3-flash-preview,prompts/v1.txt,locality,low woods near Whitehall,Low woods near Waitehall,partial,0,f w hunnewell
+3893493557,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,low woods,,unsupported,0,f w hunnewell
+3893457219,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Vicia caroliniana Walt.,Vicia caroliniana Walter,normalized,0,l j uttal
+3893457219,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,L. J. Uttal,L. J. Uttal,exact,0,l j uttal
+3893457219,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,11816,11816,exact,0,l j uttal
+3893457219,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,21 April 1976,1976-04-21,wrong,0,l j uttal
+3893457219,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,l j uttal
+3893457219,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,l j uttal
+3893457219,dev,gemini-3-flash-preview,prompts/v1.txt,county,Floyd County,Floyd,normalized,0,l j uttal
+3893457219,dev,gemini-3-flash-preview,prompts/v1.txt,locality,"rt. 668, 1 mile S. of 802.","Thin woods, rt. 668, 1 mile S. of 802. Petals pale violet at tip, white basally.",partial,0,l j uttal
+3893457219,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,Thin woods,,unsupported,0,l j uttal
+3893454146,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Quercus incana Bartr.,Quercus incana W.Bartram,normalized,0,r kral
+3893454146,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,R. Kral,R. Kral,exact,0,r kral
+3893454146,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,11093,11093,exact,0,r kral
+3893454146,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,7 Aug 1960,1960-08-07,wrong,0,r kral
+3893454146,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,r kral
+3893454146,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,r kral
+3893454146,dev,gemini-3-flash-preview,prompts/v1.txt,county,Nansemond,Suffolk,wrong,0,r kral
+3893454146,dev,gemini-3-flash-preview,prompts/v1.txt,locality,12 mi. s.s.e. Franklin,12 mi. s.s.e. Franklin; component of longleaf pine-scrub oak sand ridge.,partial,0,r kral
+3893454146,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,component of longleaf pine-scrub oak sand ridge.,,unsupported,0,r kral
+3893440560,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Agalinus purpurea (L.) Pennell,Agalinis purpurea (L.) Pennell,wrong,0,l artz
+3893440560,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,Lena Artz,Lena Artz,exact,0,l artz
+3893440560,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,931,931,exact,0,l artz
+3893440560,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,22 July 1949,1949-07-22,wrong,0,l artz
+3893440560,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,l artz
+3893440560,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,VIRGINIA,Virginia,normalized,0,l artz
+3893440560,dev,gemini-3-flash-preview,prompts/v1.txt,county,Warren County,Warren,normalized,0,l artz
+3893440560,dev,gemini-3-flash-preview,prompts/v1.txt,locality,Waterlick,Waterlick.,normalized,0,l artz
+3893440560,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,Moist meadow,Moist meadow,exact,0,l artz
+3893454764,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Platanthera ciliaris (L.) Lindl.,Platanthera ciliaris (L.) Lindl.,exact,0,e steele
+3893454764,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,E. S. Steele,E. Steele,partial,0,e steele
+3893454764,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,365,,unsupported,0,e steele
+3893454764,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,"Aug. 21, 1907",1907-08-11,wrong,0,e steele
+3893454764,dev,gemini-3-flash-preview,prompts/v1.txt,country,United States,United States of America,normalized,0,e steele
+3893454764,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,e steele
+3893454764,dev,gemini-3-flash-preview,prompts/v1.txt,county,Bath,Bath,exact,0,e steele
+3893454764,dev,gemini-3-flash-preview,prompts/v1.txt,locality,"Vicinity of Millboro, in the Allegheny Mountains Altitude 450 meters",Dry Thicket on Hill,wrong,0,e steele
+3893454764,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,Dry thicket on hill!,,unsupported,0,e steele
+3893466144,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Castanea mollissima Blume.,Castanea mollissima Blume,normalized,0,a b massey
+3893466144,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,A. B. Massey,A. B. Massey,exact,0,a b massey
+3893466144,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,,,both_empty,0,a b massey
+3893466144,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,195,1950,wrong,0,a b massey
+3893466144,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,a b massey
+3893466144,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,a b massey
+3893466144,dev,gemini-3-flash-preview,prompts/v1.txt,county,Montgomery,,unsupported,0,a b massey
+3893466144,dev,gemini-3-flash-preview,prompts/v1.txt,locality,VPI farm,,unsupported,0,a b massey
+3893466144,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,"planted, Exotic",,unsupported,0,a b massey
+3893493543,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Arisaema triphyllum (L.) Schott,Arisaema triphyllum (L.) Schott,exact,0,l j uttal
+3893493543,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,L. J. UTTAL,L. J. Uttal,normalized,0,l j uttal
+3893493543,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,6992,6992,exact,0,l j uttal
+3893493543,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,7 May 1970,1970-05-07,wrong,0,l j uttal
+3893493543,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,l j uttal
+3893493543,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,l j uttal
+3893493543,dev,gemini-3-flash-preview,prompts/v1.txt,county,Carroll,Carroll,exact,0,l j uttal
+3893493543,dev,gemini-3-flash-preview,prompts/v1.txt,locality,"Greasy Creek, Va. 764, just west of 765.","Rocky bank, dense mixed woods, Greasy creek, Va. 764, just west of 765.",partial,0,l j uttal
+3893493543,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,"Rocky bank, dense mixed woods",,unsupported,0,l j uttal
+3893486607,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Veratrum viride Ait.,Veratrum viride Aiton,normalized,0,c b buckland
+3893486607,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,C.A. Bushland,C. B. Buckland,wrong,0,c b buckland
+3893486607,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,,,both_empty,0,c b buckland
+3893486607,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,7/20/32,1930-07-30,wrong,0,c b buckland
+3893486607,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,c b buckland
+3893486607,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,c b buckland
+3893486607,dev,gemini-3-flash-preview,prompts/v1.txt,county,,Giles,omitted,0,c b buckland
+3893486607,dev,gemini-3-flash-preview,prompts/v1.txt,locality,"Mt. Lake, Va.","Mt. Lake, Va.",exact,0,c b buckland
+3893486607,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,Broad-leaf woodland,Broad-leaf woodland,exact,0,c b buckland
+3893474222,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Isotria verticillata (Willd.) Raf.,Isotria verticillata (Muhl. ex Willd.) Raf.,normalized,0,w r degarmo
+3893474222,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,W. R. Garman,W. R. DeGarmo,wrong,0,w r degarmo
+3893474222,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,,,both_empty,0,w r degarmo
+3893474222,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,"May, 1938",1938-05,wrong,0,w r degarmo
+3893474222,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,w r degarmo
+3893474222,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,w r degarmo
+3893474222,dev,gemini-3-flash-preview,prompts/v1.txt,county,Montgomery,Montgomery,exact,0,w r degarmo
+3893474222,dev,gemini-3-flash-preview,prompts/v1.txt,locality,Between Blacksburg + Merrimac,Between blacksburg & Merrimas,partial,0,w r degarmo
+3893474222,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,,,both_empty,0,w r degarmo
+3893454749,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Platanthera ciliaris (L.) Lindley,Platanthera ciliaris (L.) Lindl.,normalized,0,r kral
+3893454749,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,R. Kral,R. Kral,exact,0,r kral
+3893454749,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,13569,13569,exact,0,r kral
+3893454749,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,5 Aug 1961,1961-08-05,wrong,0,r kral
+3893454749,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,r kral
+3893454749,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,r kral
+3893454749,dev,gemini-3-flash-preview,prompts/v1.txt,county,Roanoke,Roanoke,exact,0,r kral
+3893454749,dev,gemini-3-flash-preview,prompts/v1.txt,locality,ca 1.5 mi. n.w. Salem; Ft. Lewis Mtn.,Ca 1.5 mi N.W. Salem; moist sandy clay of banks of intermittent stream; fls. orange. Ft. Lewis Mtn.,partial,0,r kral
+3893454749,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,moist sandy clay of banks of intermittent stream,,unsupported,0,r kral
+3893493822,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Floerkea proserpinacoides Willd.,Floerkea proserpinacoides Willd.,exact,0,b miller
+3893493822,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,B. Miller,"Miller, B.",normalized,0,b miller
+3893493822,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,142,142,exact,0,b miller
+3893493822,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,12-5-71,1971-05-12,wrong,0,b miller
+3893493822,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,b miller
+3893493822,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,VIRGINIA,Virginia,normalized,0,b miller
+3893493822,dev,gemini-3-flash-preview,prompts/v1.txt,county,Fairfax County,Fairfax,normalized,0,b miller
+3893493822,dev,gemini-3-flash-preview,prompts/v1.txt,locality,Bull Run Regional Park.,Bull Run Regional Park,normalized,0,b miller
+3893493822,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,In the woods.,In the woods,normalized,0,b miller
+3893485268,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Lycopodium obscurum,Dendrolycopodium obscurum (L.) A.Haines,wrong,0,d w ogle
+3893485268,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,DW Ogle,D.W.Ogle,partial,0,d w ogle
+3893485268,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,5614,,unsupported,0,d w ogle
+3893485268,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,14 Sept. 1984,1984-09-14,wrong,0,d w ogle
+3893485268,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,d w ogle
+3893485268,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,VIRGINIA,Virginia,normalized,0,d w ogle
+3893485268,dev,gemini-3-flash-preview,prompts/v1.txt,county,Wise Co.,Wise,normalized,0,d w ogle
+3893485268,dev,gemini-3-flash-preview,prompts/v1.txt,locality,Guest River Gorge,Guest River Gorge,exact,0,d w ogle
+3893485268,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,,,both_empty,0,d w ogle
+3893440243,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Amianthium muscaetoxicum Gray,Amianthium muscaetoxicum (Walter) A.Gray,normalized,0,s bentley
+3893440243,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,Stan Bentley,Stan Bentley,exact,0,s bentley
+3893440243,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,,,both_empty,0,s bentley
+3893440243,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,8-23-81,1981-08-23,wrong,0,s bentley
+3893440243,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,s bentley
+3893440243,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,s bentley
+3893440243,dev,gemini-3-flash-preview,prompts/v1.txt,county,Grayson Co.,Grayson,normalized,0,s bentley
+3893440243,dev,gemini-3-flash-preview,prompts/v1.txt,locality,Big Spring Bog off Rt. 613,Big Spring Bog off Rt. 613,exact,0,s bentley
+3893440243,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,,,both_empty,0,s bentley
+3893459182,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Lycopodium inundatum L.,"Lycopodiella margueritae J.G.Bruce, W.H.Wagner & Beitel",wrong,0,c e stevens
+3893459182,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,Charles E. Stevens,Chareles E. Stevens,normalized,0,c e stevens
+3893459182,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,"14,975",14975,wrong,0,c e stevens
+3893459182,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,"Sep. 11, 1977",1977-09-11,wrong,0,c e stevens
+3893459182,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,c e stevens
+3893459182,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,c e stevens
+3893459182,dev,gemini-3-flash-preview,prompts/v1.txt,county,Augusta,Augusta,exact,0,c e stevens
+3893459182,dev,gemini-3-flash-preview,prompts/v1.txt,locality,"Cold Spring Claypits, Big Levels, NE edge of northernmost pond in light seepage. (Tom Huntley's station) (Big Levels Quad.) el. 2200 ft.","Several colonies in open, sterile, sandy yellow clay along NE edge of northernmost pond in light seepage. (Tom Huntley's Station) (Big Levels Quad.)",partial,0,c e stevens
+3893459182,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,"open, sterile, sandy, yellow clay",,unsupported,0,c e stevens
+3893486842,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Astragalus distortus T. & G.,Astragalus distortus Torr. & A.Gray,normalized,0,a b davenport; t wieboldt
+3893486842,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,Thomas F. Wieboldt; Alison B. Davenport,Thomas Wieboldt; Alison B. Davenport,partial,0,a b davenport; t wieboldt
+3893486842,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,4283,4283,exact,0,a b davenport; t wieboldt
+3893486842,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,1 May 1982,1982-05-01,wrong,0,a b davenport; t wieboldt
+3893486842,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,a b davenport; t wieboldt
+3893486842,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,a b davenport; t wieboldt
+3893486842,dev,gemini-3-flash-preview,prompts/v1.txt,county,Shenandoah County,Shenandoah,normalized,0,a b davenport; t wieboldt
+3893486842,dev,gemini-3-flash-preview,prompts/v1.txt,locality,"South end of Short Mountain; Massanuttens. 3 miles SE of Mt. Jackson, Va.","South end of Short Mountain; Massanuttens. 3 miles SE of Mt. Jackson, Va.",exact,0,a b davenport; t wieboldt
+3893486842,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,Scattered in shaly substrate in dwarfed oak-hickory woodland.,Scattered in shaly substrate in dwarfed oak-hickory woodland.,exact,0,a b davenport; t wieboldt
+3893483991,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Lycopodium complanatum L. var. flabelliforme Fern.,Diphasiastrum digitatum (Dill. ex A.Braun) Holub,wrong,0,r s freer
+3893483991,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,Ruskin S. Freer,Ruskin S. Freer,exact,0,r s freer
+3893483991,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,2822,2822,exact,0,r s freer
+3893483991,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,AUG 29 1964,1964-08-24,wrong,0,r s freer
+3893483991,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,r s freer
+3893483991,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,r s freer
+3893483991,dev,gemini-3-flash-preview,prompts/v1.txt,county,Nelson,Nelson,exact,0,r s freer
+3893483991,dev,gemini-3-flash-preview,prompts/v1.txt,locality,Blue Ridge Parkway MILE POST 18.4,"Blue Ridge Parkway, Mile Post 18.4, White Rock Gap",partial,0,r s freer
+3893483991,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,White Rock Gap,,unsupported,0,r s freer
+3893434200,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Smilacina racemosa,Smilacina racemosa (L.) Desf.,normalized,0,k surber
+3893434200,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,Karen Surber,Karen Surber,exact,0,k surber
+3893434200,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,2056,2056,exact,0,k surber
+3893434200,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,1973-05-02,1973-05-02,exact,0,k surber
+3893434200,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,k surber
+3893434200,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,k surber
+3893434200,dev,gemini-3-flash-preview,prompts/v1.txt,county,Smyth,Smyth,exact,0,k surber
+3893434200,dev,gemini-3-flash-preview,prompts/v1.txt,locality,Archery range in Allison Gap,Archery range in Allison Gap,exact,0,k surber
+3893434200,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,rich woods,Rich woods,normalized,0,k surber
+3893439918,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Carex amphibola Steud.,Carex amphibola Steud.,exact,0,l j uttal
+3893439918,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,L. J. Uttal,L. J. Uttal,exact,0,l j uttal
+3893439918,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,7003,7003,exact,0,l j uttal
+3893439918,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,12 May 1970,1970-05-12,wrong,0,l j uttal
+3893439918,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,l j uttal
+3893439918,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,Virginia,Virginia,exact,0,l j uttal
+3893439918,dev,gemini-3-flash-preview,prompts/v1.txt,county,Roanoke,Roanoke,exact,0,l j uttal
+3893439918,dev,gemini-3-flash-preview,prompts/v1.txt,locality,"north fork of Roanoke River, just north of bridge carrying Va. 699 over stream, 0.15 mi. E. of Va. 622 (Mason's Cove)","On floodplain of north fork of Roanoke River, wooded, just north of bridge carrying Va. 699 over stream, 0.15 mi, E of Va. 622 (Mason's Cove).",partial,0,l j uttal
+3893439918,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,"On flood plain, wooded",,unsupported,0,l j uttal
+3893469174,dev,gemini-3-flash-preview,prompts/v1.txt,scientificName,Zigadenus glaucus (Nutt.) Nutt.,Zigadenus elegans Pursh,partial,0,d w ogle
+3893469174,dev,gemini-3-flash-preview,prompts/v1.txt,recordedBy,DW Ogle,D. W. Ogle,partial,0,d w ogle
+3893469174,dev,gemini-3-flash-preview,prompts/v1.txt,recordNumber,6401,,unsupported,0,d w ogle
+3893469174,dev,gemini-3-flash-preview,prompts/v1.txt,eventDate,22 August 1987,1987-08-22,wrong,0,d w ogle
+3893469174,dev,gemini-3-flash-preview,prompts/v1.txt,country,,United States of America,omitted,0,d w ogle
+3893469174,dev,gemini-3-flash-preview,prompts/v1.txt,stateProvince,VIRGINIA,Virginia,normalized,0,d w ogle
+3893469174,dev,gemini-3-flash-preview,prompts/v1.txt,county,Scott Co.,Scott,normalized,0,d w ogle
+3893469174,dev,gemini-3-flash-preview,prompts/v1.txt,locality,Natural Tunnel,Natural tunnel on walls.,partial,0,d w ogle
+3893469174,dev,gemini-3-flash-preview,prompts/v1.txt,habitat,on walls.,,unsupported,0,d w ogle

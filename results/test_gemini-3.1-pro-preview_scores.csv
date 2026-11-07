@@ -1,0 +1,631 @@
+gbifID,split,model,prompt,field,ai_value,curated_value,category,api_error,cluster
+3893443281,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Cacalia atriplicifolia L.,Arnoglossum atriplicifolium (L.) H.Rob.,wrong,0,k t markley
+3893443281,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Kenneth T. Markley,Kenneth T. Markley,exact,0,k t markley
+3893443281,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,,both_empty,0,k t markley
+3893443281,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1987-08-26,1987-08-26,exact,0,k t markley
+3893443281,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,k t markley
+3893443281,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,k t markley
+3893443281,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Dickenson,Dickenson,exact,0,k t markley
+3893443281,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,old road below beaver pond (Lake No. 2) 500 feet below lake near old horse stable,Old Road below beaver pond (Lake No. 2) 500 feet below lake near old horse stable.,normalized,0,k t markley
+3893443281,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,k t markley
+3893444907,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Packera obovata (Muhl. ex Willd.) Weber & Löve,Packera obovata (Muhl. ex Willd.) W.A.Weber & Á.Löve,normalized,0,l j uttal
+3893444907,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,L. J. Uttal,L.J. Uttal,normalized,0,l j uttal
+3893444907,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,6476,6476,exact,0,l j uttal
+3893444907,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1969-05-22,1969-05-22,exact,0,l j uttal
+3893444907,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,l j uttal
+3893444907,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,l j uttal
+3893444907,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Pulaski,Pulaski,exact,0,l j uttal
+3893444907,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"No. slope of Cloyd's Mt., Va. 100. Power clearing in full sun. Area normally heavily wooded.","No. slope of Cloyd's Mt., Va. 100. Power clearing in full sun. Area normally heavily wooded.",exact,0,l j uttal
+3893444907,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Power clearing in full sun - normally heavily wooded,omitted,0,l j uttal
+3893438484,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Ellisia nyctelea L.,Ellisia nyctelea (L.) L.,normalized,0,t f; wieboldt
+3893438484,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,T.F. Wieboldt,"Wieboldt, Thomas F.",partial,0,t f; wieboldt
+3893438484,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,7139,7139,exact,0,t f; wieboldt
+3893438484,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1990-05-11,1990-05-11,exact,0,t f; wieboldt
+3893438484,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,t f; wieboldt
+3893438484,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,t f; wieboldt
+3893438484,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Cumberland,Cumberland,exact,0,t f; wieboldt
+3893438484,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Silty alluvium of hardwood bottom. Along James River just N of confluence of Punch Creek. About 2.5 miles NW of Duncan's Store. Elev. ca. 210'.,Along James River just N of confluence of Punch Creek. About 2.5 miles NW of Duncan's Store,partial,0,t f; wieboldt
+3893438484,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Silty alluvium of hardwood bottom.,omitted,0,t f; wieboldt
+3893441883,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Antennaria Parlinii Fern. subsp. Parlinii,Antennaria parlinii subsp. parlinii,partial,0,j b lewis
+3893441883,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,J. B. Lewis,J. B. Lewis,exact,0,j b lewis
+3893441883,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,152,152,exact,0,j b lewis
+3893441883,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1936-04-11,1936-04-11,exact,0,j b lewis
+3893441883,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,j b lewis
+3893441883,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,j b lewis
+3893441883,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Amelia,Amelia,exact,0,j b lewis
+3893441883,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,,,both_empty,0,j b lewis
+3893441883,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,j b lewis
+3893441330,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Packera anonyma (Alph. Wood) W.A. Weber & A. Löve,Packera anonyma (Alph.Wood) W.A.Weber & Á.Löve,normalized,0,h a allard
+3893441330,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,H. A. ALLARD,H. A. Allard,normalized,0,h a allard
+3893441330,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,4768,4768,exact,0,h a allard
+3893441330,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1938-05-22,1938-05-22,exact,0,h a allard
+3893441330,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,h a allard
+3893441330,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,VIRGINIA,Virginia,normalized,0,h a allard
+3893441330,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Fauquier,Fauquier,exact,0,h a allard
+3893441330,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Railroad bank above Beverley mill. Abundant. Western slope of Bull Run Mountains,Railroad bank above Beverley Mill. Western slope of Bull Run Mountains.,partial,0,h a allard
+3893441330,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Railroad bank,omitted,0,h a allard
+3893441106,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Euthamia tenuifolia (Pursh) Nutt.,Euthamia caroliniana (L.) Greene ex Porter & Britton,partial,0,r kral
+3893441106,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,R. Kral,R. Kral,exact,0,r kral
+3893441106,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,14335,14335,exact,0,r kral
+3893441106,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1961-10-07,1961-10-07,exact,0,r kral
+3893441106,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,r kral
+3893441106,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,VIRGINIA,Virginia,normalized,0,r kral
+3893441106,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Norfolk,Norfolk,exact,0,r kral
+3893441106,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,n. & e. of Deep Creek on US 13; sandy peat of pine flatwoods.,n. & e. of Deep Creek on US 13; sandy peat of pin flatwoods,partial,0,r kral
+3893441106,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Pine flatwoods; Sandy,omitted,0,r kral
+3893493321,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Kuhnia eupatorioides L. var. eupatorioides,Brickellia eupatorioides (L.) Shinners,wrong,0,f w hunnewell
+3893493321,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,F. W. Hunnewell,F.W. Hunnewell,normalized,0,f w hunnewell
+3893493321,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,15766,15766,exact,0,f w hunnewell
+3893493321,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1938-09-09,1938-09-09,exact,0,f w hunnewell
+3893493321,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,f w hunnewell
+3893493321,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,f w hunnewell
+3893493321,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Shenandoah,Shenandoah,exact,0,f w hunnewell
+3893493321,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"dry woods, Elizabeth Furnace","Dry woods, Elizabeth Furnace",normalized,0,f w hunnewell
+3893493321,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Dry woods,omitted,0,f w hunnewell
+3893438702,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,"Aster undulatus, L",Symphyotrichum undulatum (L.) G.L.Nesom,wrong,0,f w hunnewell
+3893438702,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,,F.W. Hunnewell,omitted,0,f w hunnewell
+3893438702,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,16363,16363,exact,0,f w hunnewell
+3893438702,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1939-09-18,1939-09-10,wrong,0,f w hunnewell
+3893438702,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,f w hunnewell
+3893438702,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,f w hunnewell
+3893438702,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Page,Page,exact,0,f w hunnewell
+3893438702,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Massanutten Mt,"Dry woods, Massanutten Mt",partial,0,f w hunnewell
+3893438702,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,dry woods,Dry woods,normalized,0,f w hunnewell
+3893491964,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Cnicus benedictus L.,Cnicus benedictus L.,exact,0,a b massey
+3893491964,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,A. B. Massey,A.B. Massey,normalized,0,a b massey
+3893491964,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,,both_empty,0,a b massey
+3893491964,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1945-05-30,1945-05-30,exact,0,a b massey
+3893491964,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,a b massey
+3893491964,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,a b massey
+3893491964,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Amherst,Amherst,exact,0,a b massey
+3893491964,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Sweet Briar Farm Brought in by farm manager.,Sweet Briar Farm. Brough in by farm manager.,partial,0,a b massey
+3893491964,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,a b massey
+3893447776,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Asplenium platyneuron (L.) Oakes,"Asplenium platyneuron (L.) Britton, Sterns & Poggenb.",normalized,0,j b lewis
+3893447776,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,J. B. Lewis,J. B. Lewis,exact,0,j b lewis
+3893447776,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,2944,omitted,0,j b lewis
+3893447776,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1936-08-28,1936-08-28,exact,0,j b lewis
+3893447776,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,j b lewis
+3893447776,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,j b lewis
+3893447776,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Amelia,Amelia,exact,0,j b lewis
+3893447776,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,,,both_empty,0,j b lewis
+3893447776,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,j b lewis
+3893452002,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Carex albursina Sheldon,Carex albursina E.Sheld.,normalized,0,c e stevens
+3893452002,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Charles E. Stevens,Chareles E. Stevens,normalized,0,c e stevens
+3893452002,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,23426,23426,exact,0,c e stevens
+3893452002,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1993-05-10,1993-05-10,exact,0,c e stevens
+3893452002,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,c e stevens
+3893452002,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,c e stevens
+3893452002,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Cumberland,Cumberland,exact,0,c e stevens
+3893452002,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"near Cobbs Creek, Cumberland Co. Colony, with Festuca obtusa & spicebush, near base of steep, N-facing, wooded bank by James River just above mouth of Cobbs Creek. el. 220 ft. (Lakeside Village Quad.)","Near Cobbs Creek. Colony, with Festuca obtusa and spicebush, near base of steep, N-facing, wooded bank by James River just above mouth of Cobbs Creek.",partial,0,c e stevens
+3893452002,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,wooded bank,omitted,0,c e stevens
+3893447816,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Isoëtes valida (Engelm.) Clute,Isoetes valida (Engelm.) Clute,wrong,0,b gregg; j wilson
+3893447816,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,B. Gregg; J. Wilson,B. Gregg; J. Wilson,exact,0,b gregg; j wilson
+3893447816,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,,both_empty,0,b gregg; j wilson
+3893447816,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1972-10-19,1972-10-19,exact,0,b gregg; j wilson
+3893447816,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,b gregg; j wilson
+3893447816,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,b gregg; j wilson
+3893447816,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Giles,Giles,exact,0,b gregg; j wilson
+3893447816,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Banks of pond on Mountain Lake Biological Station.,Banks of pond on Mountain Lake Biological Station.,exact,0,b gregg; j wilson
+3893447816,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,b gregg; j wilson
+3893434570,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Maianthemum canadense Desf.,Maianthemum canadense Desf.,exact,0,a m hawell
+3893434570,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,A. M. Harvill,A. M. Hawell,wrong,0,a m hawell
+3893434570,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,12300,12300,exact,0,a m hawell
+3893434570,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1965-05-24,1965-05-24,exact,0,a m hawell
+3893434570,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,a m hawell
+3893434570,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,a m hawell
+3893434570,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Highland,Highland,exact,0,a m hawell
+3893434570,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Spruce forest on Laurel Fork,Spruce forest on Hamil Fork,partial,0,a m hawell
+3893434570,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,a m hawell
+3893447510,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Dicentra cucullaria (L.) Bernh.,Dicentra cucullaria (L.) Bernh.,exact,0,l artz
+3893447510,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Lena Artz,Lena Artz,exact,0,l artz
+3893447510,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,29,29,exact,0,l artz
+3893447510,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1933-04-14,1933-04-14,exact,0,l artz
+3893447510,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,l artz
+3893447510,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,l artz
+3893447510,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Shenandoah,Shenandoah,exact,0,l artz
+3893447510,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Stonewall Bend, Woodstock, Va.","Massanutten Mountains. Stonewall Bend, Woodstock",partial,0,l artz
+3893447510,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,l artz
+3893439728,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,"Orchis spectabilis, L.",Galearis spectabilis (L.) Raf.,wrong,0,a b massey
+3893439728,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,A. B. Massey,A. B. Massey,exact,0,a b massey
+3893439728,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,,both_empty,0,a b massey
+3893439728,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1939-05-10,1939-05-10,exact,0,a b massey
+3893439728,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,a b massey
+3893439728,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,a b massey
+3893439728,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Amherst,Amherst,exact,0,a b massey
+3893439728,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,On Willard farm 5 mi. N. of Amherst C.H.,On Williard farm 5 mi. N. of Amherst C. H.,partial,0,a b massey
+3893439728,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,a b massey
+3893471419,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Lemna trisulca L.,Lemna trisulca L.,exact,0,e farr
+3893471419,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,E. Farr,E. Farr,exact,0,e farr
+3893471419,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,EF25,,unsupported,0,e farr
+3893471419,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1972-10-15,1972-10-15,exact,0,e farr
+3893471419,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,e farr
+3893471419,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,e farr
+3893471419,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Montgomery,Montgomery,exact,0,e farr
+3893471419,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"tangled in other plants, pond on south side of Hwy. 460, northeast of Elliston, Va.","Tangled in other plants, pond on south side of Hwy. 460, northeast of Elliston, Va.",normalized,0,e farr
+3893471419,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,e farr
+3893441632,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Mertensia virginica (L) D.C.,Mertensia virginica (L.) Pers. ex Link,normalized,0,l artz
+3893441632,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Lena Artz,Lena Artz,exact,0,l artz
+3893441632,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,266,266,exact,0,l artz
+3893441632,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1932-04-14,1932-04-14,exact,0,l artz
+3893441632,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,l artz
+3893441632,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,l artz
+3893441632,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Shenandoah,Shenandoah,exact,0,l artz
+3893441632,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Stonewall Bend of Shen. R. Woodstock.,Massanutten Mountains. Stonewall Bend of Shen. R. Woodstock.,partial,0,l artz
+3893441632,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,l artz
+3893442526,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Quercus alba,Quercus alba L.,normalized,0,j b lewis
+3893442526,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,J. B. Lewis,J. B. Lewis,exact,0,j b lewis
+3893442526,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,455,455,exact,0,j b lewis
+3893442526,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1937-05-04,1937-05-04,exact,0,j b lewis
+3893442526,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,j b lewis
+3893442526,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,j b lewis
+3893442526,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Amelia,,unsupported,0,j b lewis
+3893442526,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Common on good, well drained soils.","Common on good, well drained soils",normalized,0,j b lewis
+3893442526,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,j b lewis
+3893438889,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Carex annectens (Bickn.) Bickn.,Carex annectens (E.P.Bicknell) E.P.Bicknell,normalized,0,t f wieboldt
+3893438889,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,T.F. Wieboldt,T. F. Wieboldt,normalized,0,t f wieboldt
+3893438889,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,11831,11831,exact,0,t f wieboldt
+3893438889,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,2006-06-17,2006-06-17,exact,0,t f wieboldt
+3893438889,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,t f wieboldt
+3893438889,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,t f wieboldt
+3893438889,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Giles,Giles,exact,0,t f wieboldt
+3893438889,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Dry slope of open, irregularly mown meadow. My property on Shady Grove Lane, Spruce Run, ca 3 mi SW of Newport, Va.","Dry slope of open, irregularly mown meadow. My property on Shady Grove Lane, Spruce Run, ca 3 mi SW of Newport, Va.",exact,0,t f wieboldt
+3893438889,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,t f wieboldt
+3893446135,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Phlox buckleyi Wherry,Phlox buckleyi Wherry,exact,0,l artz
+3893446135,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Lena Artz,Lena Artz,exact,0,l artz
+3893446135,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,s.n.,normalized,0,l artz
+3893446135,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1966-06-10,1966-06-10,exact,0,l artz
+3893446135,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,l artz
+3893446135,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,VIRGINIA,Virginia,normalized,0,l artz
+3893446135,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Bath,Bath,exact,0,l artz
+3893446135,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,No locality data.,,unsupported,0,l artz
+3893446135,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,l artz
+3893435617,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Chelone cuthbertii Small.,Chelone cuthbertii Small,normalized,0,a m; harvill; jr
+3893435617,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,A M Harvill,"Harvill, Alton M., Jr.",partial,0,a m; harvill; jr
+3893435617,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,17622,17622,exact,0,a m; harvill; jr
+3893435617,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1967-09-03,1967-09-03,exact,0,a m; harvill; jr
+3893435617,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,a m; harvill; jr
+3893435617,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,a m; harvill; jr
+3893435617,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Henrico,Henrico,exact,0,a m; harvill; jr
+3893435617,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Marsh about 1 mile west of Elko.,about 1 mi W of Elko,wrong,0,a m; harvill; jr
+3893435617,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Marsh,omitted,0,a m; harvill; jr
+3893458225,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Spiraea alba var. latifolia (Ait.) Ahles,Spiraea latifolia (Aiton) Borkh.,partial,0,l artz
+3893458225,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Lena Artz,Lena Artz,exact,0,l artz
+3893458225,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,1242,omitted,0,l artz
+3893458225,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1953-08-13,1953-08-13,exact,0,l artz
+3893458225,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,l artz
+3893458225,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,VIRGINIA,Virginia,normalized,0,l artz
+3893458225,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Shenandoah,Shenandoah,exact,0,l artz
+3893458225,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Below Downy Rits Sawmill, Massanutten Mountain,","Below Downy Rits Sawmill, Massanutten Mountain",normalized,0,l artz
+3893458225,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,l artz
+3893483881,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,L. flabelliforme (Fern.) Blanch.,Diphasiastrum digitatum (Dill. ex A.Braun) Holub,wrong,0,r kral
+3893483881,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,R. Kral,R. Kral,exact,0,r kral
+3893483881,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,9780B,9780B,exact,0,r kral
+3893483881,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1960-04-05,1960-04-05,exact,0,r kral
+3893483881,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,r kral
+3893483881,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,r kral
+3893483881,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Giles,Giles,exact,0,r kral
+3893483881,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,White pine woods above Big Stony Creek w. of Mt. Lake.,Above Big Stony Creek W of Mt. Lake,partial,0,r kral
+3893483881,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,White pine woods,omitted,0,r kral
+3893481729,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Spiranthes tuberosa Raf.,Spiranthes tuberosa Raf.,exact,0,a b davenport
+3893481729,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,A. B. Davenport,A. B. Davenport,exact,0,a b davenport
+3893481729,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,,both_empty,0,a b davenport
+3893481729,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1962-09-12,1962-09-12,exact,0,a b davenport
+3893481729,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,a b davenport
+3893481729,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,a b davenport
+3893481729,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Albemarle,Albemarle,exact,0,a b davenport
+3893481729,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,1 mi. nw. of Charlottesville. In open pine woods,1 mi. nw. of Charlottesville.,partial,0,a b davenport
+3893481729,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,In open pine woods,omitted,0,a b davenport
+3893491947,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Lilium superbum L.,Lilium superbum L.,exact,0,a b massey
+3893491947,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,A. B. Massey,A. B. Massey,exact,0,a b massey
+3893491947,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,,both_empty,0,a b massey
+3893491947,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1937-07-27,1937-07-27,exact,0,a b massey
+3893491947,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,a b massey
+3893491947,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,a b massey
+3893491947,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Surry,Surry,exact,0,a b massey
+3893491947,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,E. of Trail A,E. of trail A,normalized,0,a b massey
+3893491947,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,a b massey
+3893453442,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Erythronium umbilicatum Parks & Hardin,Erythronium umbilicatum C.R.Parks & Hardin,normalized,0,w r degarmo
+3893453442,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,W. R. DeGarmo,W. R. DeGarmo,exact,0,w r degarmo
+3893453442,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,,both_empty,0,w r degarmo
+3893453442,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1938-04-05,1938-04-05,exact,0,w r degarmo
+3893453442,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,w r degarmo
+3893453442,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,w r degarmo
+3893453442,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Pulaski,Pulaski,exact,0,w r degarmo
+3893453442,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,near Newbern,Near Newbern,normalized,0,w r degarmo
+3893453442,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,w r degarmo
+3893474734,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Lathyrus venosus Muhl. var. venosus,Lathyrus venosus Muhl. ex Willd.,partial,0,f w hunnewell
+3893474734,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,,F. W. Hunnewell,omitted,0,f w hunnewell
+3893474734,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,,both_empty,0,f w hunnewell
+3893474734,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1942-05-19,1942-05-19,exact,0,f w hunnewell
+3893474734,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,f w hunnewell
+3893474734,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,VIRGINIA,Virginia,normalized,0,f w hunnewell
+3893474734,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Shenandoah,Shenandoah,exact,0,f w hunnewell
+3893474734,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"dry woods, Massanutten Mt.",Massanutten Mt.,partial,0,f w hunnewell
+3893474734,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Dry woods,omitted,0,f w hunnewell
+3893434172,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Smilacina racemosa (L.) Desf.,Smilacina racemosa (L.) Desf.,exact,0,j l pendleton
+3893434172,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,J. L. Pendleton,J. L. Pendleton,exact,0,j l pendleton
+3893434172,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,55,55,exact,0,j l pendleton
+3893434172,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1937,1937,exact,0,j l pendleton
+3893434172,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,j l pendleton
+3893434172,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,j l pendleton
+3893434172,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Augusta,Augusta,exact,0,j l pendleton
+3893434172,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Ramsey's Gap CCC Camp,Ramsey's Gap. CCC Camp,normalized,0,j l pendleton
+3893434172,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,j l pendleton
+3893463950,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Lygodium palmatum (Bernh.) Sw.,Lygodium palmatum (Bernh.) Sw.,exact,0,r h lutts
+3893463950,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Ralph H. Lutts,Ralph H. Lutts,exact,0,r h lutts
+3893463950,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,s.n.,,both_empty,0,r h lutts
+3893463950,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,2006-06,2006-06,exact,0,r h lutts
+3893463950,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,r h lutts
+3893463950,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,VIRGINIA,Virginia,normalized,0,r h lutts
+3893463950,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Patrick,Patrick,exact,0,r h lutts
+3893463950,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Bank along gravel drive at 311 Dan River Road. Adjacent to mixed hardwoods and pine forest with understory of Rhododendron and Kalmia latifolia. Meadows of Dan, VA.","Meadows of Dan, 311 Dan River Road. Bank along gravel drive.",wrong,0,r h lutts
+3893463950,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Adjacent to mixed hardwoods and pine forest with understory of Rhododendron and Kalmia latifolia.,omitted,0,r h lutts
+3893452387,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Hexastylis virginica (L.) Small,Hexastylis virginica (L.) Small,exact,0,a b massey
+3893452387,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,A. B. Massey,"Massey, A. B.",normalized,0,a b massey
+3893452387,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,s.n.,normalized,0,a b massey
+3893452387,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1937-03-28,1937-03-28,exact,0,a b massey
+3893452387,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,a b massey
+3893452387,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,a b massey
+3893452387,test,gemini-3.1-pro-preview,prompts/v2.txt,county,York,York,exact,0,a b massey
+3893452387,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,In woods near York River near Williamsburg.,near York River near Williamsburg,partial,0,a b massey
+3893452387,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,In woods,omitted,0,a b massey
+3893448535,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Quercus alba L.,Quercus alba L.,exact,0,k markley
+3893448535,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Ken Markley,Ken Markley,exact,0,k markley
+3893448535,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,,both_empty,0,k markley
+3893448535,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1986-07-07,1986-07-07,exact,0,k markley
+3893448535,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,k markley
+3893448535,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,k markley
+3893448535,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Dickenson,,unsupported,0,k markley
+3893448535,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Breaks Interstate Park Maintenance area, park residence","Breaks Interstate Park maintenance area, park residence",normalized,0,k markley
+3893448535,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,k markley
+3893446433,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Magnolia acuminata L.,Magnolia acuminata (L.) L.,normalized,0,a b massey
+3893446433,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,A. B. Massey,A. B. Massey,exact,0,a b massey
+3893446433,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,,both_empty,0,a b massey
+3893446433,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1940-05-15,1940-05-15,exact,0,a b massey
+3893446433,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,a b massey
+3893446433,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,a b massey
+3893446433,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Giles,Giles,exact,0,a b massey
+3893446433,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Eggleston,Eggleston,exact,0,a b massey
+3893446433,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,a b massey
+3893493816,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Floerkea proserpinacoides Willd.,Floerkea proserpinacoides Willd.,exact,0,j c ludwig; rwainski; t j
+3893493816,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Thomas J. Rawinski; J.C. Ludwig,"Rwainski, Thomas J.; Ludwig, J. C.",partial,0,j c ludwig; rwainski; t j
+3893493816,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,10212,10212,exact,0,j c ludwig; rwainski; t j
+3893493816,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1990-04-12,1990-04-12,exact,0,j c ludwig; rwainski; t j
+3893493816,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,j c ludwig; rwainski; t j
+3893493816,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,j c ludwig; rwainski; t j
+3893493816,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Fairfax,Fairfax,exact,0,j c ludwig; rwainski; t j
+3893493816,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Madeira School, near Black Pond. Rich deciduous forest. With Erigenia bulbosa and Dicentra canadensis. Rather frequent. Elev. ca. 100 ft. (30 m)","Madeira School, near Black Pond",partial,0,j c ludwig; rwainski; t j
+3893493816,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Rich deciduous forest... Rather frequent,omitted,0,j c ludwig; rwainski; t j
+3893473689,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Magnolia fraseri Walt.,Magnolia fraseri Walter,normalized,0,c burrell; j harrison; l mattingly
+3893473689,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,C. Burrell; L. Mattingly; J. Harrison,"C. Burrell; L. Mattingly, J. Harrison",normalized,0,c burrell; j harrison; l mattingly
+3893473689,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,59,59,exact,0,c burrell; j harrison; l mattingly
+3893473689,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1976-05-02,1976-05-02,exact,0,c burrell; j harrison; l mattingly
+3893473689,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,c burrell; j harrison; l mattingly
+3893473689,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,VIRGINIA,Virginia,normalized,0,c burrell; j harrison; l mattingly
+3893473689,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Floyd,,unsupported,0,c burrell; j harrison; l mattingly
+3893473689,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Moist soil in open woods along swift stream at the base of Buffalo Mt. Tree approx. 20 ft. Flowers white.,Moist soil in open woods along swift stream at the base of Buffalo Mt. Tree approx. 20 ft. Flowers white.,exact,0,c burrell; j harrison; l mattingly
+3893473689,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,c burrell; j harrison; l mattingly
+3893468713,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Asplenium montanum,Asplenium montanum Willd.,normalized,0,d w ogle
+3893468713,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,DW Ogle,D. W. Ogle,partial,0,d w ogle
+3893468713,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,6708,omitted,0,d w ogle
+3893468713,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1987-09-03,1987-09-03,exact,0,d w ogle
+3893468713,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,d w ogle
+3893468713,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,VIRGINIA,Virginia,normalized,0,d w ogle
+3893468713,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Wise,Wise,exact,0,d w ogle
+3893468713,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Flag Rock recreation area above Norton,Flag Rock recreation area above Norton,exact,0,d w ogle
+3893468713,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,d w ogle
+3893450366,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Quercus rubra L.,Quercus rubra L.,exact,0,g c mason
+3893450366,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,G. C. Mason,G. C. Mason,exact,0,g c mason
+3893450366,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,137,,unsupported,0,g c mason
+3893450366,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1935-07-01,1935-07-01,exact,0,g c mason
+3893450366,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,g c mason
+3893450366,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,g c mason
+3893450366,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Warwick,Wa,wrong,0,g c mason
+3893450366,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Mariner's Museum - open woods,Mariners' Museum,wrong,0,g c mason
+3893450366,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Open woods,omitted,0,g c mason
+3893447680,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Asplenium platyneuron (L) Oakes,"Asplenium platyneuron (L.) Britton, Sterns & Poggenb.",normalized,0,d w ogle
+3893447680,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,D. W. Ogle,D. W. Ogle,exact,0,d w ogle
+3893447680,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,4347,omitted,0,d w ogle
+3893447680,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1975-06-20,1975-06-20,exact,0,d w ogle
+3893447680,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,d w ogle
+3893447680,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,d w ogle
+3893447680,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Carroll,Carroll,exact,0,d w ogle
+3893447680,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,South fork Stewart's Creek,South fork Stewart's Creek,exact,0,d w ogle
+3893447680,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,d w ogle
+3893454283,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Quercus laurifolia Michx.,Quercus laurifolia Michx.,exact,0,r kral
+3893454283,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,R. Kral,R. Kral,exact,0,r kral
+3893454283,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,12324,12324,exact,0,r kral
+3893454283,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1961-05-09,1961-05-09,exact,0,r kral
+3893454283,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,r kral
+3893454283,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,r kral
+3893454283,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Sussex,,unsupported,0,r kral
+3893454283,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Waverly; small, tight-barked tree of pond margin.","Waverly; small, tight barked tree on pond margin.",partial,0,r kral
+3893454283,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Pond,omitted,0,r kral
+3893452809,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Quercus ilicifolia Wang.,Quercus ilicifolia Wangenh.,normalized,0,r kral
+3893452809,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,R. Kral,R. Kral,exact,0,r kral
+3893452809,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,12508,12508,exact,0,r kral
+3893452809,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1961-05-16,1961-05-16,exact,0,r kral
+3893452809,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,r kral
+3893452809,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,r kral
+3893452809,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Montgomery,,unsupported,0,r kral
+3893452809,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,ca 11 mi. w. Blacksburg; small tree on dry shaly slope.,ca 11 mi. W. of Blacksburg; small tree on dry shaly stone,partial,0,r kral
+3893452809,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,small tree on dry shaly stone,omitted,0,r kral
+3893455196,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Synandra hispidula (Michaux) Baillon,Synandra hispidula (Michx.) Baill.,normalized,0,a m; b j; harvill; harville; jr
+3893455196,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Barbara J. Harvill; A. M. Harvill,"Harville, Alton M., Jr.; Harvill, Barbara J.",partial,0,a m; b j; harvill; harville; jr
+3893455196,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,36795,36795,exact,0,a m; b j; harvill; harville; jr
+3893455196,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1978-05-20,1978-05-20,exact,0,a m; b j; harvill; harville; jr
+3893455196,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,a m; b j; harvill; harville; jr
+3893455196,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,a m; b j; harvill; harville; jr
+3893455196,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Wise,Wise,exact,0,a m; b j; harvill; harville; jr
+3893455196,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Wooded slope near St. Paul on limestone,near St Paul,partial,0,a m; b j; harvill; harville; jr
+3893455196,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,wooded slope ... on limestone,omitted,0,a m; b j; harvill; harville; jr
+3893493940,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Lespedeza intermedia (Wats.) Britt.,Lespedeza Michx.,partial,0,t f wieboldt
+3893493940,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,T.F. Wieboldt; C.E. Stevens; Chip Morgan,T. F. Wieboldt,partial,0,t f wieboldt
+3893493940,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,11517,11517,exact,0,t f wieboldt
+3893493940,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,2004-09-21,2004-09-21,exact,0,t f wieboldt
+3893493940,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,t f wieboldt
+3893493940,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,t f wieboldt
+3893493940,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Russell,Russell,exact,0,t f wieboldt
+3893493940,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Very dry and rocky, southerly-facing limestone slope; mixed hardwood canopy. Just W above confluence of Big Cedar Creek with Clinch River. Ca 4.8 mi NE of Lebanon, Va.","Very dry and rocky, southerly-facing limestone slope; mixed hardwood canopy. Just W above confluence of Big Cedar Creek with Clinch River. Ca 4.8 mi NE of Lebanon, Va.",exact,0,t f wieboldt
+3893493940,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,t f wieboldt
+3893434361,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Smilacina racemosa (L.) Desf,Smilacina racemosa (L.) Desf.,normalized,0,s a terry
+3893434361,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Sybil A. Terry,Sybil A. Terry,exact,0,s a terry
+3893434361,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,,both_empty,0,s a terry
+3893434361,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1940-05,1940-05,exact,0,s a terry
+3893434361,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,s a terry
+3893434361,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,s a terry
+3893434361,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Patrick,Patrick,exact,0,s a terry
+3893434361,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,,,both_empty,0,s a terry
+3893434361,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,s a terry
+3893451834,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Lespedeza hirta (L.) Hornem. var. hirta,Lespedeza hirta (L.) Hornem.,partial,0,g w ramsey; r s freer; w m ruska
+3893451834,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,G. W. Ramsey; R. S. Freer; Wm. Ruska,"G.W. Ramsey; R. S. Freer, W. M. Ruska",partial,0,g w ramsey; r s freer; w m ruska
+3893451834,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,7257,7257,exact,0,g w ramsey; r s freer; w m ruska
+3893451834,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1967-08-30,1967-08-30,exact,0,g w ramsey; r s freer; w m ruska
+3893451834,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,g w ramsey; r s freer; w m ruska
+3893451834,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,g w ramsey; r s freer; w m ruska
+3893451834,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Augusta,Augusta,exact,0,g w ramsey; r s freer; w m ruska
+3893451834,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Spring Pond, wildlife dearingl","Spring Pond, wildlife dearing.",partial,0,g w ramsey; r s freer; w m ruska
+3893451834,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,g w ramsey; r s freer; w m ruska
+3893454726,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Platanthera ciliaris (L.) Lindl.,Platanthera ciliaris (L.) Lindl.,exact,0,a b culbertson
+3893454726,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,A. B. Culbertson,A. B. Culbertson,exact,0,a b culbertson
+3893454726,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,,both_empty,0,a b culbertson
+3893454726,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1946-08-15,1946-08-15,exact,0,a b culbertson
+3893454726,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,a b culbertson
+3893454726,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,a b culbertson
+3893454726,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Scott,Scott,exact,0,a b culbertson
+3893454726,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Head of Glady Fork,Head of Glady Fork,exact,0,a b culbertson
+3893454726,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,Edge of marshy opening in woods,Edge of marshy opening in woods.,normalized,0,a b culbertson
+3893434954,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,"Muscari racemosa, (L) Mill",Muscari neglectum Guss. ex Ten.,partial,0,f w hunnewell
+3893434954,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,F. W. Hunnewell,F. W. Hunnewell,exact,0,f w hunnewell
+3893434954,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,5113,5113,exact,0,f w hunnewell
+3893434954,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1918-04-14,1918-04-14,exact,0,f w hunnewell
+3893434954,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,f w hunnewell
+3893434954,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,f w hunnewell
+3893434954,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Fairfax,Fairfax,exact,0,f w hunnewell
+3893434954,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"dry woods, over 1 mile from nearest house",Over 1 mile from nearest house,partial,0,f w hunnewell
+3893434954,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Dry woods,omitted,0,f w hunnewell
+3893481310,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Lilium Michauxii Poir.,Lilium michauxii Poir.,normalized,0,d w ogle
+3893481310,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,D. W. Ogle,D. W. Ogle,exact,0,d w ogle
+3893481310,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,,both_empty,0,d w ogle
+3893481310,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1975-08-12,1975-08-12,exact,0,d w ogle
+3893481310,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,d w ogle
+3893481310,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,d w ogle
+3893481310,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Carroll,Carroll,exact,0,d w ogle
+3893481310,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Pipers Gap Rd. at crest of mountain,Pipers Gap rd. at crest of mountain,normalized,0,d w ogle
+3893481310,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,Edge of dec. woods.,Edge of woods,partial,0,d w ogle
+3893461253,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Isoëtes engelmannii A. Br.,Isoetes engelmannii A.Braun,wrong,0,e j s jr
+3893461253,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,"E. S. Seay, Jr.",E. J. Seary Jr.,partial,0,e j s jr
+3893461253,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,12902,omitted,0,e j s jr
+3893461253,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1960-06-07,1960-06-07,exact,0,e j s jr
+3893461253,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,e j s jr
+3893461253,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,e j s jr
+3893461253,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Cumberland,Cumberland,exact,0,e j s jr
+3893461253,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,In Bear Creek Lake.,"On Bear Creek. By mail from E. J. Seay, Jr.",wrong,0,e j s jr
+3893461253,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,e j s jr
+3893487798,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Ammophila breviligulata Fernald,Ammophila breviligulata Fernald,exact,0,baldwin; patrick
+3893487798,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Patrick Baldwin,"Baldwin, Patrick",partial,0,baldwin; patrick
+3893487798,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,1850,1850,exact,0,baldwin; patrick
+3893487798,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1996-08-10,1996-08-10,exact,0,baldwin; patrick
+3893487798,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,baldwin; patrick
+3893487798,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,baldwin; patrick
+3893487798,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Hampton,Hampton City,wrong,0,baldwin; patrick
+3893487798,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Common along entire length of Grandview Beach in front of primary dunes on grounds of Grandview Nature Preserve,along entire length of Grandview Beach... on grounds of Grandview Nature Preserve,partial,0,baldwin; patrick
+3893487798,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Common... in front of primary dunes,omitted,0,baldwin; patrick
+3893485167,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,GALIUM VERUM L.,Galium verum L.,normalized,0,l artz
+3893485167,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,LENA ARTZ,Lena Artz,normalized,0,l artz
+3893485167,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,256,256,exact,0,l artz
+3893485167,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1932-07-03,1932-07-03,exact,0,l artz
+3893485167,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,l artz
+3893485167,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Va,Virginia,normalized,0,l artz
+3893485167,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Frederick,Frederick,exact,0,l artz
+3893485167,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Roadside between Winchester & Gore Va-,Between Winchester & Gore,partial,0,l artz
+3893485167,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Roadside,omitted,0,l artz
+3893481745,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Spiranthes vernalis Engelm. & Gray,Spiranthes vernalis Engelm. & A.Gray,normalized,0,g p fleming
+3893481745,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Gary P. Fleming,Gary P. Fleming,exact,0,g p fleming
+3893481745,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,15730,15730,exact,0,g p fleming
+3893481745,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,2012-09-04,2012-09-04,exact,0,g p fleming
+3893481745,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,g p fleming
+3893481745,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,g p fleming
+3893481745,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Grayson,Grayson,exact,0,g p fleming
+3893481745,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Open grassy bald on south slope of Whitetop Mountain, along the Appalachian Trail just west of road to summit; a scattered colony here, among Sibbaldiopsis tridentata, Danthonia compressa, Gentianella quinquefolia, etc.; elev. 5040 ft.","Open grassy bald on south slope of Whitetop Mountain, along the Appalachian Trail just west of road to summit",partial,0,g p fleming
+3893481745,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Open grassy bald,omitted,0,g p fleming
+5131791191,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,,Frullania riparia Hampe ex Lehm.,omitted,0,t f wieboldt
+5131791191,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,,T.F. Wieboldt,omitted,0,t f wieboldt
+5131791191,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,14227,omitted,0,t f wieboldt
+5131791191,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,,2021-05-20,omitted,0,t f wieboldt
+5131791191,test,gemini-3.1-pro-preview,prompts/v2.txt,country,,United States of America,omitted,0,t f wieboldt
+5131791191,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,,Virginia,omitted,0,t f wieboldt
+5131791191,test,gemini-3.1-pro-preview,prompts/v2.txt,county,,Alleghany,omitted,0,t f wieboldt
+5131791191,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,,"Above Potts Creek at Rte 18 bridge at gaging station, 0.8 mi SW of Blue Spring Run",omitted,0,t f wieboldt
+5131791191,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,On shale outcrop under Juniperus virginiana in open shale barren woodland,omitted,0,t f wieboldt
+3893448074,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Isoetes valida Clute,Isoetes valida (Engelm.) Clute,normalized,0,c e stevens
+3893448074,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Charles E. Stevens,Chareles E. Stevens,normalized,0,c e stevens
+3893448074,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,23813,23813,exact,0,c e stevens
+3893448074,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1993-08-09,1993-08-09,exact,0,c e stevens
+3893448074,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,c e stevens
+3893448074,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,c e stevens
+3893448074,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Page,Page,exact,0,c e stevens
+3893448074,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"near New Market Gap, Hundreds in shallow water of small pond in woods @ head of Passage Creek 2.1 mi. NNE of gap. el. 2170 ft. (Hamburg Quad.)",Near New Market Gap. Hundreds in shallow water of small pond in woods e head of Passage Creek 2.1 mi. NNE of gap. (Hamburg Quad),partial,0,c e stevens
+3893448074,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,c e stevens
+3893443214,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Lespedeza procumbens Michx.,Lespedeza procumbens Michx.,exact,0,k markley
+3893443214,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Ken Markley,Ken Markley,exact,0,k markley
+3893443214,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,,both_empty,0,k markley
+3893443214,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1987-09-29,1987-09-29,exact,0,k markley
+3893443214,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,k markley
+3893443214,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,VA,Virginia,normalized,0,k markley
+3893443214,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Dickenson,Dickenson,exact,0,k markley
+3893443214,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Breaks Interstate Park, entrance to maintenance road, powerline right of way.","Breaks Interstate Park, entrance to maintence road, powerline Right of way",partial,0,k markley
+3893443214,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,k markley
+3893438084,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Eleocharis wolfii (Gray) Gray ex Britt.,Eleocharis wolfii (A.Gray) A.Gray ex Britton,normalized,0,j f townsend; t f; wieboldt
+3893438084,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,T. F. Wieboldt; J. F. Townsend,"Wieboldt, Thomas F.; Townsend, J. F.",partial,0,j f townsend; t f; wieboldt
+3893438084,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,12822,12822,exact,0,j f townsend; t f; wieboldt
+3893438084,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,2013-04-23,2013-04-23,exact,0,j f townsend; t f; wieboldt
+3893438084,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,j f townsend; t f; wieboldt
+3893438084,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,j f townsend; t f; wieboldt
+3893438084,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Pittsylvania,Pittsylvania,exact,0,j f townsend; t f; wieboldt
+3893438084,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Damp ground of shallow depression in open pipeline right-of-way. Broad open flats about 0.8 mi NE of Coles Hill. Multiple populations, usually associated with Alopecurus carolinianus. GPS: N36.87993 W79.28912",about 0.8 mi NE of Coles Hill,partial,0,j f townsend; t f; wieboldt
+3893438084,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,"Damp ground of shallow depression in open pipeline right-of-way. Broad open flats... Multiple populations, usually associated with Alopecurus carolinianus",omitted,0,j f townsend; t f; wieboldt
+3893434226,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Smilacina racemosa,Smilacina racemosa (L.) Desf.,normalized,0,c owens
+3893434226,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Cory Owens,Cory Owens,exact,0,c owens
+3893434226,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,5458,omitted,0,c owens
+3893434226,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1985-05-09,1985-05-09,exact,0,c owens
+3893434226,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,c owens
+3893434226,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,c owens
+3893434226,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Washington,Washington,exact,0,c owens
+3893434226,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Denton Valley,Denton Valley,exact,0,c owens
+3893434226,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,c owens
+3893491799,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Leersia virginica var. ovata (Poir.) Fern.,Leersia virginica Willd.,partial,0,l artz
+3893491799,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Lena Artz,Lena Artz,exact,0,l artz
+3893491799,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,1015,1015,exact,0,l artz
+3893491799,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1949-09-03,1949-09-03,exact,0,l artz
+3893491799,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,l artz
+3893491799,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,l artz
+3893491799,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Shenandoah,Shenandoah,exact,0,l artz
+3893491799,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"moist meadows, Elizabeth Furnace, Powell's Fort, Massanutten Mt.","Elizabeth Furnace, Powell's Fort, Massanutten Mt.",partial,0,l artz
+3893491799,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Moist meadows,omitted,0,l artz
+3893452254,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Hexastylis virginica (L.) Small,Hexastylis virginica (L.) Small,exact,0,t f; wieboldt
+3893452254,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,T.F. Wieboldt,"Wieboldt, Thomas F.",partial,0,t f; wieboldt
+3893452254,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,5556,5556,exact,0,t f; wieboldt
+3893452254,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1985-05-25,1985-05-25,exact,0,t f; wieboldt
+3893452254,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,t f; wieboldt
+3893452254,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,t f; wieboldt
+3893452254,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Giles,Giles,exact,0,t f; wieboldt
+3893452254,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Little Meadows. White pine woods on valley floor adj. to Little Stony Creek. Just above St. Rt. 714, 2 1/2 miles SE of Interior, Va. El. 3080'.","Little Meadows... adj [adjacent] to Little Stony Creek. Just above St Rt 714, 2.5 mi SE of Interior, Va. [Virginia]",partial,0,t f; wieboldt
+3893452254,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,White pine woods on valley floor,omitted,0,t f; wieboldt
+3893469912,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Castilleja coccinea (L.) Spreng.,Castilleja coccinea (L.) Spreng.,exact,0,l j; uttal
+3893469912,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,L. J. UTTAL,"Uttal, Leonard J.",partial,0,l j; uttal
+3893469912,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,6932,6932,exact,0,l j; uttal
+3893469912,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1970-05-05,1970-05-05,exact,0,l j; uttal
+3893469912,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,l j; uttal
+3893469912,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,l j; uttal
+3893469912,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Roanoke,Roanoke,exact,0,l j; uttal
+3893469912,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Meadow, at dead end of Va. 701, Trout Creek, on farm known as ""The Ridge"". Calyces and bracts scarlet-tipped.","at dead end of Va 701, Trout Creek, on farm known as ""The Ridge",partial,0,l j; uttal
+3893469912,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Meadow,omitted,0,l j; uttal
+3893467632,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Magnolia virginiana L.,Magnolia virginiana L.,exact,0,f c james
+3893467632,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Fred C. James,Fred C. James,exact,0,f c james
+3893467632,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,2111,2111,exact,0,f c james
+3893467632,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1964-08-11,1964-08-11,exact,0,f c james
+3893467632,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,f c james
+3893467632,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,VIRGINIA,Virginia,normalized,0,f c james
+3893467632,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Surry,Surry,exact,0,f c james
+3893467632,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,0.6 mi. NE of Sussex-Surry Co. line on State 31 swamp forest,0.6 mi. NE of Sussex-Surry Co. line on State 31,partial,0,f c james
+3893467632,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Swamp Forest,omitted,0,f c james
+3893438495,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Kalopanax pictus (Thunb.) Nakai var. maximowicz (van Houtte) Hara,Kalopanax pictus var. maximowiczii (Van Houtte) H.Hara ex H.L.Li,partial,0,t f; wieboldt
+3893438495,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,,"Wieboldt, Thomas F.",omitted,0,t f; wieboldt
+3893438495,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,s.n.,normalized,0,t f; wieboldt
+3893438495,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,2006-07-31,2006-07-31,exact,0,t f; wieboldt
+3893438495,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,t f; wieboldt
+3893438495,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,t f; wieboldt
+3893438495,test,gemini-3.1-pro-preview,prompts/v2.txt,county,,Lynchburg City,omitted,0,t f; wieboldt
+3893438495,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Lawn in Lynchburg. Sent in by County Extension agent for identification.,in Lynchburg,partial,0,t f; wieboldt
+3893438495,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Lawn,omitted,0,t f; wieboldt
+3893470145,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Carex appalachia J.M. Webber and P.W. Ball,Carex appalachica J.M.Webber & P.W.Ball,partial,0,c t bryson; n b bryson
+3893470145,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Charles T. Bryson; Nancy B. Bryson,Charles T. Bryson; Nancy B. Bryson,exact,0,c t bryson; n b bryson
+3893470145,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,21804,21804,exact,0,c t bryson; n b bryson
+3893470145,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,2006-06-13,2006-06-13,exact,0,c t bryson; n b bryson
+3893470145,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,c t bryson; n b bryson
+3893470145,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,c t bryson; n b bryson
+3893470145,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Grayson,Grayson,exact,0,c t bryson; n b bryson
+3893470145,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"White Top Mountain, elev. 5520' near top; near Grayson-Smyth County line, Jefferson National Forest (N36° 38.294' W081° 36.337'). Open meadow.","White Top Mountain; near Grayson-Smyth County line, Jefferson National Forest.; 36.63822 -81.60561",partial,0,c t bryson; n b bryson
+3893470145,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Open Meadow,omitted,0,c t bryson; n b bryson
+3893446358,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Asarum canadense L.,Asarum canadense L.,exact,0,l j uttal
+3893446358,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,L. J. UTTAL,L. J. Uttal,normalized,0,l j uttal
+3893446358,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,6898,6898,exact,0,l j uttal
+3893446358,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1970-04-28,1970-04-28,exact,0,l j uttal
+3893446358,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,l j uttal
+3893446358,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,l j uttal
+3893446358,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Montgomery,Montgomery,exact,0,l j uttal
+3893446358,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Large creeping colonies on rich wooded slope on Bandy Farm, Va. 641, 3.3 mi. so. of 603.","On rich wooded slope on Bandy Farm, Va. 641, 3.3 mi. so. of 603.",partial,0,l j uttal
+3893446358,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,rich wooded slope,omitted,0,l j uttal
+3893452227,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Hexastylis virginica (L.) Small,Hexastylis virginica (L.) Small,exact,0,bentley; croy; frank; greg; s q; stan
+3893452227,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Greg P. Frank; Steve Q. Croy; Stan Bentley,"Frank, Greg; Croy, Steve Q.; Bentley, Stan",partial,0,bentley; croy; frank; greg; s q; stan
+3893452227,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,496,496,exact,0,bentley; croy; frank; greg; s q; stan
+3893452227,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1981-05-01,1981-05-01,exact,0,bentley; croy; frank; greg; s q; stan
+3893452227,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,bentley; croy; frank; greg; s q; stan
+3893452227,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,VIRGINIA,Virginia,normalized,0,bentley; croy; frank; greg; s q; stan
+3893452227,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Pulaski,Pulaski,exact,0,bentley; croy; frank; greg; s q; stan
+3893452227,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Next to path along intermittent stream that feeds Pondlick Branch. 1 3/8 mi NW of Mt. Olivet. Just off Forest Service Road 202-1. Elev. 2400'. Jefferson National Forest. Common along pathside.,Next to path along intermittent stream that feeds Pondlick Branch 1.375 mi NW of Mt Olivet. Just off Forest Service Road 202-1... Jefferson National Forest,partial,0,bentley; croy; frank; greg; s q; stan
+3893452227,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,Common along pathside,omitted,0,bentley; croy; frank; greg; s q; stan
+3893439440,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Asparagus officinalis L.,Asparagus officinalis L.,exact,0,a vascott; d m e ware
+3893439440,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Donna M. E. Ware; Anna Vascott,Donna M. E. Ware; Anna Vascott,exact,0,a vascott; d m e ware
+3893439440,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,8224,8224,exact,0,a vascott; d m e ware
+3893439440,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1983-06-09,1983-06-09,exact,0,a vascott; d m e ware
+3893439440,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,a vascott; d m e ware
+3893439440,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,VIRGINIA,Virginia,normalized,0,a vascott; d m e ware
+3893439440,test,gemini-3.1-pro-preview,prompts/v2.txt,county,King George,King George,exact,0,a vascott; d m e ware
+3893439440,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Few; beach berm of Jones Pond, near E park boundary.","Few; beach berm of Jones Pond, near E park boundary.",exact,0,a vascott; d m e ware
+3893439440,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,a vascott; d m e ware
+3893448397,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Asplenium pinnatifidum,Asplenium pinnatifidum Nutt.,normalized,0,d w ogle
+3893448397,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,D. W. Ogle,D. W. Ogle,exact,0,d w ogle
+3893448397,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,,4346,omitted,0,d w ogle
+3893448397,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1978-08,1978-08,exact,0,d w ogle
+3893448397,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,d w ogle
+3893448397,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,d w ogle
+3893448397,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Washington,Washington,exact,0,d w ogle
+3893448397,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,One plant on Morrison Cliff due east from river Bridge on South Side of the North Fork of the Holston River. Elevation 1540',One plant on Morrison Cliff due east from river Bridge on South Side of the North Fork of the Holston River,partial,0,d w ogle
+3893448397,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,d w ogle
+3893483692,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Lycopodium digitatum A. Braun,Diphasiastrum digitatum (Dill. ex A.Braun) Holub,wrong,0,b a stamp
+3893483692,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Beverly A. Stamp,Beverly A. Stamp,exact,0,b a stamp
+3893483692,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,896:96,896-96,wrong,0,b a stamp
+3893483692,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1996-10-21,1996-10-21,exact,0,b a stamp
+3893483692,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,b a stamp
+3893483692,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,VIRGINIA,Virginia,normalized,0,b a stamp
+3893483692,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Roanoke,Roanoke,exact,0,b a stamp
+3893483692,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"Frequent in disturbed oak/pine woods, in association with Asplenium spp., Rubus phoenicolasius, and Lonicera japonica. Rt. 690, 1.6 mi. S of the town of Poages Mill and Rt. 211. Elev. 1700 ft.",Rt 690 1.6 mi S of Poages Mill and Rt 211,wrong,0,b a stamp
+3893483692,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,"In disturbed Oak/pine woods with Asplenium spp., rubus phoenicolasius, and Lonicera japonica",omitted,0,b a stamp
+3893467594,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Magnolia virginiana L.,Magnolia virginiana L.,exact,0,r s freer
+3893467594,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Ruskin S. Freer,Ruskin S. Freer,exact,0,r s freer
+3893467594,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,2653,2653,exact,0,r s freer
+3893467594,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1962-10-06,1962-10-06,exact,0,r s freer
+3893467594,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,r s freer
+3893467594,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,r s freer
+3893467594,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Nottoway,Nottoway,exact,0,r s freer
+3893467594,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"at Nottoway Falls, State Rt. 49","At Nottoway Falls, State Rt. 49",normalized,0,r s freer
+3893467594,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,r s freer
+3893447105,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Polygonatum biflorum,Polygonatum biflorum (Walter) Elliott,normalized,0,s foster
+3893447105,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Sherman Foster,Sherman Foster,exact,0,s foster
+3893447105,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,2032,2032,exact,0,s foster
+3893447105,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1974-06-09,1974-06-09,exact,0,s foster
+3893447105,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,s foster
+3893447105,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,,Virginia,omitted,0,s foster
+3893447105,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Wash,Washington,wrong,0,s foster
+3893447105,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Glade Spring,Glade Spring,exact,0,s foster
+3893447105,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,Deciduous Woods,Deciduous Woods,exact,0,s foster
+3893471455,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Lemna minor L.,Lemna minor L.,exact,0,g a laursen
+3893471455,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,Gary A. Laursen,Gary A. Laursen,exact,0,g a laursen
+3893471455,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,GAL 061,GAL 061,exact,0,g a laursen
+3893471455,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1972-10-12,1972-10-12,exact,0,g a laursen
+3893471455,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,g a laursen
+3893471455,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,g a laursen
+3893471455,test,gemini-3.1-pro-preview,prompts/v2.txt,county,Giles,Giles,exact,0,g a laursen
+3893471455,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,Mountain Lk. Ele. ca. 4000' Floating on small pond,Mountain Lake,wrong,0,g a laursen
+3893471455,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,,both_empty,0,g a laursen
+3893444632,test,gemini-3.1-pro-preview,prompts/v2.txt,scientificName,Polygonella articulata (L.) Meisser,Polygonella articulata (L.) Meisn.,normalized,0,s q croy; t f; wieboldt
+3893444632,test,gemini-3.1-pro-preview,prompts/v2.txt,recordedBy,T.F. Wieboldt,"Wieboldt, Thomas F.; Croy, S. Q.",partial,0,s q croy; t f; wieboldt
+3893444632,test,gemini-3.1-pro-preview,prompts/v2.txt,recordNumber,4252,4252,exact,0,s q croy; t f; wieboldt
+3893444632,test,gemini-3.1-pro-preview,prompts/v2.txt,eventDate,1981-10-21,1981-10-21,exact,0,s q croy; t f; wieboldt
+3893444632,test,gemini-3.1-pro-preview,prompts/v2.txt,country,USA,United States of America,normalized,0,s q croy; t f; wieboldt
+3893444632,test,gemini-3.1-pro-preview,prompts/v2.txt,stateProvince,Virginia,Virginia,exact,0,s q croy; t f; wieboldt
+3893444632,test,gemini-3.1-pro-preview,prompts/v2.txt,county,City of Suffolk,Suffolk City,wrong,0,s q croy; t f; wieboldt
+3893444632,test,gemini-3.1-pro-preview,prompts/v2.txt,locality,"South Quay Pine Barrens. Xeric, open, white sands just S of the Holland Hunt Club. 1.6 mile SW of South Quay on Blackwater River. Elev. 30'",South Quay Pine Barrens... just S of the Holland Hunt Club. 1.6 mi SW of South Quay on Blackwater River,partial,0,s q croy; t f; wieboldt
+3893444632,test,gemini-3.1-pro-preview,prompts/v2.txt,habitat,,"Xeric, open, white sands",omitted,0,s q croy; t f; wieboldt

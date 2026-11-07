@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893483883",
+ "split": "dev",
+ "image_file": "data/images_small/3893483883.jpg",
+ "image_sha256": "8f6ab4bc2445e509daba579b5c07611f145bb958556d8573473b174366f6950c",
+ "image_bytes": 609037,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.33,
+ "created": "2026-11-06T21:19:45",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Lycopodium flabelliforme (Fern.) Blanch.\", \"recordedBy\": \"Stan Lusby\", \"recordNumber\": \"12748\", \"eventDate\": \"4/8/43\", \"country\": null, \"stateProvince\": \"Virginia\", \"county\": \"Henrico\", \"locality\": \"near Patterson Ave. extended. Richmond\", \"habitat\": \"Swamp\"}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 86,
+   "totalTokenCount": 2043,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 823,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "uYruat3BOJf35NoPu7i8mQI"
+ },
+ "parsed": {
+  "scientificName": "Lycopodium flabelliforme (Fern.) Blanch.",
+  "recordedBy": "Stan Lusby",
+  "recordNumber": "12748",
+  "eventDate": "4/8/43",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Henrico",
+  "locality": "near Patterson Ave. extended. Richmond",
+  "habitat": "Swamp"
+ },
+ "error": null
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893474222",
+ "split": "dev",
+ "image_file": "data/images_small/3893474222.jpg",
+ "image_sha256": "e936ded7ab472205ca8557b94f170ba99e77456800daabe50cfbc54df18ef0bd",
+ "image_bytes": 634672,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 6.1,
+ "created": "2026-11-06T21:25:26",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Isotria verticillata (Willd.) Raf.\", \"recordedBy\": \"W. R. Garman\", \"recordNumber\": null, \"eventDate\": \"May, 1938\", \"country\": null, \"stateProvince\": \"Virginia\", \"county\": \"Montgomery\", \"locality\": \"Between Blacksburg + Merrimac\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 83,
+   "totalTokenCount": 2190,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    }
+   ],
+   "thoughtsTokenCount": 973,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "DozuaqrIIc2FytMPlZaPmQE"
+ },
+ "parsed": {
+  "scientificName": "Isotria verticillata (Willd.) Raf.",
+  "recordedBy": "W. R. Garman",
+  "recordNumber": null,
+  "eventDate": "May, 1938",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Montgomery",
+  "locality": "Between Blacksburg + Merrimac",
+  "habitat": null
+ },
+ "error": null
+}

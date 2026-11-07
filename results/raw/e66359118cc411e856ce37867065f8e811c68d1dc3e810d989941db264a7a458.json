@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893471419",
+ "split": "test",
+ "image_file": "data/images/3893471419.jpg",
+ "image_sha256": "72d40a647a59565b9145f06ae0202f740ffc4a30cbf223c243265f790d544f54",
+ "image_bytes": 4131019,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.42,
+ "created": "2026-11-06T21:42:45",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Lemna trisulca L.\",\n  \"recordedBy\": \"E. Farr\",\n  \"recordNumber\": \"EF25\",\n  \"eventDate\": \"1972-10-15\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Montgomery\",\n  \"locality\": \"tangled in other plants, pond on south side of Hwy. 460, northeast of Elliston, Va.\",\n  \"habitat\": null\n}",
+       "thoughtSignature": "EsITCr8TAWkUfRNtdtTNA1/wFERW6S5rLjIIkE7lAcIQjIInWb1txIDTVFJBrguwvmxBQRK0A/yNqeH7PWSiE4BkJim4DaAuzdddYOJ9KQ8CeyGSvx2GGZzrK2O4WK9M0yUI5m6MupJ3V2kSjVNOLl6YaKr94cADUV6h3uQZfFS2JSML+xx5jICkMpHINAWJkWPG7HvBvSMfF6HFBGRr3zn5JGgPT7TRVlshkYVfO/EdSlwu1LIZKi224mblv4smKP41PO9ladGUD8CL+sb6JPOd1Ibb3+w2o98Y85eiRrXYSxIL0TbHYq227CjlI0JuaWEUubg33C6JJy4z9GRMnUTLaij2CBUFfhNJiiM/RisPm2FWmoI8OO48WMCIK0hhNKOkGxE9R/ns5W8ieO9B5Y2HjPa57EgcH8V3Q4eg/obUvkLhZSzmLs7OiqiF7KOWd8ze3cq+f06J2Ch3dump1HwznB/49XbPaJswb4K/uTbhn5CwNcCgPvgyjM3CtsMN/yDPbQpURDw6pIA5FbCzQTe/W0S4RgW++CFRcM00GeReeDDyYZGcp/BySFTu8VyYPiV/Yr0TcIMDT9+QQl1zfFWXKJfVjBtzND+Z0GObYO4CrGPOe3x7Xn31gf0zoLrSagLPz1WaW5wHdiP0beXMpNcsR+F8BLDz0c32WDcNyxeikO8Vw0fthwt0LjiENYyzta2Z9mfwzqfUD745ot2sptaDOiAGMs6e6UNow0/6jDtbXdQ/MoPhQT28ZMbPNgr99jUj6ye8exQpn0MdOXgs+u6aCiQdnO4okiBFa9tMmGAghDG1+AcncPy3Bgaw2J9iKj2rNDfEkz2aGMG29v+NTRdr6lrUFHeXETbkfmPYzPRx7eW+TwRtGi4tuWBbH41hMzOZxN3ttTRDqJcsRW4x/xmlF4+J3lYRTSJ8BGmb0vp+ESr8oikpn1/mFQoIBeE8x3V1R0eUwXh1q5GYqpnO7EBOgqTU3EXU1t0cWJxCGzNS8OvTn/3klTfbU95HHbtgMH+wC+4RmsX+EIFdMhlqbtE99wJpjct9fZSx4vVoFylgwZx5Qw3luZoxabDLu5PXn6Z4vhKvVZJRv9mtDEaD24A+BuXRFM4SQVugUd2aOJZcJWEX/uCAwtARj1oIMN3Q0asnFxSrdmOxH8Bw1Z/a00YNlVBxLP/S8mjB63KoZVQmuQdZ9LhC2KX6ldWWdyCg79X7Ode97qT3SeEztsWcPw2cwlv0CQMtqrjNz9HO2C9R8Qa3yZbi2doh/IrR3zbKrzIWbN89C63ZUl3+Duq09won4mmZ+1WJoXtF9aX/dooV/bV8dO7mIa5nw1M/qe/hpVosOGAsi8Am6q91H9/cicD+y906mlsILg867zQO1JWI+QMHS1iwY+eaC6WtKIJt6m/9A449GcXbSorT5YHCd6OwpdJqgA8hdTRt3YD7Nzjs32Ku2auZKkQIv4LVzY3W5E3RF2EArQUV6NV2Un6g+0RGmczUwHcqQgYPfSEiujmqurAbkOWPLdNoQB4NtAOKD4iv0eBdPrepsuiucTyRKkatVP5pwTRT+9G7Tkes+aXe6v1xWUpdEqCpgDDpHcz9b206CfF9x6TtLgrp/T2eE+zfwCsUL5oeaqfNHS0Dnfvk7QJEy5aHep7wxyKLS1ie71xasVPmTTV7I2jyJFWCmvfBObMrZofAnDqIF3XrDQrTPyNOIYBWz61mEQaLeEeGci3+yPbRH/Hr7SXwAAd+ARcVyJ3OTDICCn+xYvmr8GGai15cusC67IkRErPYw+b6yz4qec9Leu6xjupfCGt2FeYT70i/1+6Y8CO0AvssHeAqyD2lF9GbCDbrSalqnTeIyj5qQEK5JZ3tINtJtc9CJeTqSeQN+lFsmamw3P6wmRE2/YanPI9yxxkPahP2l6q4YlOabvWWsXD7l/VAwJ1DoEnMKHTfULsvW6/k/wBn7Au1qC+/Jj/4WNW46n//hrtIlJNf7DD+iiyWDROSalYK0utyDYWr5OhtGM+4g/jSUneV3S27XcbDv7ah3MZXcQGNOieUqKr4c+lfSMAIP92q7Unzi50VP8NWEPk3c28jUW7bcSiQYYnPUp5iv9n5CBMIOi/8/kEW7OBxO0OlJ5szjjQZ3+AC2mbKjUveSZquTHWCD2PvjHCJxm/f2Fg5Avk3bnt8PS12Dshr8/obxl/Pp3uXNusYBLeoBLmeuefy/KyG0Zn9CAA1HwDslO1Qp458ZgAy4BspwuHOq9ZQmXvPL+7unGaOO8EJbyTSKI9B9hMwdUZh4l6+r8WPE8YjwqeJUpFuoNipnHUehAeCUifvnzQZUIQmDppUXs/Z04sqDJOQYJ5W2BEB8LGAt+adYevKTtFTngDrpDYoIOBLLKmS7Pvtvy0BCHyWkdMjKOFmxS4YSECZKR+PXSU771zqKT5TrhQF4zPPiIO1wX2D3myHE86hs1iuP0hlxzahKnRAakroSUu7BGM8uGoFZSeqihYlm7xxIcxN+3+OWWWtnrHwIGz49Pf68YNbS/NqAi7xpZZ5fOkPTSR7i0nvk5pwlZy3I95IaBPg0FnsBB2YYROUdS332+XFo+Evxm4+g9UG9I6Wd4dQmYs9gVWgY5JVkcAPfi0sexCbLHPSoV5dH1mZ6PjiqPlBPl1YP+gtRVnqvkspd2HRIydNCbE3zXMjSg/r7oRvKB1O90nZ3x7CyYKGGEBWfVFOOZhl1PgvWMwCxbQLpwepYLkhauCY2P5RpzauuF8EDevF2MAlkc2wmWdTi/lfMs/UoLZtEgee2MRecWTMTxCixjK3YSQVALr6N1S+hMs+zMEKon7A/m7dvXVPCuYLHpb2YPp0RpepdFUPz4ndIZufezh2Eez2O14K/HWINDV4a6qlq1EcRQyd24DWOpBOiCQBIH5z9DdLQoqmJGeGfXgcj5aEjtoH+d3eP4lvwbh+opGzy5Q87Rib92tAxwPPpN88W5PxAEEiyedhzasEm794AOUE5CqqGmRHR9hXeWEdsI1EJQ3r2W+9UxZSqUKkZlQbxkzWVfTLanmpmojtm4HKqLIFvApFBzCeht7ukO41SxQ+qEujDOm+Gy0x9aIu8i8RkBNmDXzgu9hrbhfTGYsGuRG+WAIxs5gvBWyLdLk1zLCMmvVKQYXanszyL+qMO/E0830Qo57N8MxV3whiuLgq09cL+ccNMh2qyxNg3ntotiQHO1YDbua2tAa5yaG4A5w+jx83KX9LAZK/e1uIeb7YLYagW6obimjsel8IIVimUOn24Y9UUV9FSgjDxE3rFEBu405bKSfBuOAMjb8F7Kfx845PaNSz5MJkdU33ZUX8jZo="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 119,
+   "totalTokenCount": 2454,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 732,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "HZDuarCTMNKU5NoPgfW5wQM"
+ },
+ "parsed": {
+  "scientificName": "Lemna trisulca L.",
+  "recordedBy": "E. Farr",
+  "recordNumber": "EF25",
+  "eventDate": "1972-10-15",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Montgomery",
+  "locality": "tangled in other plants, pond on south side of Hwy. 460, northeast of Elliston, Va.",
+  "habitat": null
+ },
+ "error": null
+}

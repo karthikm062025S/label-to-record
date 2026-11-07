@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893458225",
+ "split": "test",
+ "image_file": "data/images_small/3893458225.jpg",
+ "image_sha256": "f2a9c22913bc0502656be959bd2dd84f33ab3f5d3c2855e7e5dc16204e2123e3",
+ "image_bytes": 684584,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.29,
+ "created": "2026-11-06T21:46:28",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Spiraea alba var. latifolia (Ait.) Ahles\", \"recordedBy\": \"Lena Artz\", \"recordNumber\": null, \"eventDate\": \"1953-08-13\", \"country\": \"USA\", \"stateProvince\": \"VIRGINIA\", \"county\": \"Shenandoah\", \"locality\": \"Below Downy Rits Sawmill, Massanutten Mountain,\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 94,
+   "totalTokenCount": 2700,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 1003,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "_ZDuaq_XFYq-xdIP3JeU0AM"
+ },
+ "parsed": {
+  "scientificName": "Spiraea alba var. latifolia (Ait.) Ahles",
+  "recordedBy": "Lena Artz",
+  "recordNumber": null,
+  "eventDate": "1953-08-13",
+  "country": "USA",
+  "stateProvince": "VIRGINIA",
+  "county": "Shenandoah",
+  "locality": "Below Downy Rits Sawmill, Massanutten Mountain,",
+  "habitat": null
+ },
+ "error": null
+}

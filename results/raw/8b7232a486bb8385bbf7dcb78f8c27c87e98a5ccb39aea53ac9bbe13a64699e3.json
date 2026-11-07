@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893448397",
+ "split": "test",
+ "image_file": "data/images/3893448397.jpg",
+ "image_sha256": "88f9dc2dce5dbdcb2e486849e2b4d63f0c52bcbd387c1e1f91df095bb7a9c358",
+ "image_bytes": 4427635,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.45,
+ "created": "2026-11-06T21:57:41",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Asplenium x pinnatifidum\",\n  \"recordedBy\": \"D. W. Ogle\",\n  \"recordNumber\": \"4346\",\n  \"eventDate\": \"1978-08\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Washington\",\n  \"locality\": \"One plant on Morrison Cliff due east from river Bridge on South Side of the North Fork of the Holston River. Elevation 1540'\",\n  \"habitat\": null\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 126,
+   "totalTokenCount": 2473,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 744,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "nZPuatGhNIC-uMYP0-CjyAE"
+ },
+ "parsed": {
+  "scientificName": "Asplenium x pinnatifidum",
+  "recordedBy": "D. W. Ogle",
+  "recordNumber": "4346",
+  "eventDate": "1978-08",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Washington",
+  "locality": "One plant on Morrison Cliff due east from river Bridge on South Side of the North Fork of the Holston River. Elevation 1540'",
+  "habitat": null
+ },
+ "error": null
+}

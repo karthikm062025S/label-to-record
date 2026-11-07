@@ -1,0 +1,74 @@
+source,county,tgn_id,n_candidates,resolved
+ai,Albemarle,2002137,1,1
+ai,Amelia,2002139,1,1
+ai,Amherst,2002140,1,1
+ai,Augusta,2002142,1,1
+ai,Bath,2002143,1,1
+ai,Carroll,2002151,1,1
+ai,City of Suffolk,,0,0
+ai,Cumberland,2002156,1,1
+ai,Dickenson,2002157,1,1
+ai,Fairfax,7014160,1,1
+ai,Fauquier,1002368,1,1
+ai,Floyd,2002158,1,1
+ai,Frederick,2002161,1,1
+ai,Giles,2002162,1,1
+ai,Grayson,2002164,1,1
+ai,Hampton,,0,0
+ai,Henrico,1002467,1,1
+ai,Highland,2002168,1,1
+ai,King George,1002547,1,1
+ai,Montgomery,2002174,1,1
+ai,Norfolk,,0,0
+ai,Nottoway,2002176,1,1
+ai,Page,2002178,1,1
+ai,Patrick,2002179,1,1
+ai,Pittsylvania,2002180,1,1
+ai,Pulaski,2002183,1,1
+ai,Roanoke,7014344,1,1
+ai,Russell,2002188,1,1
+ai,Scott,2002189,1,1
+ai,Shenandoah,2002190,1,1
+ai,Surry,1002931,1,1
+ai,Sussex,1002935,1,1
+ai,Warwick,,0,0
+ai,Wash,,0,0
+ai,Washington,2002194,1,1
+ai,Wise,2002195,1,1
+ai,York,1003048,1,1
+curated,Albemarle,2002137,1,1
+curated,Alleghany,2002138,1,1
+curated,Amelia,2002139,1,1
+curated,Amherst,2002140,1,1
+curated,Augusta,2002142,1,1
+curated,Bath,2002143,1,1
+curated,Carroll,2002151,1,1
+curated,Cumberland,2002156,1,1
+curated,Dickenson,2002157,1,1
+curated,Fairfax,7014160,1,1
+curated,Fauquier,1002368,1,1
+curated,Frederick,2002161,1,1
+curated,Giles,2002162,1,1
+curated,Grayson,2002164,1,1
+curated,Hampton City,,0,0
+curated,Henrico,1002467,1,1
+curated,Highland,2002168,1,1
+curated,King George,1002547,1,1
+curated,Lynchburg City,,0,0
+curated,Montgomery,2002174,1,1
+curated,Norfolk,,0,0
+curated,Nottoway,2002176,1,1
+curated,Page,2002178,1,1
+curated,Patrick,2002179,1,1
+curated,Pittsylvania,2002180,1,1
+curated,Pulaski,2002183,1,1
+curated,Roanoke,7014344,1,1
+curated,Russell,2002188,1,1
+curated,Scott,2002189,1,1
+curated,Shenandoah,2002190,1,1
+curated,Suffolk City,,0,0
+curated,Surry,1002931,1,1
+curated,Wa,,0,0
+curated,Washington,2002194,1,1
+curated,Wise,2002195,1,1
+curated,York,1003048,1,1

@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893454764",
+ "split": "dev",
+ "image_file": "data/images_small/3893454764.jpg",
+ "image_sha256": "d8f022d7a3585e99cd79925973c9f3581c5c1cb9e351b39e0c6334a3d0c078df",
+ "image_bytes": 717370,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 8.82,
+ "created": "2026-11-06T21:24:57",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Platanthera ciliaris (L.) Lindl.\",\n  \"recordedBy\": \"E. S. Steele\",\n  \"recordNumber\": \"365\",\n  \"eventDate\": \"Aug. 21, 1907\",\n  \"country\": \"United States\",\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Bath\",\n  \"locality\": \"Vicinity of Millboro, in the Allegheny Mountains Altitude 450 meters\",\n  \"habitat\": \"Dry thicket on hill!\"\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 127,
+   "totalTokenCount": 2783,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 1522,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "7ovuaq2OK6aEuMYPjsfduAE"
+ },
+ "parsed": {
+  "scientificName": "Platanthera ciliaris (L.) Lindl.",
+  "recordedBy": "E. S. Steele",
+  "recordNumber": "365",
+  "eventDate": "Aug. 21, 1907",
+  "country": "United States",
+  "stateProvince": "Virginia",
+  "county": "Bath",
+  "locality": "Vicinity of Millboro, in the Allegheny Mountains Altitude 450 meters",
+  "habitat": "Dry thicket on hill!"
+ },
+ "error": null
+}

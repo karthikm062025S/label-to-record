@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893493557",
+ "split": "dev",
+ "image_file": "data/images/3893493557.jpg",
+ "image_sha256": "e5dc8e2a2d5f67c0828834e6d5fca6bbf3c66db227704841457c5d8a99f3f024",
+ "image_bytes": 5846549,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 6.57,
+ "created": "2026-11-06T21:37:07",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Arisaema triphyllum (L.) Schott var. triphyllum\", \"recordedBy\": \"F. W. Hunnewell\", \"recordNumber\": \"17404\", \"eventDate\": \"1941-05-13\", \"country\": \"USA\", \"stateProvince\": \"Virginia\", \"county\": \"Frederick\", \"locality\": \"low woods near Waitenall\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 97,
+   "totalTokenCount": 2695,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 995,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "yo7uaq3DNufbytMP8YfQgA0"
+ },
+ "parsed": {
+  "scientificName": "Arisaema triphyllum (L.) Schott var. triphyllum",
+  "recordedBy": "F. W. Hunnewell",
+  "recordNumber": "17404",
+  "eventDate": "1941-05-13",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Frederick",
+  "locality": "low woods near Waitenall",
+  "habitat": null
+ },
+ "error": null
+}

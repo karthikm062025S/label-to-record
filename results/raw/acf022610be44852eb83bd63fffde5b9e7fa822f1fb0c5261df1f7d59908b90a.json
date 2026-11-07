@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893468327",
+ "split": "dev",
+ "image_file": "data/images/3893468327.jpg",
+ "image_sha256": "da580c37241f92cbe324d273b7e8a0429a8e25c8b7c703800b422f0582f380ee",
+ "image_bytes": 6350404,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 11.19,
+ "created": "2026-11-06T21:24:03",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Erythronium umbilicatum Parks & Hardin\",\n  \"recordedBy\": \"A. B. Massey\",\n  \"recordNumber\": null,\n  \"eventDate\": \"5-17-38\",\n  \"country\": null,\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Montgomery\",\n  \"locality\": \"East of Ironto\",\n  \"habitat\": null\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 100,
+   "totalTokenCount": 3325,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 2091,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "tovuasizFoCpytMPwuK88Q0"
+ },
+ "parsed": {
+  "scientificName": "Erythronium umbilicatum Parks & Hardin",
+  "recordedBy": "A. B. Massey",
+  "recordNumber": null,
+  "eventDate": "5-17-38",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Montgomery",
+  "locality": "East of Ironto",
+  "habitat": null
+ },
+ "error": null
+}

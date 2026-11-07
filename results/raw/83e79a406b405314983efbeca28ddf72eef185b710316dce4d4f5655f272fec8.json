@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893447816",
+ "split": "test",
+ "image_file": "data/images/3893447816.jpg",
+ "image_sha256": "cb86b87df6ce5f0a740fe416d67f77a2dcedc23be9e1ad45b7d180dbdde38b49",
+ "image_bytes": 6020636,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.26,
+ "created": "2026-11-06T21:42:21",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Isoetes valida (Engelm.) Clute\", \"recordedBy\": \"B. Gregg; J. Wilson\", \"recordNumber\": null, \"eventDate\": \"1972-10-19\", \"country\": \"USA\", \"stateProvince\": \"Virginia\", \"county\": \"Giles\", \"locality\": \"Banks of pond on Mountain Lake Biological Station.\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 88,
+   "totalTokenCount": 2320,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 629,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "BpDuav_aFsqMytMPh4ez4A0"
+ },
+ "parsed": {
+  "scientificName": "Isoetes valida (Engelm.) Clute",
+  "recordedBy": "B. Gregg; J. Wilson",
+  "recordNumber": null,
+  "eventDate": "1972-10-19",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Giles",
+  "locality": "Banks of pond on Mountain Lake Biological Station.",
+  "habitat": null
+ },
+ "error": null
+}

@@ -1,0 +1,8 @@
+data/images/
+data/images_small/
+__pycache__/
+*.pyc
+.env
+.venv/
+viewer_fonts_local.css
+APPLICATION_NOTES.md

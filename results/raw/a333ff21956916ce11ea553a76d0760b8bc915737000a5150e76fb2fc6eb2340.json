@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893450557",
+ "split": "dev",
+ "image_file": "data/images_small/3893450557.jpg",
+ "image_sha256": "d892dda7b61635a67d5efd311737a85c161c8fc6a345a0a55af1ffc4c130c24c",
+ "image_bytes": 818332,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 8.16,
+ "created": "2026-11-06T21:22:58",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Eriogonum Alleni S. Wats.\",\n  \"recordedBy\": \"LENA ARTZ\",\n  \"recordNumber\": \"201\",\n  \"eventDate\": \"July 31, 1932\",\n  \"country\": null,\n  \"stateProvince\": null,\n  \"county\": \"Shenandoah Co.\",\n  \"locality\": \"Massanutten Mountains, Woodstock Shales\",\n  \"habitat\": \"Woodstock Shales\"\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 113,
+   "totalTokenCount": 2873,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    }
+   ],
+   "thoughtsTokenCount": 1626,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "eIvuaqW-G_65uMYPk6Tk4Qs"
+ },
+ "parsed": {
+  "scientificName": "Eriogonum Alleni S. Wats.",
+  "recordedBy": "LENA ARTZ",
+  "recordNumber": "201",
+  "eventDate": "July 31, 1932",
+  "country": null,
+  "stateProvince": null,
+  "county": "Shenandoah Co.",
+  "locality": "Massanutten Mountains, Woodstock Shales",
+  "habitat": "Woodstock Shales"
+ },
+ "error": null
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893485268",
+ "split": "dev",
+ "image_file": "data/images/3893485268.jpg",
+ "image_sha256": "b26b1bee8cf048e89c1e3f5eb7847c9e3552216fc5206139b7e154830645afad",
+ "image_bytes": 4994762,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 10.41,
+ "created": "2026-11-06T21:25:51",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Lycopodium obscurum\", \"recordedBy\": \"DW Ogle\", \"recordNumber\": \"5614\", \"eventDate\": \"14 Sept. 1984\", \"country\": null, \"stateProvince\": \"VIRGINIA\", \"county\": \"Wise Co.\", \"locality\": \"Guest River Gorge\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 78,
+   "totalTokenCount": 3003,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    }
+   ],
+   "thoughtsTokenCount": 1791,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "I4zuat2AG9KqwbUP4oiQoQM"
+ },
+ "parsed": {
+  "scientificName": "Lycopodium obscurum",
+  "recordedBy": "DW Ogle",
+  "recordNumber": "5614",
+  "eventDate": "14 Sept. 1984",
+  "country": null,
+  "stateProvince": "VIRGINIA",
+  "county": "Wise Co.",
+  "locality": "Guest River Gorge",
+  "habitat": null
+ },
+ "error": null
+}

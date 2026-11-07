@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893453442",
+ "split": "test",
+ "image_file": "data/images/3893453442.jpg",
+ "image_sha256": "0157b7b7a6298403367b4173f9772587a47b4d1853a80a2a1d836b4b28f56f6c",
+ "image_bytes": 4154732,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 6.41,
+ "created": "2026-11-06T21:46:49",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"ERYTHRONIUM UMBILICATUM Parks & Hardin\",\n  \"recordedBy\": \"W.R. DeGarmo\",\n  \"recordNumber\": null,\n  \"eventDate\": \"1938-04-05\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"VIRGINIA\",\n  \"county\": \"Pulaski\",\n  \"locality\": \"near Newbern\",\n  \"habitat\": null\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 107,
+   "totalTokenCount": 2682,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 972,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "EZHuapCyCsLhytMP2_bo8Aw"
+ },
+ "parsed": {
+  "scientificName": "ERYTHRONIUM UMBILICATUM Parks & Hardin",
+  "recordedBy": "W.R. DeGarmo",
+  "recordNumber": null,
+  "eventDate": "1938-04-05",
+  "country": "USA",
+  "stateProvince": "VIRGINIA",
+  "county": "Pulaski",
+  "locality": "near Newbern",
+  "habitat": null
+ },
+ "error": null
+}

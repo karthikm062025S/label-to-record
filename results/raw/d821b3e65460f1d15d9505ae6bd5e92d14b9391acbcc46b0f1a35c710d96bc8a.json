@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893447680",
+ "split": "test",
+ "image_file": "data/images/3893447680.jpg",
+ "image_sha256": "031810941102ddf7c4c528c48e7dad1257bac4e3ce2b4fcbda1766fe6d4f9264",
+ "image_bytes": 6414899,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 7.79,
+ "created": "2026-11-06T21:50:58",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Asplenium platyneuron (L) Oakes\", \"recordedBy\": \"D. W. Ogle\", \"recordNumber\": \"4347\", \"eventDate\": \"1975-06-20\", \"country\": \"USA\", \"stateProvince\": \"VA.\", \"county\": \"Carroll\", \"locality\": \"South fork Stewart's Creek\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 90,
+   "totalTokenCount": 3023,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 1330,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "CJLuao28IMzFxdIPiLvrkQM"
+ },
+ "parsed": {
+  "scientificName": "Asplenium platyneuron (L) Oakes",
+  "recordedBy": "D. W. Ogle",
+  "recordNumber": "4347",
+  "eventDate": "1975-06-20",
+  "country": "USA",
+  "stateProvince": "VA.",
+  "county": "Carroll",
+  "locality": "South fork Stewart's Creek",
+  "habitat": null
+ },
+ "error": null
+}

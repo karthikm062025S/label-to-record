@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893466144",
+ "split": "dev",
+ "image_file": "data/images_small/3893466144.jpg",
+ "image_sha256": "8497dac3ddb0285abaef2123d404b309acf49b127d97c03896f02fc1aab9a482",
+ "image_bytes": 1249156,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 9.12,
+ "created": "2026-11-06T21:25:06",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\":\"Castanea mollissima Blume.\",\"recordedBy\":\"A. B. Massey\",\"recordNumber\":null,\"eventDate\":\"195\",\"country\":null,\"stateProvince\":\"Virginia\",\"county\":\"Montgomery\",\"locality\":\"VPI farm\",\"habitat\":\"planted, Exotic\"}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 57,
+   "totalTokenCount": 2951,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    }
+   ],
+   "thoughtsTokenCount": 1760,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "94vuasjBIpnO0_gPrf7xuAM"
+ },
+ "parsed": {
+  "scientificName": "Castanea mollissima Blume.",
+  "recordedBy": "A. B. Massey",
+  "recordNumber": null,
+  "eventDate": "195",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Montgomery",
+  "locality": "VPI farm",
+  "habitat": "planted, Exotic"
+ },
+ "error": null
+}

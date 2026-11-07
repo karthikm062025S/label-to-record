@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893486827",
+ "split": "dev",
+ "image_file": "data/images_small/3893486827.jpg",
+ "image_sha256": "6e4c12e52ee7a4b8bd0c0a59d008d309b89abc0b704225fb580875150de76cd0",
+ "image_bytes": 1364222,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.24,
+ "created": "2026-11-06T21:23:03",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Xerophyllum asphodeloides (L.) Nutt.\",\n  \"recordedBy\": \"W. H. Duis\",\n  \"recordNumber\": null,\n  \"eventDate\": \"ca. 8 Feb. 1976\",\n  \"country\": null,\n  \"stateProvince\": \"VIRGINIA\",\n  \"county\": \"Bedford County\",\n  \"locality\": \"Goose Creek area\",\n  \"habitat\": \"on a cliff with Kalmia.\"\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 113,
+   "totalTokenCount": 1968,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 721,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "gIvuao6KJd7H0_gP4ry46AM"
+ },
+ "parsed": {
+  "scientificName": "Xerophyllum asphodeloides (L.) Nutt.",
+  "recordedBy": "W. H. Duis",
+  "recordNumber": null,
+  "eventDate": "ca. 8 Feb. 1976",
+  "country": null,
+  "stateProvince": "VIRGINIA",
+  "county": "Bedford County",
+  "locality": "Goose Creek area",
+  "habitat": "on a cliff with Kalmia."
+ },
+ "error": null
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893475209",
+ "split": "dev",
+ "image_file": "data/images/3893475209.jpg",
+ "image_sha256": "4084d8a7524f3a4773fe75330ee7abe02696ff5b73161b9eaf2b1b0079ce568b",
+ "image_bytes": 5697707,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 7.53,
+ "created": "2026-11-06T21:24:10",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Carex alata Torr. & Gray\",\n  \"recordedBy\": \"L. J. UTTAL\",\n  \"recordNumber\": \"8134\",\n  \"eventDate\": \"22 June 1971\",\n  \"country\": null,\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Virginia Beach\",\n  \"locality\": \"Bank of creek on Va. 603, ca. 1 mi. so. of Pungo.\",\n  \"habitat\": \"Bank of creek\"\n}",
+       "thoughtSignature": "EuYbCuMbAWkUfRO8RPmrnxgLy4lkEWZwxKLsO8Cd2rUKpjhafg6LygVQj25ptjPPjkNZCk+rn7Qx89jVxwZ66Lu1yCaObogCiT5teX33qH6SN4XoJLfLZDisw1vk+7b9T9SAyVhkMlr4/MaqZtu8FKIig4N73hI4J7l6e4HnZCNaMCaN1XJWrO6nIu1Qgi8dtZsoxLi9bfGlM+prmVYyYNeDfZe2o4LWWt7yfi8jDcNzy8eCw/DSt/NxAG0nnA4ljVRlhdDJsL30osVEaLo4i6vhZTVfgFSrrvTUwms56oYdoCVmuguHdWoKknh2RzXYEEcQO0md0l8cwD7y4XdSWChiTPSGnVnvJ9VNm+kEd+eilDl8MOAezKlObcDVScdavvD6BTq0wUavHjRnRIHZSYE1YOa56aKL7KRxgIiOqTpinArifSLZw1K8sPqfFGJhHDwtnDu+kFU0UjjeghArxdDGTXe1mV1o7wYyxG/Gk7Lzu0od7pSkFh88uGP+W0afvx+b72JVOkxHppO/LpYb5gInkouuTj3meHWqN9l53bd0t34jjaFiyEFyDYSD76hopEX2A9rSc50QQWeRazcCHy/7x8zyygAN+DaBy4Z6auHBotVuWTJduLptWrPdpq7MXYfewy7oLFeyCpiAqcM5MEZA5jEfO++DvpYXyNU1p0SDcYpKErFJaPZIKHp9fQmuWzWyavir1+QbXmCuarhtF4dukK51VDlqLDTfanEsySLjHJuuW/weUBF4HbGP2zvv8eYZs3vwyUB38QOouW/lXY53R3Gp1VFK/pz3KQUj2UyMU2eNPy6LUEP7A3MYgGVPkv0ZdQma5gzM0qmTv6YO8hLRRLu6z/crTtmvY16kK+ziUvKi2HpFUlOizA0NMHcJhiFtHYyAr12s2KicgwK3swBZxRKMG6Hy+gvOtRoVGDfBRk/uazJ8Ai2GS3/p3OevoeN5cBhOPWJg7wCwef+uihsrSzZK9ctvfCIx2GUxNs//mxQy8+fomNCZ/FNsYX1LvqZN2o7yZ1KauiO39eKpyC2bIpxDAurqVToz8PgAmFMCCnXKpsky0k9TlW7JaPN1cUeyVSh746EaMZnjLPYtGq/wW7m4O7sjrku171ECwPqIuZk3dSpc3SX48ALd+hxKl8h36YnmOfp05WGmQuwqiCCNEbWShIYkGjeMfjzNv4lvrjWThYF38DCz7ZRNDgydMdklbPk3vkDg1ZmYIVOX1MaEadyB7TfBJSjytVetZGN9kaLVLrsL9x/PNEwiArg3c5pXAxrUC8za7gg88ZiUkHNclaNN7qrGnCOaN6NyPKk0uGp5OBrKz3hDVlxfevJsayUE1OKcFbZd0/4CYcN+c2qf5HgEteJXQ213dTdwJ9qVDMJnRHHeKrUqLNSU/NAfXipiJIGM5hbYCNQJ8aQR54Jer8aKQjNpg5XEPxAXgqCX/lJ5CTHtRmw8yW2WmCLR9+tv2z4rjOCwDSP8LR0PfKezpW0hPe1D6KISGcf+0qE03i48/PMiQvXKwYyg2u/yoMXVG6+fBkGiirGW/rLqbo228MrkVGa0NZj91G4wDlW+HF4A6HAHheuz6ZCdnIZBIjBLcWT6vRf2iFKtkL5B/n9HTf3OWe3pJFh/XRqvABoCPqG2Y/HuD9l5+ob+76FkIoGCKWIazB66TL4Wei17NqI2n8XP5my/Ap88b8sHnSi+T065DhqwrVnowIEM1e0Wqqw65A4PDQtluBhpaKYzAXo4CwFpib5o/t/0ptQdSfe6/zk7A+cfawpW/EGp5PvmWKe8QwO+hmsBh6IOjWQuR/JH1o7Je03AIuH7LJn2UD02ku0bkvbloWin0ZF+hJEcTbrmK+rKnNd7s+SLQ/N5NIMN8U6cGQiCXIHGslSvlxH1LB0DrkMq6IDnSsTx9f4ccYpoo8wSKa0J2gapLD3WY66JSloXAEwLJCmgFeLia7iPXMsQazxPSMf2GNLlW5yE9hPOQotleiUZlBZuZzpvHl/nk/51Gi0VRQN5YRN18AQcZSxuPGurT/UbyQ0aZ2o6/btu/tYo9HaTtJgxqKPPyIyDFS1wem1+kHfyQwwgEMTYcD7DhjgK5puQKfYiO9/D5bdiEv05IjaWG8ORVimYjoY3bdzWB8rjaeUcGOSd3M13vAHhEdpFm8BFMXgqmBYkx0J8ivKhBYlzdhdRJHVjaXIjvREzOq2aZNiPUKGmSDybiQG2IxUy6rCWgm3IJj+sqlqqMJHmRKm7wQLUfElanOeISfMwVgc88SEfffqKN3UQvMPbTkvzjWDFDTj18OVCjuqE4qSgTQ5T1YmjzmNIshyeheeSS5CQgPuko0/iofsiAJHA9Qu3ysPlKo1CZC/qdset6lhpsQzf/uzoSHyxZIMjtkjToZpdtreoU4qexM/GWYHmNz3Su/WbSMQpGPzUki7uAC5h8EYfF3dJnY1ICEeO5B0Oq3buLmIlaLuUQ3kbgSqVJCbaVNl2ssRZmoroSO65lmeSRAAq/1mKrVOzeS/HOMBt/Rascya+L7B4Mdf0UUH2STYiH1aHlAiutHU18viNmATQ5upsiFORSrmZvtXRoeoEPjUJ2IdB/fOsRVFkecsosRtucroTKbJm3zZWRHp+FwISCXxbi5Dy8iWduL5mJxRONUQibdpIcX0tFolWJUJlGd8IwSsc1MkjkgOwIp3auKfkPGfwGKjh3o51WegJmdMPUD16aMUg4snN3H3oUBlgb7l2frHqy4FzGvb8OFSPvLguvX9J6zYwlPlp0fq4XuPL77wcUcV1h7mst5osRJfWLY/knZv50qH11xCBxJgeSLtWGeXB5wmeckextHrUwh0ndl/yRRdf9BPrqYGaeixdsm+p0JNmBqDE03Uc/6rbY/z08jsJSDCPKcHTjHOBe4N/fILO9S4uTQjTbZg3Jjx/VeoPxWzRvHDoYJSnQIojKh+cJN9kvT5/hRanqc1UnxwyQE9K5/UiOSBsP3JYNBzHPisgxiWpppwUgQgji9+tXqU/UdHg1VzSF5x3m4nLYnSiASbdqMaetHSStDev/BRQ93H5VB5APFYGsXaNs160OlSJA8y8QD+swYhCMYqDjcF7Y5+XU94RnvSnRqhzjGDO/qh+ILHKjQgSrVOgRODoELrfJJQnW2/q/aMxYyA1lQeAW/6+RWSYDJgZeVSbKCk5c/cJa+fkQbgXoIZqrJH7jua5El7i8OT/lhGtu98RHTGSZ2gEHpedN9XXbxjVWbDtC6as4yJ/Ld/UHhLhrNGUH3IobgNuimzEgw0vAMpJpxawwuPrrXoHTQMdUScR9GmeWZwdsfRcYcN8+/TUWmZie2/pzTuKpVpoSu3MXYGzFVcffT+7NhdHdAEndIS1v4/Hui/gQOqwkFGHO6msM++p3ep5HZaQrJ/BpDuqCIp8B1nBrqCFsjQKqxPQnLq5IzyW9fvwusTo+JkmIEmX3yh9jWlIqcLDs51fUlHN+VG3clTWS31OPlRqN7boFN+dExjWOLlqzryegpvl9XIi1OOMK+E4JoVZD4OpE4TT5U9BIOe31TLPHPrRV/s668KcxLunHlLvzXBzyCp2lxxhY3fd546UTRwlLOrVtVrmmCG4X8E50yAj9VS+SFyWildf2KZeVkxOTdlNsb1ItgrvbBNzqv8OmkxC9yKTx8MPJDdNbU0shpCGL+Dm5n9ZLJzBAcP3sQqQMdfuunNatPZtQZM0MLRVS8tAVNEmbDT5lfgEiWXy70pFgixqrg6orfnqNo7Z3ceTJym+zlJpvnS5PPrlHI1e5mOTSRFH6zILuO//lVgLerqvMgfBel1TlNspPcsu7ugm6mcCBefM1v0I5L0M+XMonwxf/8U2Ua5X2EY6Prar+XBfb4n0fk+amWhe54bwaYRAGNRqEAYs1Q/5ABuMz286Pk9rolurYDaMdHK/RiXOFr6+sNSYgSnonGFt867bOETS/GL5ZcnicJ42YHjPGjqNikeltqiro3Z4rY+F758C5Z/TPKfABuqM5b89atxwd7DJ/M8JQ6Ih1rsLfOx2/Lhr29z8Mjo6wij/1YYBd8fT1t0DvCnzfynw9IJmPMaJL8+2wE5+Gxfi3DVWNmexF6X5BqkduWzSJ61Sal3r9NxKLCE5YMDadL+5W7NQ4kWruwY5/8XBXnGv2CcMu3E43DNKStaqER91L+EdDmw0QNO50rqDdAw5TRax5mYjy5YvZ23FagYhB376DA56+qT/LtHvI4ynSwQ0iDmXFdpNyhcBTdksF6LGQQxGdJAmx7J3m/DCN+lutGuo8ejlzWwvW+RFSJCzeLiqLEnPh5JpwEd2iIMBQif3MQSFbhOomBKQ1Rh1Q6Ig9wYO6C6Ij/8ltijfrjpBRBjmKGMK5lmYIB3HCmtVpnwZLGeouREy6HK49qGaEPOgsMXWW+s/jjfKnCSi991odsHkAfyjrXZR47q3EJx8IYqYMc1w+GvQhAYubcbQFKBrhWECNrZ4JR3BfhOY1wR1rCy1Aw30PQE60cev/eTrbXCvK8moIIeFCvxYVBc0Xyscf+PHLgWanIOlBafyC4kNK7HnJPlUm4T9EapwNTpTCHhnvtbD2wxU9A2AcAJCaIi932VAAdbLLjEUpZDV4hhiXlVNwy4J5+92/YsqHXsbJPVph1r86ZFTcwnJzCx2KAZF1mpBq2hNIS7KhmBclaDXtN7C3Hy6/sie7chzmf2j6gZUgWu8dWwIMeRos8999ezdFydF9OBAtx/Iz0xEdDyi"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 126,
+   "totalTokenCount": 2402,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    }
+   ],
+   "thoughtsTokenCount": 1142,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "wYvuasylJcDiytMPgfjdsQE"
+ },
+ "parsed": {
+  "scientificName": "Carex alata Torr. & Gray",
+  "recordedBy": "L. J. UTTAL",
+  "recordNumber": "8134",
+  "eventDate": "22 June 1971",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Virginia Beach",
+  "locality": "Bank of creek on Va. 603, ca. 1 mi. so. of Pungo.",
+  "habitat": "Bank of creek"
+ },
+ "error": null
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893460736",
+ "split": "dev",
+ "image_file": "data/images/3893460736.jpg",
+ "image_sha256": "f089dc2a8a76b567ad2c77ba29ccdd71b08babaab60c2891688ae37341f7c324",
+ "image_bytes": 4784632,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.4,
+ "created": "2026-11-06T21:37:00",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Equisetum hiemale, L.\", \"recordedBy\": \"A. B. Massey; Warren Wagner\", \"recordNumber\": \"12703\", \"eventDate\": \"1962-08-13\", \"country\": \"USA\", \"stateProvince\": \"Virginia\", \"county\": \"Montgomery\", \"locality\": \"In moist soil along railroad east of Ironto\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 92,
+   "totalTokenCount": 2460,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 765,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "xY7uapy-HODLytMPwbjJ-A0"
+ },
+ "parsed": {
+  "scientificName": "Equisetum hiemale, L.",
+  "recordedBy": "A. B. Massey; Warren Wagner",
+  "recordNumber": "12703",
+  "eventDate": "1962-08-13",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Montgomery",
+  "locality": "In moist soil along railroad east of Ironto",
+  "habitat": null
+ },
+ "error": null
+}

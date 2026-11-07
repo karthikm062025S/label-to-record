@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893470145",
+ "split": "test",
+ "image_file": "data/images/3893470145.jpg",
+ "image_sha256": "88149b59e397e153bc6139836b2bdd19bbb71deba787f26072718a7ab441bd15",
+ "image_bytes": 5771523,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 4.78,
+ "created": "2026-11-06T21:56:54",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Carex appalachia J.M. Webber and P.W. Ball\", \"recordedBy\": \"Charles T. Bryson; Nancy B. Bryson\", \"recordNumber\": \"21804\", \"eventDate\": \"2006-06-13\", \"country\": \"USA\", \"stateProvince\": \"VIRGINIA\", \"county\": \"GRAYSON\", \"locality\": \"White Top Mountain, elev. 5520' near top; near Grayson-Smyth County line, Jefferson National Forest (N36\\u00B0 38.294' W081\\u00B0 36.337'). Open meadow.\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 160,
+   "totalTokenCount": 2448,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 685,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "b5Puaqj-M6KPytMPouf2sAE"
+ },
+ "parsed": {
+  "scientificName": "Carex appalachia J.M. Webber and P.W. Ball",
+  "recordedBy": "Charles T. Bryson; Nancy B. Bryson",
+  "recordNumber": "21804",
+  "eventDate": "2006-06-13",
+  "country": "USA",
+  "stateProvince": "VIRGINIA",
+  "county": "GRAYSON",
+  "locality": "White Top Mountain, elev. 5520' near top; near Grayson-Smyth County line, Jefferson National Forest (N36° 38.294' W081° 36.337'). Open meadow.",
+  "habitat": null
+ },
+ "error": null
+}

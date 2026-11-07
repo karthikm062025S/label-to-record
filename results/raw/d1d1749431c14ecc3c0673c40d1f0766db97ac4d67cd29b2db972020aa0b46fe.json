@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893493543",
+ "split": "dev",
+ "image_file": "data/images/3893493543.jpg",
+ "image_sha256": "5c805edc5d9aef93edfbf3c21ad2d2d32d6cd888d7b69becb8ee92f742e761e1",
+ "image_bytes": 6565668,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 8.24,
+ "created": "2026-11-06T21:25:14",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Arisaema triphyllum (L.) Schott\",\n  \"recordedBy\": \"L. J. UTTAL\",\n  \"recordNumber\": \"6992\",\n  \"eventDate\": \"7 May 1970\",\n  \"country\": null,\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Carroll\",\n  \"locality\": \"Greasy Creek, Va. 764, just west of 765.\",\n  \"habitat\": \"Rocky bank, dense mixed woods\"\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 125,
+   "totalTokenCount": 2628,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    }
+   ],
+   "thoughtsTokenCount": 1369,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "AIzuap6bN7rN0_gPuJivwAE"
+ },
+ "parsed": {
+  "scientificName": "Arisaema triphyllum (L.) Schott",
+  "recordedBy": "L. J. UTTAL",
+  "recordNumber": "6992",
+  "eventDate": "7 May 1970",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Carroll",
+  "locality": "Greasy Creek, Va. 764, just west of 765.",
+  "habitat": "Rocky bank, dense mixed woods"
+ },
+ "error": null
+}

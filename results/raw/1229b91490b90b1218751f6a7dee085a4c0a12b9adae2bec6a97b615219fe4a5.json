@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893469174",
+ "split": "dev",
+ "image_file": "data/images/3893469174.jpg",
+ "image_sha256": "7b8ddaf633ad4d190e1f9be65ce9a98fb6baeb2fd5dc9eb78918f2c1eaa5d468",
+ "image_bytes": 6388148,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 7.68,
+ "created": "2026-11-06T21:29:53",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Zigadenus glaucus (Nutt.) Nutt.\", \"recordedBy\": \"DW Ogle\", \"recordNumber\": \"6401\", \"eventDate\": \"22 August 1987\", \"country\": null, \"stateProvince\": \"VIRGINIA\", \"county\": \"Scott Co.\", \"locality\": \"Natural Tunnel\", \"habitat\": \"on walls.\"}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 84,
+   "totalTokenCount": 2544,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 1326,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "F43uatqkOIKOytMPjdre-Q0"
+ },
+ "parsed": {
+  "scientificName": "Zigadenus glaucus (Nutt.) Nutt.",
+  "recordedBy": "DW Ogle",
+  "recordNumber": "6401",
+  "eventDate": "22 August 1987",
+  "country": null,
+  "stateProvince": "VIRGINIA",
+  "county": "Scott Co.",
+  "locality": "Natural Tunnel",
+  "habitat": "on walls."
+ },
+ "error": null
+}

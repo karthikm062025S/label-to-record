@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893493543",
+ "split": "dev",
+ "image_file": "data/images/3893493543.jpg",
+ "image_sha256": "5c805edc5d9aef93edfbf3c21ad2d2d32d6cd888d7b69becb8ee92f742e761e1",
+ "image_bytes": 6565668,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.76,
+ "created": "2026-11-06T21:37:45",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Arisaema triphyllum (L.) Schott var. triphyllum\",\n  \"recordedBy\": \"L. J. UTTAL\",\n  \"recordNumber\": \"6992\",\n  \"eventDate\": \"1970-05-07\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Carroll\",\n  \"locality\": \"Rocky bank, dense mixed woods, Greasy Creek, Va. 764, just west of 765.\",\n  \"habitat\": null\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 134,
+   "totalTokenCount": 2481,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 744,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "8Y7uaufNOKLdytMPg-e6gQw"
+ },
+ "parsed": {
+  "scientificName": "Arisaema triphyllum (L.) Schott var. triphyllum",
+  "recordedBy": "L. J. UTTAL",
+  "recordNumber": "6992",
+  "eventDate": "1970-05-07",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Carroll",
+  "locality": "Rocky bank, dense mixed woods, Greasy Creek, Va. 764, just west of 765.",
+  "habitat": null
+ },
+ "error": null
+}

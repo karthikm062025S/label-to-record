@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893460736",
+ "split": "dev",
+ "image_file": "data/images/3893460736.jpg",
+ "image_sha256": "f089dc2a8a76b567ad2c77ba29ccdd71b08babaab60c2891688ae37341f7c324",
+ "image_bytes": 4784632,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.21,
+ "created": "2026-11-06T21:24:16",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Equisetum hiemale, L.\", \"recordedBy\": \"A. B. Massey with Warren Wagner\", \"recordNumber\": \"12703\", \"eventDate\": \"8-13-1962\", \"country\": null, \"stateProvince\": \"Virginia\", \"county\": \"Montgomery\", \"locality\": \"east of Ironto\", \"habitat\": \"In moist soil along railroad\"}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 90,
+   "totalTokenCount": 1867,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 643,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "yYvuarjaB8DiytMPgfjdsQE"
+ },
+ "parsed": {
+  "scientificName": "Equisetum hiemale, L.",
+  "recordedBy": "A. B. Massey with Warren Wagner",
+  "recordNumber": "12703",
+  "eventDate": "8-13-1962",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Montgomery",
+  "locality": "east of Ironto",
+  "habitat": "In moist soil along railroad"
+ },
+ "error": null
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893454146",
+ "split": "dev",
+ "image_file": "data/images_small/3893454146.jpg",
+ "image_sha256": "04a76f7274b4337c3041d8d5559b989f04b4a88f9c73a138f84e859434044067",
+ "image_bytes": 845434,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.3,
+ "created": "2026-11-06T21:24:41",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Quercus incana Bartr.\",\n  \"recordedBy\": \"R. Kral\",\n  \"recordNumber\": \"11093\",\n  \"eventDate\": \"7 Aug 1960\",\n  \"country\": null,\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Nansemond\",\n  \"locality\": \"12 mi. s.s.e. Franklin\",\n  \"habitat\": \"component of longleaf pine-scrub oak sand ridge.\"\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 118,
+   "totalTokenCount": 2200,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 948,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "4ovuatz1Ip7e0_gP7cHx0QI"
+ },
+ "parsed": {
+  "scientificName": "Quercus incana Bartr.",
+  "recordedBy": "R. Kral",
+  "recordNumber": "11093",
+  "eventDate": "7 Aug 1960",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Nansemond",
+  "locality": "12 mi. s.s.e. Franklin",
+  "habitat": "component of longleaf pine-scrub oak sand ridge."
+ },
+ "error": null
+}

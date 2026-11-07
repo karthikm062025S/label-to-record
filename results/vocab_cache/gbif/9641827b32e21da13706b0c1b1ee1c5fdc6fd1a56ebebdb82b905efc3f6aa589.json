@@ -1,0 +1,1 @@
+{"url": "https://api.gbif.org/v1/species/match?name=Lilium+Michauxii+Poir.", "fetched": "2026-11-06T21:59:33", "response": {"note": "No match because of too little confidence", "matchType": "NONE", "synonym": false}}

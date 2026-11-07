@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893438889",
+ "split": "test",
+ "image_file": "data/images/3893438889.jpg",
+ "image_sha256": "d93537db59d23b2e34cf8185c415ad76b958742c7051aa9dc64160dd2e487f20",
+ "image_bytes": 6504586,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.54,
+ "created": "2026-11-06T21:42:59",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Carex annectens (Bickn.) Bickn.\", \"recordedBy\": \"T.F. Wieboldt\", \"recordNumber\": \"11831\", \"eventDate\": \"2006-06-17\", \"country\": \"USA\", \"stateProvince\": \"Virginia\", \"county\": \"Giles\", \"locality\": \"Dry slope of open, irregularly mown meadow. My property on Shady Grove Lane, Spruce Run, ca 3 mi SW of Newport, Va.\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 118,
+   "totalTokenCount": 2586,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 865,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "K5DuasOSMfGg5NoPlpKYgQk"
+ },
+ "parsed": {
+  "scientificName": "Carex annectens (Bickn.) Bickn.",
+  "recordedBy": "T.F. Wieboldt",
+  "recordNumber": "11831",
+  "eventDate": "2006-06-17",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Giles",
+  "locality": "Dry slope of open, irregularly mown meadow. My property on Shady Grove Lane, Spruce Run, ca 3 mi SW of Newport, Va.",
+  "habitat": null
+ },
+ "error": null
+}

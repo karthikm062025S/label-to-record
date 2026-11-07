@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893434570",
+ "split": "test",
+ "image_file": "data/images/3893434570.jpg",
+ "image_sha256": "6251894bc3640de80aeb24783edc95a6c249585eee0d4890e0b939072e94757e",
+ "image_bytes": 4435368,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 7.5,
+ "created": "2026-11-06T21:42:29",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Maianthemum canadense Desf.\", \"recordedBy\": \"A. M. Harvill\", \"recordNumber\": \"12300\", \"eventDate\": \"1965-05-24\", \"country\": \"USA\", \"stateProvince\": \"Virginia\", \"county\": \"Highland\", \"locality\": \"Spruce forest on Laurel Fork, Highland Co.\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 90,
+   "totalTokenCount": 3026,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 1333,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "C5DuaoP0Kd-liLMP6Iv3mQ8"
+ },
+ "parsed": {
+  "scientificName": "Maianthemum canadense Desf.",
+  "recordedBy": "A. M. Harvill",
+  "recordNumber": "12300",
+  "eventDate": "1965-05-24",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Highland",
+  "locality": "Spruce forest on Laurel Fork, Highland Co.",
+  "habitat": null
+ },
+ "error": null
+}

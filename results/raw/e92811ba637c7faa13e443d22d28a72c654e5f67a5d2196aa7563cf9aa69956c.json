@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893473689",
+ "split": "test",
+ "image_file": "data/images/3893473689.jpg",
+ "image_sha256": "a1479635588722d8ac0a44ef62b1781ea62fcf98c472e8a790d86c012b6ac18c",
+ "image_bytes": 7133430,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 7.84,
+ "created": "2026-11-06T21:50:34",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Magnolia fraseri Walt.\", \"recordedBy\": \"C. Burrell; L. Mattingly; J. Harrison\", \"recordNumber\": \"59\", \"eventDate\": \"1976-05-02\", \"country\": \"USA\", \"stateProvince\": \"VIRGINIA\", \"county\": \"Floyd\", \"locality\": \"Moist soil in open woods along swift stream at the base of Buffalo Mt. Tree approx. 20 ft. Flowers white.\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 113,
+   "totalTokenCount": 2968,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 1252,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "8ZHuaszgBLq5xdIPgarsQA"
+ },
+ "parsed": {
+  "scientificName": "Magnolia fraseri Walt.",
+  "recordedBy": "C. Burrell; L. Mattingly; J. Harrison",
+  "recordNumber": "59",
+  "eventDate": "1976-05-02",
+  "country": "USA",
+  "stateProvince": "VIRGINIA",
+  "county": "Floyd",
+  "locality": "Moist soil in open woods along swift stream at the base of Buffalo Mt. Tree approx. 20 ft. Flowers white.",
+  "habitat": null
+ },
+ "error": null
+}

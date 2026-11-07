@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893440560",
+ "split": "dev",
+ "image_file": "data/images/3893440560.jpg",
+ "image_sha256": "187ea051da173554247b9b0e00f654a839e32b28ae18ccee7969574f019c9adf",
+ "image_bytes": 6023318,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 6.79,
+ "created": "2026-11-06T21:24:48",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Agalinus purpurea (L.) Pennell\", \"recordedBy\": \"Lena Artz\", \"recordNumber\": \"931\", \"eventDate\": \"22 July 1949\", \"country\": null, \"stateProvince\": \"VIRGINIA\", \"county\": \"Warren County\", \"locality\": \"Waterlick\", \"habitat\": \"Moist meadow\"}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 83,
+   "totalTokenCount": 2316,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    }
+   ],
+   "thoughtsTokenCount": 1099,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "6IvuauK0BLvMytMPobG_-QE"
+ },
+ "parsed": {
+  "scientificName": "Agalinus purpurea (L.) Pennell",
+  "recordedBy": "Lena Artz",
+  "recordNumber": "931",
+  "eventDate": "22 July 1949",
+  "country": null,
+  "stateProvince": "VIRGINIA",
+  "county": "Warren County",
+  "locality": "Waterlick",
+  "habitat": "Moist meadow"
+ },
+ "error": null
+}

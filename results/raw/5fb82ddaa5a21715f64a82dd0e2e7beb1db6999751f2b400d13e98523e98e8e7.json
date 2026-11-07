@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893486842",
+ "split": "dev",
+ "image_file": "data/images/3893486842.jpg",
+ "image_sha256": "0e12d6c463fd70467c337cadae0018198d4850d87b54a2261719c59b0987271a",
+ "image_bytes": 7028304,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 9.93,
+ "created": "2026-11-06T21:26:24",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Astragalus distortus T. & G.\", \"recordedBy\": \"Thomas F. Wieboldt; Alison B. Davenport\", \"recordNumber\": \"4283\", \"eventDate\": \"1 May 1982\", \"country\": null, \"stateProvince\": \"Virginia\", \"county\": \"Shenandoah County\", \"locality\": \"South end of Short Mountain; Massanuttens. 3 miles SE of Mt. Jackson, Va.\", \"habitat\": \"Scattered in shaly substrate in dwarfed oak-hickory woodland.\"}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 121,
+   "totalTokenCount": 3052,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    },
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    }
+   ],
+   "thoughtsTokenCount": 1797,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "RIzuatOEHLqP1sgPxavBkQ0"
+ },
+ "parsed": {
+  "scientificName": "Astragalus distortus T. & G.",
+  "recordedBy": "Thomas F. Wieboldt; Alison B. Davenport",
+  "recordNumber": "4283",
+  "eventDate": "1 May 1982",
+  "country": null,
+  "stateProvince": "Virginia",
+  "county": "Shenandoah County",
+  "locality": "South end of Short Mountain; Massanuttens. 3 miles SE of Mt. Jackson, Va.",
+  "habitat": "Scattered in shaly substrate in dwarfed oak-hickory woodland."
+ },
+ "error": null
+}

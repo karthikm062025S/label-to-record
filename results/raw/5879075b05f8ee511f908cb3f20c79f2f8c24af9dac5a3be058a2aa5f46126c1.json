@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893451834",
+ "split": "test",
+ "image_file": "data/images/3893451834.jpg",
+ "image_sha256": "64b8876349ee5e34980ec10b2f95dcf080daeefaac0e5f8a44a93a71fb27f7cf",
+ "image_bytes": 6201665,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 6.62,
+ "created": "2026-11-06T21:51:37",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Lespedeza hirta (L.) Hornem. var. hirta\",\n  \"recordedBy\": \"G. W. Ramsey; R. S. Freer; Wm. Ruska.\",\n  \"recordNumber\": \"7257\",\n  \"eventDate\": \"1967-08-30\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"VIRGINIA\",\n  \"county\": \"Augusta\",\n  \"locality\": \"Spring Pond, wildlife dearingl\",\n  \"habitat\": null\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 129,
+   "totalTokenCount": 2525,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 793,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "MJLuavb3Idjc0_gP6u_tiQQ"
+ },
+ "parsed": {
+  "scientificName": "Lespedeza hirta (L.) Hornem. var. hirta",
+  "recordedBy": "G. W. Ramsey; R. S. Freer; Wm. Ruska.",
+  "recordNumber": "7257",
+  "eventDate": "1967-08-30",
+  "country": "USA",
+  "stateProvince": "VIRGINIA",
+  "county": "Augusta",
+  "locality": "Spring Pond, wildlife dearingl",
+  "habitat": null
+ },
+ "error": null
+}

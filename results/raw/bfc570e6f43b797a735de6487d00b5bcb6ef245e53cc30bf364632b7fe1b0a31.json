@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893468327",
+ "split": "dev",
+ "image_file": "data/images/3893468327.jpg",
+ "image_sha256": "da580c37241f92cbe324d273b7e8a0429a8e25c8b7c703800b422f0582f380ee",
+ "image_bytes": 6350404,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 5.95,
+ "created": "2026-11-06T21:36:49",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"ERYTHRONIUM UMBILICATUM Parks & Hardin\", \"recordedBy\": \"A. B. Massey\", \"recordNumber\": null, \"eventDate\": \"1938-05-17\", \"country\": \"USA\", \"stateProvince\": \"Virginia\", \"county\": \"Montgomery\", \"locality\": \"East of Ironto\", \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 84,
+   "totalTokenCount": 2769,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 1082,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "uY7uauC6H4u9xdIPkJiJuAI"
+ },
+ "parsed": {
+  "scientificName": "ERYTHRONIUM UMBILICATUM Parks & Hardin",
+  "recordedBy": "A. B. Massey",
+  "recordNumber": null,
+  "eventDate": "1938-05-17",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Montgomery",
+  "locality": "East of Ironto",
+  "habitat": null
+ },
+ "error": null
+}

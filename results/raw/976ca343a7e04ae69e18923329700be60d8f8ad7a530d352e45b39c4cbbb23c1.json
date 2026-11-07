@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893439452",
+ "split": "dev",
+ "image_file": "data/images_small/3893439452.jpg",
+ "image_sha256": "afd43bfd1ba56cdb403af9846ab04a41bacb80202c949a560f13aa15167038fa",
+ "image_bytes": 732464,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 4.23,
+ "created": "2026-11-06T21:32:44",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Streptopus roseus Michx.\", \"recordedBy\": \"A. B. Massey\", \"recordNumber\": null, \"eventDate\": \"1941-05-17\", \"country\": \"USA\", \"stateProvince\": \"Virginia\", \"county\": \"Grayson\", \"locality\": null, \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 76,
+   "totalTokenCount": 2362,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 683,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "xo3uaozSKP65uMYPk6Tk4Qs"
+ },
+ "parsed": {
+  "scientificName": "Streptopus roseus Michx.",
+  "recordedBy": "A. B. Massey",
+  "recordNumber": null,
+  "eventDate": "1941-05-17",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Grayson",
+  "locality": null,
+  "habitat": null
+ },
+ "error": null
+}

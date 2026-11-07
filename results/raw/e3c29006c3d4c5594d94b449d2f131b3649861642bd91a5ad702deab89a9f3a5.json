@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893441632",
+ "split": "test",
+ "image_file": "data/images_small/3893441632.jpg",
+ "image_sha256": "862129636e9dc7be9d0301ec83fc2d751c05afac60b494c37ef25d5b64eaf006",
+ "image_bytes": 924432,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 4.04,
+ "created": "2026-11-06T21:42:49",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"scientificName\": \"Mertensia virginica (L.) D.C.\",\n  \"recordedBy\": \"LENA ARTZ\",\n  \"recordNumber\": \"266\",\n  \"eventDate\": \"1932-04-14\",\n  \"country\": \"USA\",\n  \"stateProvince\": \"Virginia\",\n  \"county\": \"Shenandoah\",\n  \"locality\": \"Stonewall Bend of Shen. R. Woodstock.\",\n  \"habitat\": null\n}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 112,
+   "totalTokenCount": 2322,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 607,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "I5DuauuKCbqEytMP3qn4sA0"
+ },
+ "parsed": {
+  "scientificName": "Mertensia virginica (L.) D.C.",
+  "recordedBy": "LENA ARTZ",
+  "recordNumber": "266",
+  "eventDate": "1932-04-14",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Shenandoah",
+  "locality": "Stonewall Bend of Shen. R. Woodstock.",
+  "habitat": null
+ },
+ "error": null
+}

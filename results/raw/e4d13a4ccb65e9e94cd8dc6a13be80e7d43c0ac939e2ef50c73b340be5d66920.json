@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v2.txt",
+ "prompt_sha256": "6263d380a0bdbbced553d5ff85279c97a304dbd2cd06ad88bf35ba28667856c0",
+ "gbifID": "3893446433",
+ "split": "test",
+ "image_file": "data/images_small/3893446433.jpg",
+ "image_sha256": "f91a709d27f685a78f02afed683dc8abd46d7cf8599e74eb7b1c70676a75fe75",
+ "image_bytes": 819441,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Read the specimen label, and any annotation or determination slips, and fill these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for a field if the information is not on the sheet or cannot be read.\\n\\nRules:\\n- scientificName: the name on the most recent annotation or determination slip if there is one, otherwise the name on the label. Copy the spelling as written. Include the author abbreviation if it is written after the name.\\n- recordedBy: the collector names exactly as written, keeping every initial and every period (write \\\"J. Q. Doe\\\", not \\\"JQ Doe\\\"). Separate two or more collectors by \\\"; \\\".\\n- recordNumber: the collector's own number, often written beside the collector's name. Write it without commas or spaces (1234, not 1,234). Do not use a barcode, catalog, accession or sheet number. Null if the collector gave no number.\\n- eventDate: the collection date in ISO 8601: YYYY-MM-DD, or YYYY-MM or YYYY if the day or month is missing. Numeric dates on these labels are month/day/year (3/9/52 means 1952-03-09). A two-digit year means 19YY. Write an approximate date (\\\"ca.\\\") as the date itself. Never copy the date in its original format.\\n- country: the country as written on the label. If the label gives no country but names a U.S. state, write \\\"USA\\\".\\n- stateProvince: the state as written on the label, including a printed label heading. Write the whole state name. Do not guess it out of a town.\\n- county: the county as written on the label, without the word \\\"County\\\" or \\\"Co.\\\". Do not guess it out of a town or the herbarium's own name.\\n- locality: copy the whole locality text verbatim, in label order, including any habitat or site description inside the same text.\\n- habitat: only text the label gives as its own \\\"Habitat\\\" entry. Otherwise null. Do not split habitat words out of the locality text.\\n- Do not expand abbreviations, do not correct spelling, and do not add information the sheet does not show. The only exceptions are the ISO date format and the country rule.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 4.96,
+ "created": "2026-11-06T21:50:20",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Magnolia acuminata L.\", \"recordedBy\": \"Eggleston\", \"recordNumber\": null, \"eventDate\": \"1940-05-15\", \"country\": \"USA\", \"stateProvince\": \"Virginia\", \"county\": \"Giles\", \"locality\": null, \"habitat\": null}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1603,
+   "candidatesTokenCount": 71,
+   "totalTokenCount": 2462,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 523
+    }
+   ],
+   "thoughtsTokenCount": 788,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "5ZHuasqHNYDExdIP2Lz9kAk"
+ },
+ "parsed": {
+  "scientificName": "Magnolia acuminata L.",
+  "recordedBy": "Eggleston",
+  "recordNumber": null,
+  "eventDate": "1940-05-15",
+  "country": "USA",
+  "stateProvince": "Virginia",
+  "county": "Giles",
+  "locality": null,
+  "habitat": null
+ },
+ "error": null
+}

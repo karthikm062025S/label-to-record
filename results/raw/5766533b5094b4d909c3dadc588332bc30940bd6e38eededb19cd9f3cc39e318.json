@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893448459",
+ "split": "dev",
+ "image_file": "data/images/3893448459.jpg",
+ "image_sha256": "9fb89c98e9ceafb6f657895826bb287da94f2178dc4880a8b5fc17ad2389671c",
+ "image_bytes": 6001864,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 7.37,
+ "created": "2026-11-06T21:23:52",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Quercus alba L.\", \"recordedBy\": \"Fred C. James\", \"recordNumber\": \"8938\", \"eventDate\": \"May 14, 1968\", \"country\": null, \"stateProvince\": \"VIRGINIA\", \"county\": \"Smyth Co.\", \"locality\": \"At Hungry Mother State Park on State 16\", \"habitat\": \"Rich slope at Camp Area A\"}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 93,
+   "totalTokenCount": 2308,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    }
+   ],
+   "thoughtsTokenCount": 1081,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "rovuauH9OsWao_UPv52i4Aw"
+ },
+ "parsed": {
+  "scientificName": "Quercus alba L.",
+  "recordedBy": "Fred C. James",
+  "recordNumber": "8938",
+  "eventDate": "May 14, 1968",
+  "country": null,
+  "stateProvince": "VIRGINIA",
+  "county": "Smyth Co.",
+  "locality": "At Hungry Mother State Park on State 16",
+  "habitat": "Rich slope at Camp Area A"
+ },
+ "error": null
+}

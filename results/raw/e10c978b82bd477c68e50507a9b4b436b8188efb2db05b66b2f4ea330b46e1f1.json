@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3-flash-preview",
+ "prompt": "prompts/v1.txt",
+ "prompt_sha256": "c6078b95249bd06624a63298460921a461a72a74e80f108cb42e1adc6385a1db",
+ "gbifID": "3893493822",
+ "split": "dev",
+ "image_file": "data/images/3893493822.jpg",
+ "image_sha256": "917bb345e8e42d15560b5ab1304b030f69d213d03cc6859617c30fcb1f73ff75",
+ "image_bytes": 5256597,
+ "request_text": "{\"contents\": [{\"parts\": [{\"inline_data\": {\"data\": \"<image bytes omitted>\", \"mime_type\": \"image/jpeg\"}}, {\"text\": \"The image is a herbarium specimen sheet. Transcribe the specimen label into these Darwin Core fields: scientificName, recordedBy, recordNumber, eventDate, country, stateProvince, county, locality, habitat. Return null for anything not on the label.\\n\"}], \"role\": \"user\"}], \"generationConfig\": {\"responseMimeType\": \"application/json\", \"responseSchema\": {\"properties\": {\"country\": {\"nullable\": true, \"type\": \"STRING\"}, \"county\": {\"nullable\": true, \"type\": \"STRING\"}, \"eventDate\": {\"nullable\": true, \"type\": \"STRING\"}, \"habitat\": {\"nullable\": true, \"type\": \"STRING\"}, \"locality\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordNumber\": {\"nullable\": true, \"type\": \"STRING\"}, \"recordedBy\": {\"nullable\": true, \"type\": \"STRING\"}, \"scientificName\": {\"nullable\": true, \"type\": \"STRING\"}, \"stateProvince\": {\"nullable\": true, \"type\": \"STRING\"}}, \"propertyOrdering\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"required\": [\"scientificName\", \"recordedBy\", \"recordNumber\", \"eventDate\", \"country\", \"stateProvince\", \"county\", \"locality\", \"habitat\"], \"type\": \"OBJECT\"}, \"temperature\": 0}}",
+ "http_status": 200,
+ "attempts": 1,
+ "latency_s": 7.12,
+ "created": "2026-11-06T21:25:41",
+ "response": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"scientificName\": \"Floerkea proserpinacoides Willd.\", \"recordedBy\": \"B. Miller\", \"recordNumber\": \"142\", \"eventDate\": \"12-5-71\", \"country\": null, \"stateProvince\": \"VIRGINIA\", \"county\": \"Fairfax County\", \"locality\": \"Bull Run Regional Park.\", \"habitat\": \"In the woods.\"}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1134,
+   "candidatesTokenCount": 87,
+   "totalTokenCount": 2025,
+   "promptTokensDetails": [
+    {
+     "modality": "IMAGE",
+     "tokenCount": 1080
+    },
+    {
+     "modality": "TEXT",
+     "tokenCount": 54
+    }
+   ],
+   "thoughtsTokenCount": 804,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "HIzuatTjD6aPytMPvcvywAE"
+ },
+ "parsed": {
+  "scientificName": "Floerkea proserpinacoides Willd.",
+  "recordedBy": "B. Miller",
+  "recordNumber": "142",
+  "eventDate": "12-5-71",
+  "country": null,
+  "stateProvince": "VIRGINIA",
+  "county": "Fairfax County",
+  "locality": "Bull Run Regional Park.",
+  "habitat": "In the woods."
+ },
+ "error": null
+}
